@@ -18,8 +18,8 @@
 
 ### [Introducción](#intro-1)
 
-- [¿Qué es Vim?](#what-is-vim)
-- [La Filosofía de Vim](#the-vim-philosophy)
+- [¿Qué es Vim?](#qué-es-vim)
+- [La Filosofía de Vim](#la-filosofía-de-vim)
 - [Primeros pasos](#first-steps)
 - [Vimrc mínimo](#minimal-vimrc)
 - [¿Qué tipo de vim estoy utilizando?](#what-kind-of-vim-am-i-running)
@@ -71,108 +71,99 @@
 - [Ejecución de programas externos y uso de filtros](#running-external-programs-and-using-filters)
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
-- [Verdadero colores (True colors)](#true-colors)
+- [Verdaderos colores (True colors)](#true-colors)
 
 ### [Tips](#tips-1)
 
 - [Ir al otro extremo del texto seleccionado](#go-to-other-end-of-selected-text)
 - [Comportamiento más sano de n y N](#saner-behavior-of-n-and-n)
-- [Saner command-line history](#saner-command-line-history)
-- [Saner CTRL-L](#saner-ctrl-l)
-- [Disable audible and visual bells](#disable-audible-and-visual-bells)
-- [Quickly move current line](#quickly-move-current-line)
-- [Quickly add empty lines](#quickly-add-empty-lines)
-- [Quickly edit your macros](#quickly-edit-your-macros)
-- [Quickly jump to header or source file](#quickly-jump-to-header-or-source-file)
-- [Quickly change font size in GUI](#quickly-change-font-size-in-gui)
-- [Change cursor style dependent on mode](#change-cursor-style-dependent-on-mode)
-- [Don't lose selection when shifting sidewards](#dont-lose-selection-when-shifting-sidewards)
-- [Reload a file on saving](#reload-a-file-on-saving)
-- [Smarter cursorline](#smarter-cursorline)
-- [Faster keyword completion](#faster-keyword-completion)
-- [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
+- [Uso más sano del historial de la línea de comandos](#saner-command-line-history)
+- [Uso más sano del CTRL-L](#saner-ctrl-l)
+- [Desactivar los timbres sonoros y visuales](#disable-audible-and-visual-bells)
+- [Mover rápidamente la línea actual](#quickly-move-current-line)
+- [Añadir rápidamente líneas vacías](#quickly-add-empty-lines)
+- [Edite rápidamente sus macros](#quickly-edit-your-macros)
+- [Saltar rápidamente a la cabecera o al archivo fuente](#quickly-jump-to-header-or-source-file)
+- [Cambiar rápidamente el tamaño de la fuente en la interfaz gráfica de usuario](#quickly-change-font-size-in-gui)
+- [Cambiar el estilo del cursor en función del modo](#change-cursor-style-dependent-on-mode)
+- [No perder la selección al cambiar de lado](#dont-lose-selection-when-shifting-sidewards)
+- [Recargar un archivo al guardar](#reload-a-file-on-saving)
+- [Cursor más inteligente](#smarter-cursorline)
+- [Completación más rapida de palabras claves](#faster-keyword-completion)
+- [Cambios cosméticos a los esquemas de color](#cosmetic-changes-to-colorschemes)
 
-### [Commands](#commands-1)
+### [Comandos](#commands-1)
 
-- [:global and :vglobal](#global-and-vglobal) - Execute a command on all matching lines.
-- [:normal and :execute](#normal-and-execute) - The scripting dream team.
-- [:redir and execute()](#redir-and-execute) - Capture command output.
+- [:global y :vglobal](#global-and-vglobal) - Ejecutar un comando en todas las líneas coincidentes.
+- [:normal y :execute](#normal-and-execute) - El dream team de los guiones.
+- [:redir y execute()](#redir-and-execute) - Capturar la salida del comando.
 
 ### [Debugging](#debugging-1)
 
-- [General tips](#general-tips)
-- [Verbosity](#verbosity)
-- [Profiling startup time](#profiling-startup-time)
-- [Profiling at runtime](#profiling-at-runtime)
-- [Debugging Vim scripts](#debugging-vim-scripts)
-- [Debugging syntax files](#debugging-syntax-files)
+- [Tips generales](#general-tips)
+- [Verbosidad (Comando `verbose`)](#verbosity)
+- [Perfilando el tiempo de inicio](#profiling-startup-time)
+- [Perfilando en tiempo de ejecución](#profiling-at-runtime)
+- [Debugging los scripts Vim](#debugging-vim-scripts)
+- [Debugging archivo de sintaxis](#debugging-syntax-files)
 
-### [Miscellaneous](#miscellaneous-1)
+### [Miscelánea](#miscellaneous-1)
 
-- [Additional resources](#additional-resources)
-- [Vim distributions](#vim-distributions)
-- [Standard plugins](#standard-plugins)
-- [Map CapsLock to Control](#map-capslock-to-control)
-- [Generating HTML from buffer](#generating-html-from-buffer)
+- [Recursos adicionales](#additional-resources)
+- [Distribucciones de Vim](#vim-distributions)
+- [Plugins standard](#standard-plugins)
+- [Mapear CapsLock a Control](#map-capslock-to-control)
+- [Generar HTML del buffer](#generating-html-from-buffer)
 - [Easter eggs](#easter-eggs)
-- [Why hjkl for navigation?](#why-hjkl-for-navigation)
+- [¿Por qué hjkl para la navegación?](#why-hjkl-for-navigation)
 
-### [Common problems](#common-problems-1)
+### [Problemas comunes](#common-problems-1)
 
-- [Editing small files is slow](#editing-small-files-is-slow)
-- [Editing huge files is slow](#editing-huge-files-is-slow)
-- [Bracketed paste (or why do I have to set 'paste' all the time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
-- [Delays when using escape key in terminal](#delays-when-using-escape-key-in-terminal)
-- [Function search undo](#function-search-undo)
+- [La edición de archivos pequeños es lenta](#editing-small-files-is-slow)
+- [La edición de archivos grandes es lenta](#editing-huge-files-is-slow)
+- [Pegar entre corchetes (o ¿por qué tengo que poner "pegar" todo el tiempo?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
+- [Retrasos al utilizar la tecla de escape en el terminal](#delays-when-using-escape-key-in-terminal)
+- [Deshacer función de busqueda (function-search-undo)](#function-search-undo)
 
-### [Technical quirks](#technical-quirks-1)
+### [Peculiaridades técnicas](#technical-quirks-1)
 
-- [Newline used for NUL](#newline-used-for-nul)
+- [Nueva linea utilizada para NUL](#newline-used-for-nul)
 
-### [Terminology](#terminology-1)
+### [Terminología](#terminology-1)
 
 - [Vim script? Vimscript? VimL?](#vim-script-vimscript-viml)
 
-### [List of colorschemes](PLUGINS.md#colorschemes-1)
+### [Lista de esquemas de colores](PLUGINS.md#colorschemes-1)
 
-### [List of plugins](PLUGINS.md)
+### [Lista de plugins](PLUGINS.md)
 
 <br>
 
-# Intro
+# Introducción
 
-## What is Vim?
+## Qué es Vim?
 
-[Vim](http://www.vim.org) is a text editor with a long line of ancestors that
-goes back to [qed](https://en.wikipedia.org/wiki/QED_(text_editor)). [Bram
-Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) released it in 1991.
+[Vim](http://www.vim.org) es un editor de texto con una larga línea de ancestros que se remonta a [qed](https://en.wikipedia.org/wiki/QED_(text_editor)). [Bram
+Moolenaar](https://es.wikipedia.org/wiki/Bram_Moolenaar) lo lanzó en 1991.
 
-The project is hosted online at [vim.org](http://www.vim.org/index.php).
+El proyecto está alojado en línea en [vim.org](http://www.vim.org/index.php).
 
-Getting Vim: Use your favourite package manager or visit the [download
-page](http://www.vim.org/download.php) from vim.org.
+Conseguir Vim: Utilice su gestor de paquetes favorito o visite la [página de descarga](http://www.vim.org/download.php) de vim.org
 
-Discussions and user questions are best done on the
-[vim_use](https://groups.google.com/forum/#!forum/vim_use) mailing list or using
-IRC ([Freenode](https://freenode.net)) in the `#vim` channel.
+Discusiones y preguntas de los usuarios se realizan mejor en la lista de correo
+[vim_use](https://groups.google.com/forum/#!forum/vim_use) o utilizando
+IRC ([Freenode](https://freenode.net)) en el canal `#vim`.
 
-Development happens on [GitHub](https://github.com/vim/vim), discussions on the
-[vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
+El desarrollo se realiza en [GitHub](https://github.com/vim/vim), las discusiones en la lista de correo
+[vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
 
-Read [Why, oh WHY, do those #?@! nutheads use
-vi?](http://www.viemu.com/a-why-vi-vim.html) to see common misconceptions about
-Vim explained.
+Lea [¿Por qué, oh POR QUÉ, esos #?@! chiflados usan vi?](http://www.viemu.com/a-why-vi-vim.html) para ver explicadas las ideas erróneas más comunes sobre Vim.
 
-## The Vim Philosophy
+## La Filosofía de Vim
 
-Vim adheres to the modal editing philosophy. This means that it provides
-multiple modes and the meaning of keys changes according to the mode. You
-navigate files in _normal mode_, you insert text in _insert mode_, you select
-lines in _visual mode_, you access commands in _command-line mode_ and so on.
-This might sound complicated at first, but has a huge advantage: you don't have
-to break your fingers by holding several keys at once, most of the time you
-simply press them one after the other. The more common the task, the fewer keys
-are needed.
+Vim se adhiere a la filosofía de edición modal. Esto significa que ofrece múltiples modos y el significado de las teclas cambia según el modo. Navegas por los archivos en el _modo normal_, insertas texto en el _modo de inserción_, seleccionas líneas en el _modo visual_, accedes a los comandos en el modo de _línea de comandos_, etc. Esto puede parecer complicado al principio, pero tiene una gran ventaja: no tienes que romperte los dedos sujetando varias teclas a la vez, la mayoría de las veces simplemente las pulsas una tras otra. Cuanto más común sea la tarea, menos teclas se necesitan.
+
+<!-- FINISH UNTIL HERE -->
 
 A related concept that works well with modal editing are operators and motions.
 _Operators_ start a certain action, e.g. changing, removing, or selecting text.
