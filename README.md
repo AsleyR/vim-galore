@@ -163,73 +163,44 @@ Lea [¿Por qué, oh POR QUÉ, esos #?@! chiflados usan vi?](http://www.viemu.com
 
 Vim se adhiere a la filosofía de edición modal. Esto significa que ofrece múltiples modos y el significado de las teclas cambia según el modo. Navegas por los archivos en el _modo normal_, insertas texto en el _modo de inserción_, seleccionas líneas en el _modo visual_, accedes a los comandos en el modo de _línea de comandos_, etc. Esto puede parecer complicado al principio, pero tiene una gran ventaja: no tienes que romperte los dedos sujetando varias teclas a la vez, la mayoría de las veces simplemente las pulsas una tras otra. Cuanto más común sea la tarea, menos teclas se necesitan.
 
-<!-- FINISH UNTIL HERE -->
+Un concepto relacionado que funciona bien con la edición modal son los operadores y los movimientos. _Los operadores_ inician una acción determinada, por ejemplo, cambiar, eliminar o seleccionar texto. Después se especifica la región del texto sobre la que se quiere actuar mediante un _movimiento_. Para cambiar todo lo que está entre paréntesis, utilice `ci` (léase _cambiar el paréntesis interior_). Para eliminar un párrafo entero de texto, utilice `dap` (léase _eliminar alrededor del párrafo_).
 
-A related concept that works well with modal editing are operators and motions.
-_Operators_ start a certain action, e.g. changing, removing, or selecting text.
-Afterwards you specify the region of text you want to act on using a _motion_.
-To change everything between parentheses, use `ci(` (read _change inner
-parentheses_). To remove an entire paragraph of text, use `dap` (read _delete
-around paragraph_).
+Si ves trabajar a los usuarios avanzados de Vim, te darás cuenta de que hablan _el lenguaje de Vim_ tan bien como los pianistas manejan sus instrumentos. Las operaciones complejas se realizan con sólo pulsar unas pocas teclas. Ni siquiera piensan en ello, ya que la [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory) <!-- No pude encontrar un articulo de Wikipedia sobre la memoria muscular --> se ha hecho cargo. Esto reduce la [carga cognitiva](https://es.frwiki.wiki/wiki/Charge_cognitive) <!-- No pude encontrar un articulo de Wikipedia sobre la carga cognitiva --> y ayuda a concentrarse en la tarea que uno está haciendo.
 
-If you see advanced Vim users working, you'll notice that they speak the
-_language of Vim_ as well as pianists handle their instruments. Complex
-operations are done using only a few key presses. They don't even think about it
-anymore as [muscle memory](https://en.wikipedia.org/wiki/Muscle_memory) took
-over already. This reduces [cognitive
-load](https://en.wikipedia.org/wiki/Cognitive_load) and helps to focus on the
-actual task.
+## Primeros Pasos
 
-## First steps
-
-Vim comes bundled with an interactive tutorial that teaches the most basic
-things you need to know about. You can start it from the shell:
+Vim viene con un tutorial interactivo que enseña las cosas más básicas que necesitas saber. Puedes iniciarlo desde la terminal:
 
 ```
 $ vimtutor
 ```
 
-Don't be put off by how boring it looks like and work through the exercises. The
-editors or IDEs you used before were most probably all non-modal, so working by
-switching modes will seem awkward at first, but the more you use Vim, the more
-it becomes [muscle memory](https://en.wikipedia.org/wiki/Muscle_memory).
+No te desanimes por lo aburrido que parece y trabaja con los ejercicios. Los editores o IDEs que utilizabas antes eran probablemente todos no modales, así que trabajar cambiando de modo te parecerá incómodo al principio, pero cuanto más utilices Vim, lo más todo se convierte en [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory). <!-- No pude encontrar un articulo de Wikipedia sobre la memoria muscular -->
 
-Vim was bolted on [Stevie](https://en.wikipedia.org/wiki/Stevie_(text_editor)), a
-[vi](https://en.wikipedia.org/wiki/Vi) clone, and supports two operating modes:
-"compatible" and "nocompatible". Using Vim in compatible mode means using vi
-defaults for all options, opposed to Vim defaults. As long as you didn't create
-a user vimrc yet or started Vim with `vim -N`, compatible mode is assumed! Don't
-use Vim in compatible mode. Just don't.
+Vim fue agrupado con [Stevie](https://en.wikipedia.org/wiki/Stevie_(text_editor))<!-- No pude encontrar un articulo de Wikipedia sobre Stevie editor -->, un clon de [vi](https://es.wikipedia.org/wiki/Vi), y gracias a esto ahora Vim soporta dos modos de funcionamiento: "compatible" y "nocompatible". Usar Vim en modo compatible significa usar los valores predeterminados de vi para todas las opciones, en oposición a los valores predeterminados de Vim. Mientras no haya creado un vimrc de usuario o haya iniciado Vim con `vim -N`, se asume el modo compatible. No uses Vim en modo compatible. Simplemente no lo hagas.
 
-Next steps:
+Próximos pasos:
 
-1. Create your own [vimrc](#minimal-vimrc).
-2. Have some [cheatsheets](#cheatsheets) ready for the first weeks.
-3. Read through the [basics](#basics-1) section to learn what is even possible.
-4. Learn on demand! You never finish learning Vim. If you encounter any
-   problems, just look for it on the internet. Your problem was solved already.
-   Vim comes with great documentation and knowing how to navigate it is a must:
-   [Getting help offline](#getting-help-offline).
-5. Have a look at the [additional resources](#additional-resources).
+1. Crea tu propio [vimrc](#minimal-vimrc).
+2. Ten preparadas algunas [cheatsheets](#cheatsheets) listas para las primeras semanas.
+3. Lea la sección de [conceptos basicos](#basics) para saber qué es incluso posible en vim.
+4. ¡Aprende a la marcha! Uno nunca termina de aprender Vim. Si te encuentras con algún problema, sólo tienes que buscarlo en Internet. Tu problema ya está resuelto. Vim viene con una gran documentación y saber cómo navegar por ella es imprescindible:
+   [Conseguir ayuda fuera de línea](#getting-help-offline).
+5. Echa un vistazo a los [recursos adicionales](#additional-resources).
 
-One last advice: Please learn how to use Vim properly before starting to add all
-kinds of hyped [plugins](#managing-plugins) that only implement features that
-Vim already supports natively.
+Un último consejo: Por favor, aprende a usar Vim correctamente antes de empezar a añadir todo tipo de [plugins](#managing-plugins) exagerados que sólo implementan características que Vim ya soporta de forma nativa.
 
-## Minimal vimrc
+## Vimrc mínimo
 
-The user vimrc can be put into `~/.vimrc` or for the sake of better separation
-into `~/.vim/vimrc`. The latter makes it easy to put the entire configuration
-under version control and upload it to, let's say GitHub.
+El vimrc del usuario se puede poner en `~/.vimrc` o para una mejor separación en `~/.vim/vimrc`. Este último facilita poner toda la configuración bajo control de versiones y subirla a, digamos, GitHub.
 
-You find many "minimal vimrcs" all over the net, and maybe my version isn't as
-minimal as it should be, but it provides a good set of sane settings that I deem
-to be useful for starting out.
+Se encuentran muchos "vimrcs mínimos" por toda la red, y tal vez mi versión no es tan mínima como debería ser, pero proporciona un buen conjunto de ajustes sanos que considero útiles para empezar.
 
-Eventually you have to read up on all the mentioned settings anyway and decide
-for yourself. :-)
+De todos modos, tienes que leer todos los ajustes mencionados y decidir por ti mismo. :-)
 
-So here it is: [minimal-vimrc](static/minimal-vimrc.vim)
+Así que aquí está: [vimrc-mínimo](static/minimal-vimrc.vim)
+
+<!-- FINISH HERE -->
 
 In case you're interested, here's
 [my vimrc](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc).
