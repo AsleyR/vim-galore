@@ -3,80 +3,80 @@
   <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
   <div>
-    <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chino Mandarín</a> |
-    <a href='http://postd.cc/?s=vim-galore'>Japonés</a> |
-    <a href='https://github.com/lsrdg/vim-galore'>Portugués</a> |
-    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Ruso</a> |
-    <a href='https://github.com/kyoz/vim-galore-vi'>Vietnamita</a>
+    <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chinese</a> |
+    <a href='http://postd.cc/?s=vim-galore'>Japanese</a> |
+    <a href='https://github.com/lsrdg/vim-galore'>Portuguese</a> |
+    <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Russian</a> |
+    <a href='https://github.com/kyoz/vim-galore-vi'>Vietnamese</a>
     <div>
       <br />
-      <sub>Con licencia <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
+      <sub>Licensed under <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
     </div>
   </div>
   <br /><br />
 </div>
 
-### [Introducción](#intro-1)
+### [Intro](#intro-1)
 
-- [¿Qué es Vim?](#what-is-vim)
-- [La Filosofía de Vim](#the-vim-philosophy)
-- [Primeros pasos](#first-steps)
-- [Vimrc mínimo](#minimal-vimrc)
-- [¿Qué tipo de vim estoy utilizando?](#what-kind-of-vim-am-i-running)
+- [What is Vim?](#what-is-vim)
+- [The Vim Philosophy](#the-vim-philosophy)
+- [First steps](#first-steps)
+- [Minimal vimrc](#minimal-vimrc)
+- [What kind of Vim am I running?](#what-kind-of-vim-am-i-running)
 - [Cheatsheets](#cheatsheets)
 
-### [Conceptos Básicos](#basics-1)
+### [Basics](#basics-1)
 
-- [Buffers, ventanas, pestañas](#buffers-windows-tabs)
-- [Buffers activados, cargados, listados, y nombrados](#active-loaded-listed-named-buffers)
-- [Lista de argumentos](#argument-list)
-- [Mapeos](#mappings)
-- [Tecla líder](#mapleader)
-- [Registradores](#registers)
-- [Rangos](#ranges)
-- [Marcadores](#marks)
-- [Completadores](#completion)
-- [Movimientos, operadores, objetos de texto](#motions-operators-text-objects)
+- [Buffers, windows, tabs](#buffers-windows-tabs)
+- [Active, loaded, listed, named buffers](#active-loaded-listed-named-buffers)
+- [Argument list](#argument-list)
+- [Mappings](#mappings)
+- [Mapleader](#mapleader)
+- [Registers](#registers)
+- [Ranges](#ranges)
+- [Marks](#marks)
+- [Completion](#completion)
+- [Motions, operators, text objects](#motions-operators-text-objects)
 - [Autocmds](#autocmds)
-- [lista de cambios, lista de salto](#changelist-jumplist)
-- [Árbol de deshacer](#undo-tree)
-- [Quickfix and lista de ubicaciones](#quickfix-and-location-lists)
+- [Changelist, jumplist](#changelist-jumplist)
+- [Undo tree](#undo-tree)
+- [Quickfix and location lists](#quickfix-and-location-lists)
 - [Macros](#macros)
-- [Esquema de colores](#colorschemes)
-- [Folding (Doblamiento)](#folding)
-- [Sesiones](#sessions)
-- [Localidad](#locality)
+- [Colorschemes](#colorschemes)
+- [Folding](#folding)
+- [Sessions](#sessions)
+- [Locality](#locality)
 
-### [Utilización](#usage-1)
+### [Usage](#usage-1)
 
-- [Conseguir ayuda offline](#getting-help-offline)
-- [Conseguir ayuda offline (alternativo)](#getting-help-offline-alternative)
-- [Conseguir ayuda online](#getting-help-online)
-- [Autocmds en la practica](#autocmds-in-practice)
-  - [Eventos del usuario](#user-events)
-  - [Autocmds anidados](#nested-autocmds)
-- [Portapapeles](#clipboard)
-  - [Uso de portapapeles (Windows, macOS)](#clipboard-usage-windows-macos)
-  - [Uso de portapapeles (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
-- [Restaurar la posición del cursor al abrir un archivo](#restore-cursor-position-when-opening-file)
-- [Archivos temporales](#temporary-files)
-  - [Archivos de respaldo](#backup-files)
-  - [Archivos Swap (Swap Files)](#swap-files)
-  - [Deshace archivos](#undo-files)
-  - [Archivos viminfo](#viminfo-files)
-  - [Ejemplo de configuración de archivos temporales](#example-configuration-for-temporary-files)
-- [Editando archivos remotos](#editing-remote-files)
-- [Gestión de plugins](#managing-plugins)
-- [Inserción en bloque](#block-insert)
-- [Ejecución de programas externos y uso de filtros](#running-external-programs-and-using-filters)
+- [Getting help offline](#getting-help-offline)
+- [Getting help offline (alternative)](#getting-help-offline-alternative)
+- [Getting help online](#getting-help-online)
+- [Autocmds in practice](#autocmds-in-practice)
+  - [User events](#user-events)
+  - [Nested autocmds](#nested-autocmds)
+- [Clipboard](#clipboard)
+  - [Clipboard usage (Windows, macOS)](#clipboard-usage-windows-macos)
+  - [Clipboard usage (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
+- [Restore cursor position when opening file](#restore-cursor-position-when-opening-file)
+- [Temporary files](#temporary-files)
+  - [Backup files](#backup-files)
+  - [Swap files](#swap-files)
+  - [Undo files](#undo-files)
+  - [Viminfo files](#viminfo-files)
+  - [Example configuration for temporary files](#example-configuration-for-temporary-files)
+- [Editing remote files](#editing-remote-files)
+- [Managing plugins](#managing-plugins)
+- [Block insert](#block-insert)
+- [Running external programs and using filters](#running-external-programs-and-using-filters)
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
-- [Verdadero colores (True colors)](#true-colors)
+- [True colors](#true-colors)
 
 ### [Tips](#tips-1)
 
-- [Ir al otro extremo del texto seleccionado](#go-to-other-end-of-selected-text)
-- [Comportamiento más sano de n y N](#saner-behavior-of-n-and-n)
+- [Go to other end of selected text](#go-to-other-end-of-selected-text)
+- [Saner behavior of n and N](#saner-behavior-of-n-and-n)
 - [Saner command-line history](#saner-command-line-history)
 - [Saner CTRL-L](#saner-ctrl-l)
 - [Disable audible and visual bells](#disable-audible-and-visual-bells)
