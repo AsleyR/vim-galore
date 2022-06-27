@@ -20,17 +20,17 @@
 
 ### [Introducción](#introducción-1)
 
-- [¿Qué es Vim?](#¿qué-es-vim)
+- [¿Qué es Vim?](#qué-es-vim)
 - [La Filosofía de Vim](#la-filosofía-de-vim)
 - [Primeros pasos](#primeros-pasos)
 - [Vimrc mínimo](#vimrc-mínimo)
-- [¿Qué tipo de Vim estoy utilizando?](#¿qué-tipo-de-vim-estoy-utilizando)
+- [¿Qué tipo de Vim estoy utilizando?](#qué-tipo-de-vim-estoy-utilizando)
 - [Cheatsheets](#cheatsheets)
 
 ### [Conceptos Básicos](#conceptos-básicos-1)
 
-- [Buffers, ventanas, pestañas](#búfers-ventanas-pestañas)
-- [Buffers activados, cargados, listados, y nombrados](#búfers-activados-cargados-listados-y-nombrados)
+- [Búfers, ventanas, pestañas](#búfers-ventanas-pestañas)
+- [Búfers activados, cargados, listados, y nombrados](#búfers-activados-cargados-listados-y-nombrados)
 - [Lista de argumentos](#lista-de-argumentos)
 - [Mapeos](#mapeos)
 - [Tecla líder](#tecla-líder)
@@ -145,21 +145,21 @@
 
 ## ¿Qué es Vim?
 
-[Vim](http://www.vim.org) es un editor de texto con una larga línea de ancestros que se remonta a [qed](https://en.wikipedia.org/wiki/QED_(text_editor)). [Bram
+[Vim](http://www.vim.org) (link en inglés) es un editor de texto con una larga línea de ancestros que se remonta a [qed](https://es.abcdef.wiki/wiki/QED_(text_editor)). [Bram
 Moolenaar](https://es.wikipedia.org/wiki/Bram_Moolenaar) lo lanzó en 1991.
 
-El proyecto está alojado en línea en [vim.org](http://www.vim.org/index.php).
+El proyecto está alojado en línea en [vim.org](http://www.vim.org/index.php) (link en inglés).
 
-Conseguir Vim: Utilice su gestor de paquetes favorito o visite la [página de descarga](http://www.vim.org/download.php) de vim.org
+Conseguir Vim: Utilice su gestor de paquetes favorito o visite la [página de descarga](http://www.vim.org/download.php) (link en inglés) de vim.org
 
 Discusiones y preguntas de los usuarios se realizan mejor en la lista de correo
-[vim_use](https://groups.google.com/forum/#!forum/vim_use) o utilizando
-IRC ([Freenode](https://freenode.net)) en el canal `#vim`.
+[vim_use](https://groups.google.com/forum/#!forum/vim_use) (link en inglés) o utilizando
+IRC ([Freenode](https://freenode.net)) (link en inglés) en el canal `#vim`.
 
-El desarrollo se realiza en [GitHub](https://github.com/vim/vim), las discusiones en la lista de correo
-[vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
+El desarrollo se realiza en [GitHub](https://github.com/vim/vim) (link en inglés), las discusiones en la lista de correo
+[vim_dev](https://groups.google.com/forum/#!forum/vim_dev) (link en inglés).
 
-Lea [¿Por qué, oh POR QUÉ, esos #?@! chiflados usan vi?](http://www.viemu.com/a-why-vi-vim.html) para ver explicadas las ideas erróneas más comunes sobre Vim.
+Lea [¿Por qué, oh POR QUÉ, esos #?@! chiflados usan vi?](http://www.viemu.com/a-why-vi-vim.html) (link en inglés) para ver explicadas las ideas erróneas más comunes sobre Vim.
 
 ## La Filosofía de Vim
 
@@ -167,7 +167,7 @@ Vim se adhiere a la filosofía de edición modal. Esto significa que ofrece múl
 
 Un concepto relacionado que funciona bien con la edición modal son los operadores y los movimientos. _Los operadores_ inician una acción determinada, por ejemplo, cambiar, eliminar o seleccionar texto. Después se especifica la región del texto sobre la que se quiere actuar mediante un _movimiento_. Para cambiar todo lo que está entre paréntesis, utilice `ci` (léase _cambiar el paréntesis interior_). Para eliminar un párrafo entero de texto, utilice `dap` (léase _eliminar alrededor del párrafo_).
 
-Si ves trabajar a los usuarios avanzados de Vim, te darás cuenta de que hablan _el lenguaje de Vim_ tan bien como los pianistas manejan sus instrumentos. Las operaciones complejas se realizan con sólo pulsar unas pocas teclas. Ni siquiera piensan en ello, ya que la [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory) <!-- No pude encontrar un articulo de Wikipedia sobre la memoria muscular --> se ha hecho cargo. Esto reduce la [carga cognitiva](https://es.frwiki.wiki/wiki/Charge_cognitive) <!-- No pude encontrar un articulo de Wikipedia sobre la carga cognitiva --> y ayuda a concentrarse en la tarea que uno está haciendo.
+Si ves trabajar a los usuarios avanzados de Vim, te darás cuenta de que hablan _el lenguaje de Vim_ tan bien como los pianistas manejan sus instrumentos. Las operaciones complejas se realizan con sólo pulsar unas pocas teclas. Ni siquiera piensan en ello, ya que la [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory) se ha hecho cargo. Esto reduce la [carga cognitiva](https://es.frwiki.wiki/wiki/Charge_cognitive) y ayuda a concentrarse en la tarea que uno está haciendo.
 
 ## Primeros Pasos
 
@@ -177,20 +177,20 @@ Vim viene con un tutorial interactivo que enseña las cosas más básicas que ne
 $ vimtutor
 ```
 
-No te desanimes por lo aburrido que parece y trabaja con los ejercicios. Los editores o IDEs que utilizabas antes eran probablemente todos no modales, así que trabajar cambiando de modo te parecerá incómodo al principio, pero cuanto más utilices Vim, lo más todo se convierte en [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory). <!-- No pude encontrar un articulo de Wikipedia sobre la memoria muscular -->
+No te desanimes por lo aburrido que parece y trabaja con los ejercicios. Los editores o IDEs que utilizabas antes eran probablemente todos no modales, así que trabajar cambiando de modo te parecerá incómodo al principio, pero cuanto más utilices Vim, lo más todo se convierte en [memoria muscular](https://es.abcdef.wiki/wiki/Muscle_memory).
 
-Vim fue agrupado con [Stevie](https://en.wikipedia.org/wiki/Stevie_(text_editor))<!-- No pude encontrar un articulo de Wikipedia sobre Stevie editor -->, un clon de [vi](https://es.wikipedia.org/wiki/Vi), y gracias a esto ahora Vim soporta dos modos de funcionamiento: "compatible" y "nocompatible". Usar Vim en modo compatible significa usar los valores predeterminados de vi para todas las opciones, en oposición a los valores predeterminados de Vim. Mientras no haya creado un vimrc de usuario o haya iniciado Vim con `vim -N`, se asume el modo compatible. No uses Vim en modo compatible. Simplemente no lo hagas.
+Vim fue agrupado con [Stevie](https://wblog.wiki/es/Stevie_(text_editor)), un clon de [vi](https://es.wikipedia.org/wiki/Vi), y gracias a esto ahora Vim soporta dos modos de funcionamiento: "compatible" y "nocompatible". Usar Vim en modo compatible significa usar los valores predeterminados de vi para todas las opciones, en oposición a los valores predeterminados de Vim. Mientras no haya creado un vimrc de usuario o haya iniciado Vim con `vim -N`, se asume el modo compatible. No uses Vim en modo compatible. Simplemente no lo hagas.
 
 Próximos pasos:
 
 1. Crea tu propio [vimrc](#vimrc-mínimo).
 2. Ten preparadas algunas [cheatsheets](#cheatsheets) listas para las primeras semanas.
-3. Lea la sección de [conceptos basicos](#conceptos-bc3a1sicos-1) para saber qué es incluso posible en vim.
+3. Lea la sección de [conceptos basicos](#conceptos-básicos-1) para saber qué es incluso posible en vim.
 4. ¡Aprende a la marcha! Uno nunca termina de aprender Vim. Si te encuentras con algún problema, sólo tienes que buscarlo en Internet. Tu problema ya está resuelto. Vim viene con una gran documentación y saber cómo navegar por ella es imprescindible:
    [Conseguir ayuda fuera de línea](#conseguir-ayuda-offline).
 5. Echa un vistazo a los [recursos adicionales](#recursos-adicionales).
 
-Un último consejo: Por favor, aprende a usar Vim correctamente antes de empezar a añadir todo tipo de [plugins](#managing-plugins) exagerados que sólo implementan características que Vim ya soporta de forma nativa.
+Un último consejo: Por favor, aprende a usar Vim correctamente antes de empezar a añadir todo tipo de [plugins](#gestión-de-plugins) exagerados que sólo implementan características que Vim ya soporta de forma nativa.
 
 ## Vimrc mínimo
 
@@ -200,9 +200,7 @@ Se encuentran muchos "vimrcs mínimos" por toda el internet, y tal vez mi versi�
 
 De todos modos, tienes que leer todos los ajustes mencionados y decidir por ti mismo. :-)
 
-Así que aquí está: [vimrc-mínimo](static/minimal-vimrc.vim)
-
-<!-- FINISH HERE -->
+Así que aquí está: [vimrc-mínimo](./static/minimal-vimrc.vim)
 
 Por si te interesa, aquí está el [vimrc de _mhinz_](https://github.com/mhinz/dotfiles/blob/master/.vim/vimrc) (El creador original de Vim-Galore).
 
@@ -243,12 +241,14 @@ Comandos help:
 
 ## Cheatsheets
 
+_Nota: Todos están en inglés_
+
 - http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
 - https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
 - http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_screen.png
 - http://www.rosipov.com/images/posts/vim-movement-commands-cheatsheet.png
 
-O abra rápidamente un cheatsheet desde Vim: [vim-cheat40](https://github.com/lifepillar/vim-cheat40).
+O abra rápidamente un cheatsheet desde Vim: [vim-cheat40](https://github.com/lifepillar/vim-cheat40) (link en inglés).
 
 # Conceptos Básicos
 
@@ -282,7 +282,7 @@ Los **búferes sin nombre**, también utilizados a menudo por los plugins, son b
 
 ## Lista de argumentos
 
-La [lista global de búferes](#buffers-windows-tabs) es una cosa de Vim. Antes, en vi, sólo existía la lista de argumentos, que también está disponible en Vim.
+La [lista global de búferes](#búfers-ventanas-pestañas) es una cosa de Vim. Antes, en vi, sólo existía la lista de argumentos, que también está disponible en Vim.
 
 Cada nombre de archivo dado a Vim en la línea de comandos del shell, se recuerda en la lista de argumentos. Puede haber varias listas de argumentos: por defecto todos los argumentos se ponen en la lista de argumentos global, pero puede usar `:arglocal` para crear una nueva lista de argumentos que sea local a la ventana.
 
@@ -397,7 +397,7 @@ Vim proporciona los siguientes registros:
 | Sólo lectura          | `:`, `.`, `%`          | vim        | [x]       | `:`: Último comando, `.`: Último texto insertado, `%`: Nombre de archivo actual. |
 | Búfer alterno    | `#`                    | vim        | [ ]       | La mayoría de las veces el buffer previamente visitado de la ventana actual. Ver `:h archivo-alternativo` |
 | Expresión          | `=`                    | user       | [ ]       | Evaluación de la expresión de VimL que fue arrancado. Por ejemplo, haga esto en el modo de inserción: `<c-r>=5+5<cr>` y se insertará "10" en el buffer. |
-| Selección           | `+`, `*`               | vim        | [ ]       | `*` y `+` son los registros del [portapapeles](#clipboard). |
+| Selección           | `+`, `*`               | vim        | [ ]       | `*` y `+` son los registros del [portapapeles](#portapapeles). |
 | Drop                | `~`                    | vim        | [x]       | Desde el último drag'n'drop. |
 | Agujero negro          | `_`                    | vim        | [ ]       | Si no quieres que ningún otro registro se vea afectado implícitamente. Por ejemplo, `"_dd` borra la línea actual sin afectar a los registros `"`, `1`, `+`, `*`. |
 | Último patrón de búsqueda | `/`                    | vim        | [ ]       | Último patrón utilizado con `/`, `?`, `:global`, etc. |
@@ -465,7 +465,7 @@ como forma abreviada de `:delete`):
 | `:,+3d` | Línea actual y las 3 líneas siguientes. |
 | `:1,+3d` | De la primera línea a la línea actual + 3. |
 | `:,-3d` | CLínea actual y las 3 últimas líneas. (Vim le preguntará, ya que se trata de un rango invertido). |
-| `:3,'xdelete` | Líneas 3 a la línea marcada por el [marcador](#marks) x. |
+| `:3,'xdelete` | Líneas 3 a la línea marcada por el [marcador](#marcadores) x. |
 | `:/^foo/,$delete` | Desde la siguiente línea que comienza con "foo" hasta el final. |
 | `:/^foo/+1,$delete` | Desde la línea que sigue a la que empieza por "foo" hasta el final. |
 
@@ -717,9 +717,9 @@ Por el contrario, `g-` y `g+` funcionan en función del tiempo. Así, `g-` no re
 | `[count]g-`, `:earlier [count]?` | Ir al estado de texto más antiguo [count] veces. Los "?" pueden ser "s", "m", "h", "d" o "f". Por ejemplo, `:earlier 2d` va al estado del texto de hace 2 días. `:earlier 1f` irá al estado del último archivo guardado. |
 | `[count]g+`, `:later [count]?` | Lo mismo que lo anterior, pero en la otra dirección. |
 
-El árbol de deshacer se mantiene en memoria y se perderá cuando Vim se cierre. Vea [Deshacer archivos](#undo-files) para saber cómo habilitar el deshacer persistente.
+El árbol de deshacer se mantiene en memoria y se perderá cuando Vim se cierre. Vea [Deshacer archivos](#deshacer-archivos) para saber cómo habilitar el deshacer persistente.
 
-Si estás confundido con el árbol de deshacer, el proyecto [undotree](https://github.com/mbbill/undotree) hace un excelente trabajo vizualizando este tipo árbol. Sin embargo, cabo destacar que el proyecto se encuentra en inglés.
+Si estás confundido con el árbol de deshacer, el proyecto [undotree](https://github.com/mbbill/undotree) (link en inglés) hace un excelente trabajo vizualizando este tipo árbol. Sin embargo, cabo destacar que el proyecto se encuentra en inglés.
 
 Comandos help:
 
@@ -740,7 +740,7 @@ Normalmente se abre una nueva ventana para mostrar la lista de quickfix: la vent
 
 En el buffer de quickfix `<cr>` abre la entrada seleccionada en la ventana asociada y `<c-w><cr>` en una nueva ventana.
 
-La lista quickfix fue nombrada por la función "quick fix" del compilador [Aztec C](https://en.wikipedia.org/wiki/Aztec_C) (Link en inglés).
+La lista quickfix fue nombrada por la función "quick fix" del compilador [Aztec C](https://es.abcdef.wiki/wiki/Aztec_C).
 
 En realidad, hay dos tipos de listas: las listas rápidas y las de localización. Se comportan casi igual, pero tienen las siguientes diferencias:
 
@@ -821,7 +821,7 @@ q
 
 Ten en cuenta que también muestro cómo lograr lo mismo sin usar macros, pero esto funciona principalmente sólo para estos ejemplos simples. Para una automatización más compleja, ¡las macros son la bomba!
 
-Vea también: [Edite rápidamente sus macros](#quickly-edit-your-macros)
+Vea también: [Edite rápidamente sus macros](#edite-rápidamente-sus-macros)
 
 Comandos help:
 
@@ -846,13 +846,13 @@ En realidad, la mayoría de los esquemas de colores son realmente 2 esquemas de 
 
 Si alguna vez usas un esquema de colores en Vim terminal y los colores no se parecen en absoluto a los de la captura de pantalla, lo más probable es que el esquema de colores sólo defina los colores para la GUI. Por el contrario, si usas un Vim gráfico (por ejemplo, gvim o MacVim) y los colores no se parecen, es posible que el esquema de colores sólo defina los colores para el terminal.
 
-Este último caso puede ser "resuelto" habilitando los colores verdaderos en Neovim o Vim 7.4.1830 y más recientes. Esto hace que el terminal Vim utilice las definiciones de la GUI en su lugar, pero también requiere que el propio emulador de terminal y todo el software intermedio (por ejemplo, tmux) sea capaz de manejar los colores verdaderos. (Este [gist](https://gist.github.com/XVilka/8346728) da una buena visión general sobre el tema).
+Este último caso puede ser "resuelto" habilitando los colores verdaderos en Neovim o Vim 7.4.1830 y más recientes. Esto hace que el terminal Vim utilice las definiciones de la GUI en su lugar, pero también requiere que el propio emulador de terminal y todo el software intermedio (por ejemplo, tmux) sea capaz de manejar los colores verdaderos. (Este [gist](https://gist.github.com/XVilka/8346728) (link en inglés) da una buena visión general sobre el tema).
 
 Comando help & cosas de interés:
 
 - `:h 'termguicolors'`
 - [Lista de esquema de colores](PLUGINS.md#colorschemes-1)
-- [Cambios cosméticos en los esquemas de color](#cosmetic-changes-to-colorschemes)
+- [Cambios cosméticos en los esquemas de color](#cambios-cosméticos-a-los-esquemas-de-color)
 
 ## Plegados
 
@@ -1004,9 +1004,9 @@ Además, en la parte superior de las páginas de ayuda se mencionará un enlace 
 
 ## Conseguir ayuda online
 
-Si tienes un problema que no puedes resolver o necesitas orientación general, consulta la lista de correo [vim_use](https://groups.google.com/forum/#!forum/vim_use). Otro gran recurso es utilizar el [IRC](https://de.wikipedia.org/wiki/Internet_Relay_Chat). El canal #vim en [Freenode](https://freenode.net) es enorme y suele estar lleno de gente que ayuda.
+Si tienes un problema que no puedes resolver o necesitas orientación general, consulta la lista de correo [vim_use](https://groups.google.com/forum/#!forum/vim_use) (link en inglés). Otro gran recurso es utilizar el [IRC](https://de.wikipedia.org/wiki/Internet_Relay_Chat) (link en inglés). El canal #vim en [Freenode](https://freenode.net) (link en inglés) es enorme y suele estar lleno de gente que ayuda.
 
-Si quieres informar de un error en Vim, utiliza la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
+Si quieres informar de un error en Vim, utiliza la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) (link en inglés).
 
 ## Autocmds en la practica
 
@@ -1064,7 +1064,7 @@ Comando help: `:h autocmd-nested`
 
 ## Portapapeles
 
-[Funciones](#¿qué-tipo-de-vim-estoy-utilizando) de Vim requeridas: `+clipboard` y opcionalmente `+xterm_clipboard` si quieres usar la opción `'clipboard'` en un sistema Unix con un Vim que no tiene soporte de GUI.
+[Funciones](#qué-tipo-de-vim-estoy-utilizando) de Vim requeridas: `+clipboard` y opcionalmente `+xterm_clipboard` si quieres usar la opción `'clipboard'` en un sistema Unix con un Vim que no tiene soporte de GUI.
 
 Comandos help:
 
@@ -1074,11 +1074,11 @@ Comandos help:
 :h gui-selections
 ```
 
-Vea también: [Pegar entre corchetes (¿o por qué tengo que poner "paste" todo el tiempo?) ](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
+Vea también: [Pegar entre corchetes (¿o por qué tengo que poner "paste" todo el tiempo?) ](#pegar-entre-corchetes-o-por-qué-tengo-que-poner-pegar-todo-el-tiempo)
 
 ### Uso de portapapeles (Windows, macOS)
 
-Windows cuenta con un portapapeles llamado [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx), mientras que macOS cuenta con uno similar llamado [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
+Windows cuenta con un portapapeles llamado [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx) (link en inglés), mientras que macOS cuenta con uno similar llamado [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1) (link en inglés).
 
 Ambos funcionan como la mayoría de los usuarios esperan que lo hagan. Copias el texto seleccionado con `ctrl+c`/`cmd+c` y lo pegas en otra aplicación con `ctrl+v`/`cmd+v`.
 
@@ -1114,11 +1114,11 @@ Comandos help:
 
 ### Uso de portapapeles (Linux, BSD, ...)
 
-Si su sistema operativo utiliza [X](http://www.x.org/wiki), las cosas funcionan un poco diferente. X implementa el [Protocolo del Sistema de Ventanas X](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) que resulta estar en la versión principal 11 desde 1987, de ahí que X también se llame a menudo X11.
+Si su sistema operativo utiliza [X](http://www.x.org/wiki) (link en inglés), las cosas funcionan un poco diferente. X implementa el [Protocolo del Sistema de Ventanas X](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) (link en inglés) que resulta estar en la versión principal 11 desde 1987, de ahí que X también se llame a menudo X11.
 
-Anteriormente, en X10, se introdujeron los [buffers de corte](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers), que funcionaban como un portapapeles, ya que el texto copiado era guardado por X y era accesible por todas las demás aplicaciones. Este mecanismo todavía existe en X, pero su uso está obsoleto y la mayoría del software ya no lo utiliza.
+Anteriormente, en X10, se introdujeron los [buffers de corte](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers) (link en inglés), que funcionaban como un portapapeles, ya que el texto copiado era guardado por X y era accesible por todas las demás aplicaciones. Este mecanismo todavía existe en X, pero su uso está obsoleto y la mayoría del software ya no lo utiliza.
 
-Hoy en día los datos se transfieren entre aplicaciones por medio de [selecciones](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Selections). De los 3 átomos de selección definidos, sólo 2 se utilizan en la práctica: PRIMARY y CLIPBOARD.
+Hoy en día los datos se transfieren entre aplicaciones por medio de [selecciones](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Selections) (link en inglés). De los 3 átomos de selección definidos, sólo 2 se utilizan en la práctica: PRIMARY y CLIPBOARD.
 
 Las selecciones funcionan más o menos así:
 
@@ -1189,7 +1189,7 @@ Con `:set backup`, la copia de seguridad persistirá. Esto significa que el arch
 
 Puedes desactivar las copias de seguridad por completo con `:set nobackup nowritebackup`, pero no deberías necesitarlo hoy en día. La función `'writebackup'' es una característica de seguridad que asegura que no se pierda el archivo original en caso de que se falle al guardarlo, sin importar si se guarda el archivo de respaldo después o no.
 
-Si usas frecuentemente Vim para editar archivos enormes, [y probablemente no deberías](#editing-huge-files-is-slow), puedes excluirlos de las copias de seguridad con `'backupskip'`.
+Si usas frecuentemente Vim para editar archivos enormes, [y probablemente no deberías](#la-edición-de-archivos-grandes-es-lenta), puedes excluirlos de las copias de seguridad con `'backupskip'`.
 
 Vim conoce diferentes maneras de crear una copia de seguridad: _copiar_ y _renombrar_.
 
@@ -1323,7 +1323,7 @@ Otra posibilidad es usar [sshfs](https://wiki.archlinux.org/index.php/Sshfs) (li
 
 ## Gestión de plugins
 
-[Pathogen](https://github.com/tpope/vim-pathogen) (contenido del link en inglés) fue la primera herramienta popular para gestionar plugins. En realidad sólo ajusta la ruta de ejecución (`:h 'rtp'`) para incluir todas las cosas puestas bajo un determinado directorio. Tienes que clonar los repositorios de los plugins allí mismo.
+[Pathogen](https://github.com/tpope/vim-pathogen) (link en inglés) fue la primera herramienta popular para gestionar plugins. En realidad sólo ajusta la ruta de ejecución (`:h 'rtp'`) para incluir todas las cosas puestas bajo un determinado directorio. Tienes que clonar los repositorios de los plugins allí mismo.
 
 Los verdaderos gestores de plugins exponen comandos que te ayudan a instalar y actualizar plugins desde Vim.
 
@@ -1331,7 +1331,7 @@ Los verdaderos gestores de plugins exponen comandos que te ayudan a instalar y a
 
 ## Inserción en bloque
 
-Esta es una técnica para insertar el mismo texto en varias líneas consecutivas al mismo tiempo. Vea este [demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-block_insert.gif).
+Esta es una técnica para insertar el mismo texto en varias líneas consecutivas al mismo tiempo. Vea este [demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-block_insert.gif) (link en inglés).
 
 Cambie al modo de bloque visual con `<c-v>`. Después baja unas cuantas líneas. Pulsa `I` o `A` y empieza a introducir tu texto.
 
@@ -1352,11 +1352,9 @@ Después, `$10l` o `90|` funcionan incluso después del final de la línea.
 
 Vea `:h blockwise-examples` para más información. Puede parecer complicado al principio, pero rápidamente se convierte en algo natural.
 
-Si quiere ser realmente sofisticado, eche un vistazo a los [cursores multiples](https://github.com/terryma/vim-multiple-cursors).
+Si quiere ser realmente sofisticado, eche un vistazo a los [cursores multiples](https://github.com/terryma/vim-multiple-cursors) (link en inglés).
 
 ## Ejecución de programas externos y uso de filtros
-
-<!-- TERMINE AQUÍ -->
 
 Nota: Vim es de síncrono de un solo hilo, por lo que la ejecución de un programa externo en primer plano bloqueará todo lo demás. Claro, puedes usar una de las interfaces de programación de Vim, por ejemplo Lua, y usar su soporte de hilos asíncrono, pero durante ese tiempo el proceso de Vim se bloquea de todas formas. Neovim ha solucionado esto añadiendo una API de trabajo adecuada.
 
@@ -1372,7 +1370,7 @@ Sin un rango, la salida de `:!` se mostrará en una ventana desplazable. Por otr
 Como añadir manualmente el rango es bastante pesado, Vim también proporciona algunos ayudantes para mayor comodidad. Como siempre con los rangos, también puedes seleccionar líneas en modo visual y luego pulsar `:`. También hay un operador `!` que toma un movimiento. Por ejemplo, `!ip!sort` ordenará las líneas del párrafo actual.
 
 
-Un buen caso de uso para el filtrado es el [lenguaje de programación Go](https://golang.org). La indentación es bastante opinable, incluso viene con un filtro llamado `gofmt` para indentar el código fuente Go correctamente. Así que los plugins para Go a menudo proporcionan comandos de ayuda llamados `:Fmt` que básicamente hacen `:%!gofmt`, por lo que indentan todas las líneas del archivo.
+Un buen caso de uso para el filtrado es el [lenguaje de programación Go](https://golang.org) (link en inglés). La indentación es bastante opinable, incluso viene con un filtro llamado `gofmt` para indentar el código fuente Go correctamente. Así que los plugins para Go a menudo proporcionan comandos de ayuda llamados `:Fmt` que básicamente hacen `:%!gofmt`, por lo que indentan todas las líneas del archivo.
 
 La gente suele usar `:r !prog` para poner la salida de prog debajo de la línea actual, lo que está bien para los scripts, pero cuando se hace sobre la marcha, me parece más fácil usar `!!ls` en su lugar, que reemplaza la línea actual.
 
@@ -1382,7 +1380,7 @@ La gente suele usar `:r !prog` para poner la salida de prog debajo de la línea 
 
 ## Cscope
 
-[Cscope](http://cscope.sourceforge.net/) hace más cosas que [ctags](http://ctags.sourceforge.net/), pero sólo soporta C (y C++ y Java hasta cierto punto).
+[Cscope](http://cscope.sourceforge.net/) (link en inglés) hace más cosas que [ctags](http://ctags.sourceforge.net/) (link en inglés), pero sólo soporta C (y C++ y Java hasta cierto punto).
 
 Mientras que un archivo de etiquetas sólo sabe dónde se definió un símbolo, una base de datos de cscope sabe mucho más sobre sus datos:
 
@@ -1522,7 +1520,7 @@ Como se explica [aquí](#esquema-de-colores), los esquemas de colores pueden ser
 
 Después de `:set termguicolors`, Vim comienza a emitir secuencias de escape sólo entendidas por un emulador de terminal que soporte colores verdaderos. Cuando sus colores se ven extraños, es probable que su emulador de terminal no soporte colores verdaderos o que su esquema de colores no tenga definidos los colores de la interfaz gráfica de usuario.
 
-Mucha gente utiliza el multiplexor de terminal [tmux](https://github.com/tmux/tmux/wiki) que básicamente se sitúa entre el emulador de terminal y Vim. Para hacer que tmux _reenvíe_ las secuencias de escape de color verdadero emitidas por Vim, tienes que poner lo siguiente en el `.tmux.conf` del usuario:
+Mucha gente utiliza el multiplexor de terminal [tmux](https://github.com/tmux/tmux/wiki) (link en inglés) que básicamente se sitúa entre el emulador de terminal y Vim. Para hacer que tmux _reenvíe_ las secuencias de escape de color verdadero emitidas por Vim, tienes que poner lo siguiente en el `.tmux.conf` del usuario:
 
 ```
 set-option -g  default-terminal 'tmux-256color'
@@ -1603,7 +1601,7 @@ set novisualbell
 set t_vb=
 ```
 
-Vea [Vim Wiki: Desactivar el pitido](http://vim.wikia.com/wiki/Disable_beeping).
+Vea [Vim Wiki: Desactivar el pitido](http://vim.wikia.com/wiki/Disable_beeping) (link en inglés).
 
 ## Mover rápidamente la línea actual
 
@@ -1676,7 +1674,7 @@ else
 endif
 ```
 
-Esto simplemente le dice a Vim que imprima una determinada secuencia de caracteres ([secuencia de escape](https://es.frwiki.wiki/wiki/S%C3%A9quence_d%27%C3%A9chappement)) al entrar/salir del modo de inserción. El terminal subyacente, o programas como [tmux](https://tmux.github.io) que se sitúan entre Vim y el terminal, lo procesarán y evaluarán.
+Esto simplemente le dice a Vim que imprima una determinada secuencia de caracteres ([secuencia de escape](https://es.frwiki.wiki/wiki/S%C3%A9quence_d%27%C3%A9chappement)) al entrar/salir del modo de inserción. El terminal subyacente, o programas como [tmux](https://tmux.github.io) (link en inglés) que se sitúan entre Vim y el terminal, lo procesarán y evaluarán.
 
 Sin embargo, hay un inconveniente: hay muchas implementaciones de emuladores de terminal y no todas usan las mismas secuencias para hacer las mismas cosas. Las secuencias usadas arriba podrían no funcionar con tu implementación. Su implementación podría incluso no soportar diferentes estilos de cursor. Compruebe la documentación.
 
@@ -1817,7 +1815,7 @@ vim -u NONE -N
 
 Esto iniciará Vim sin vimrc (por lo tanto, la configuración por defecto) y en modo nocompatible (lo que hace que utilice los valores predeterminados de Vim en lugar de los de vi). (Vea `:h --noplugin` para otras combinaciones de lo que debe cargar al inicio).
 
-Si todavía puedes reproducirlo ahora, lo más probable es que sea un error en el propio Vim. Infórmalo en la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev). La mayoría de las veces el problema no se resolverá en ese momento y tendrás que seguir investigando.
+Si todavía puedes reproducirlo ahora, lo más probable es que sea un error en el propio Vim. Infórmalo en la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) (link en inglés). La mayoría de las veces el problema no se resolverá en ese momento y tendrás que seguir investigando.
 
 Los plugins a menudo introducen un comportamiento nuevo/cambiado/falso. Por ejemplo, si ocurre al guardar, comprueba `:verb au BufWritePost` para obtener una lista de posibles culpables.
 
@@ -1878,7 +1876,7 @@ La primera columna es la más importante, ya que muestra el tiempo absoluto tran
 
 ## Perfilando en tiempo de ejecución
 
-[Funcionalidad](#¿qué-tipo-de-vim-estoy-utilizando) requerida: `+perfil`.
+[Funcionalidad](#qué-tipo-de-vim-estoy-utilizando) requerida: `+perfil`.
 
 Vim proporciona una capacidad incorporada para perfilar en tiempo de ejecución y es una gran manera de encontrar código lento en su entorno.
 
@@ -1946,7 +1944,7 @@ Como puede ver, el uso de `<cr>` repetirá el comando de depuración anterior, `
 
 ## Depurando archivos de sintaxis
 
-Los archivos de sintaxis suelen ser la causa de ralentizaciones debido a expresiones regulares erróneas y/o complejas. Si la [funcionalidad](#¿qué-tipo-de-vim-estoy-utilizando) `+perfil` está compilada, Vim proporciona el súper útil comando `:syntime`.
+Los archivos de sintaxis suelen ser la causa de ralentizaciones debido a expresiones regulares erróneas y/o complejas. Si la [funcionalidad](#qué-tipo-de-vim-estoy-utilizando) `+perfil` está compilada, Vim proporciona el súper útil comando `:syntime`.
 
 ```vim
 :syntime on
@@ -1977,7 +1975,7 @@ _Nota: Todos los recursos se encuentran en inglés._
 
 #### Recursos en forma de video
 
-_Nota: Similarmente, estos recursos se encuentran en inglés._
+_Nota: Similarmente, estos recursos tambien se encuentran en inglés._
 
 - [vimcasts.org](http://vimcasts.org/episodes/archive)
 - [Por wincent](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA) (Canal de Youtube)
@@ -1994,6 +1992,8 @@ Sé que mucha gente no quiere pasar horas y horas personalizando un editor (y en
 Repite después de mí: "Un programador debe conocer sus herramientas".
 
 De todos modos, si sabes lo que haces, podrías inspirarte mirando algunas distribuciones:
+
+_Nota: Los links están en inglés_
 
 - [cream](http://cream.sourceforge.net)
 - [janus](https://github.com/carlhuda/janus.git)
@@ -2047,11 +2047,11 @@ Para cambiar las claves en X, pon esto en tu `~/.xmodmap`:
 
 A continuación, actualice la configuración a través de `$ xmodmap ~/.xmodmap`.
 
-Una alternativa sería utilizar [caps2esc](https://github.com/oblitum/caps2esc) o [xcape](https://github.com/alols/xcape).
+Una alternativa sería utilizar [caps2esc](https://github.com/oblitum/caps2esc) (link en inglés) o [xcape](https://github.com/alols/xcape) (link en inglés).
 
 **Windows**:
 
-Vea [superuser.com: Asignar Caps-Lock a Control en Windows 8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1).
+Vea [superuser.com: Asignar Caps-Lock a Control en Windows 8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1) (link en inglés).
 
 ## Generar HTML del buffer
 
@@ -2102,7 +2102,7 @@ Hay dos cosas que pueden tener un gran impacto en el rendimiento:
 | `:set cursorline`        | Hace que todas las líneas se redibujen. | `:set nocursorline` |
 | `:set cursorcolumn`      | Hace que todas las líneas se redibujen. | `:set nocursorcolumn` |
 | `:set relativenumber`    | Hace que todas las líneas se redibujen. | `:set norelativenumber` |
-| `:set foldmethod=syntax` | Si el archivo de sintaxis ya es lento, esto lo empeora aún más. | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) |
+| `:set foldmethod=syntax` | Si el archivo de sintaxis ya es lento, esto lo empeora aún más. | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) (link en inglés) |
 | `:set synmaxcol=3000`    | Debido a la representación interna, Vim tiene problemas con las líneas largas en general. Resalta las columnas hasta la columna 3000. | `:set synmaxcol=200` |
 | matchparen.vim           | Cargado por defecto. Utiliza expresiones regulares para encontrar el paréntesis que lo acompaña. | Disable plugin: `:h matchparen` |
 
@@ -2112,7 +2112,7 @@ Hay dos cosas que pueden tener un gran impacto en el rendimiento:
 
 El mayor problema con los archivos grandes es que Vim lee todo el archivo a la vez. Este
 se hace debido a cómo se representan internamente los buffers.
-([Discusión en vim_dev@](https://groups.google.com/forum/#!topic/vim_dev/oY3i8rqYGD4/discussion))
+([Discusión en vim_dev@](https://groups.google.com/forum/#!topic/vim_dev/oY3i8rqYGD4/discussion)) (link en inglés)
 
 Si sólo quieres leer, `tail hugefile | vim -` es una buena solución.
 
@@ -2143,9 +2143,9 @@ Obviamente esto no es un problema, si pegas usando los registros de Vim, por eje
 
 Para solucionar esto, tienes que `:set paste`, para que se pegue tal cual. Ver `:h 'paste'` y `:h 'pastetoggle'`.
 
-Si estás harto de tener que alternar `'pegar'` todo el tiempo, echa un vistazo a este buen plugin que lo hace por ti: [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste).
+Si estás harto de tener que alternar `'pegar'` todo el tiempo, echa un vistazo a este buen plugin que lo hace por ti: [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste) (link en inglés).
 
-Lectura adicional del mismo autor del plugin: [aquí](http://cirw.in/blog/bracketed-paste).
+Lectura adicional del mismo autor del plugin: [aquí](http://cirw.in/blog/bracketed-paste) (link en inglés).
 
 **Neovim**: Neovim trata de hacer todo esto mucho más fluido y establece el modo de pegado entre corchetes automáticamente si el emulador de terminal lo soporta.
 
@@ -2214,6 +2214,6 @@ Vea `man 7 ascii` y `:h NL-used-for-Nul` para más información.
 
 ## Vim script? Vimscript? VimL?
 
-Los términos `Vim script`, `Vimscript` y `VimL` se refieren a lo mismo: el lenguaje de programación utilizado para hacer scripts en Vim. Aunque [8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) cambió todas las referencias de `VimL` a `Vim script`, que ahora puede considerarse el término oficial, `VimL` sigue estando muy extendido por todo Internet.
+Los términos `Vim script`, `Vimscript` y `VimL` se refieren a lo mismo: el lenguaje de programación utilizado para hacer scripts en Vim. Aunque [8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) (link en inglés) cambió todas las referencias de `VimL` a `Vim script`, que ahora puede considerarse el término oficial, `VimL` sigue estando muy extendido por todo Internet.
 
 No importa el término que utilices, todo el mundo lo entenderá.
