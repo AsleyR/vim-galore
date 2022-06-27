@@ -1,57 +1,57 @@
 "
-" A (not so) minimal vimrc.
+" Un vimrc (no tan) mínimo.
 "
 
-" You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
-" We set it explicitely to make our position clear!
+" Usted quiere Vim, no vi. Cuando Vim encuentra un vimrc, 'nocompatible' se establece de todos modos.
+" Lo fijamos explícitamente para dejar clara nuestra posición.
 set nocompatible
 
-filetype plugin indent on  " Load plugins according to detected filetype.
-syntax on                  " Enable syntax highlighting.
+filetype plugin indent on  " Cargar plugins según el tipo de archivo detectado.
+syntax on                  " Activar el resaltado de sintaxis.
 
-set autoindent             " Indent according to previous line.
-set expandtab              " Use spaces instead of tabs.
-set softtabstop =4         " Tab key indents by 4 spaces.
-set shiftwidth  =4         " >> indents by 4 spaces.
-set shiftround             " >> indents to next multiple of 'shiftwidth'.
+set autoindent             " Sangría según la línea anterior.
+set expandtab              " Utilice espacios en lugar de tabulaciones.
+set softtabstop =4         " La tecla de tabulación se desplaza 4 espacios.
+set shiftwidth  =4         " >> sangrías de 4 espacios.
+set shiftround             " >> se desplaza al siguiente múltiplo de 'shiftwidth'.
 
-set backspace   =indent,eol,start  " Make backspace work as you would expect.
-set hidden                 " Switch between buffers without having to save first.
-set laststatus  =2         " Always show statusline.
-set display     =lastline  " Show as much as possible of the last line.
+set backspace   =indent,eol,start  " Hacer que el retroceso funcione como se espera.
+set hidden                 " Cambia entre los buffers sin tener que guardar primero.
+set laststatus  =2         " Mostrar siempre la línea de estado.
+set display     =lastline  " Muestra todo lo posible de la última línea.
 
-set showmode               " Show current mode in command-line.
-set showcmd                " Show already typed keys when more are expected.
+set showmode               " Mostrar el modo actual en la línea de comandos.
+set showcmd                " Mostrar las teclas ya tecleadas cuando se esperan más.
 
-set incsearch              " Highlight while searching with / or ?.
-set hlsearch               " Keep matches highlighted.
+set incsearch              " Resalte mientras busca con / o ?.
+set hlsearch               " Mantenga las coincidencias resaltadas.
 
-set ttyfast                " Faster redrawing.
-set lazyredraw             " Only redraw when necessary.
+set ttyfast                " Redibujado más rápido.
+set lazyredraw             " Sólo se redibuja cuando es necesario.
 
-set splitbelow             " Open new windows below the current window.
-set splitright             " Open new windows right of the current window.
+set splitbelow             " Abrir nuevas ventanas debajo de la ventana actual.
+set splitright             " Abrir nuevas ventanas a la derecha de la ventana actual.
 
-set cursorline             " Find the current line quickly.
-set wrapscan               " Searches wrap around end-of-file.
-set report      =0         " Always report changed lines.
-set synmaxcol   =200       " Only highlight the first 200 columns.
+set cursorline             " Encuentra rápidamente la línea actual.
+set wrapscan               " Las búsquedas se ajustan al final del archivo.
+set report      =0         " Informar siempre de las líneas modificadas.
+set synmaxcol   =200       " Destaca sólo las primeras 200 columnas.
 
-set list                   " Show non-printable characters.
+set list                   " Mostrar caracteres no imprimibles.
 if has('multi_byte') && &encoding ==# 'utf-8'
   let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
-" The fish shell is not very compatible to other shells and unexpectedly
-" breaks things that use 'shell'.
+" La "fish shell" no es muy compatible con otras "shell" y esta rompe 
+" inesperadamente las cosas que usan "shell".
 if &shell =~# 'fish$'
   set shell=/bin/bash
 endif
 
-" Put all temporary files under the same directory.
-" https://github.com/mhinz/vim-galore#temporary-files
+" Coloca todos los archivos temporales en el mismo directorio.
+" https://github.com/AsleyR/vim-galore/blob/main/README.md
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
