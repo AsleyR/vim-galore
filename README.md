@@ -1,8 +1,10 @@
 <div align='center'>
   <br /><br /><br />
-  <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/logo-vim-galore.png' alt='vim-galore logo' />
+  <img src='./static/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
   <div>
+    <a href="https://github.com/mhinz/vim-galore">Inglés</a>
+    <a>|</a>
     <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chino Mandarín</a> |
     <a href='http://postd.cc/?s=vim-galore'>Japonés</a> |
     <a href='https://github.com/lsrdg/vim-galore'>Portugués</a> |
@@ -16,19 +18,19 @@
   <br /><br />
 </div>
 
-### [Introducción](#intro-1)
+### [Introducción](#introducción-1)
 
-- [¿Qué es Vim?](#qué-es-vim)
+- [¿Qué es Vim?](#¿qué-es-vim)
 - [La Filosofía de Vim](#la-filosofía-de-vim)
 - [Primeros pasos](#primeros-pasos)
 - [Vimrc mínimo](#vimrc-mínimo)
 - [¿Qué tipo de Vim estoy utilizando?](#¿qué-tipo-de-vim-estoy-utilizando)
 - [Cheatsheets](#cheatsheets)
 
-### [Conceptos Básicos](#conceptos-bc3a1sicos-1)
+### [Conceptos Básicos](#conceptos-básicos-1)
 
-- [Buffers, ventanas, pestañas](#buffers-ventanas-pestañas)
-- [Buffers activados, cargados, listados, y nombrados](#buffers-activados-cargados-listados-y-nombrados)
+- [Buffers, ventanas, pestañas](#búfers-ventanas-pestañas)
+- [Buffers activados, cargados, listados, y nombrados](#búfers-activados-cargados-listados-y-nombrados)
 - [Lista de argumentos](#lista-de-argumentos)
 - [Mapeos](#mapeos)
 - [Tecla líder](#tecla-líder)
@@ -47,7 +49,7 @@
 - [Sesiones](#sesiones)
 - [Localidad](#localidad)
 
-### [Utilización](#utilizacic3b3n-1)
+### [Utilización](#utilización-1)
 
 - [Conseguir ayuda offline](#conseguir-ayuda-offline)
 - [Conseguir ayuda offline (alternativo)](#conseguir-ayuda-offline-alternativo)
@@ -71,63 +73,63 @@
 - [Ejecución de programas externos y uso de filtros](#ejecución-de-programas-externos-y-uso-de-filtros)
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
-- [Verdaderos colores (True colors)](#true-colors)
+- [Verdaderos colores (True colors)](#verdaderos-colores-true-colors)
 
 ### [Tips](#tips-1)
 
-- [Ir al otro extremo del texto seleccionado](#go-to-other-end-of-selected-text)
-- [Comportamiento más sano de n y N](#saner-behavior-of-n-and-n)
-- [Uso más sano del historial de la línea de comandos](#saner-command-line-history)
-- [Uso más sano del CTRL-L](#saner-ctrl-l)
-- [Desactivar los timbres sonoros y visuales](#disable-audible-and-visual-bells)
-- [Mover rápidamente la línea actual](#quickly-move-current-line)
-- [Añadir rápidamente líneas vacías](#quickly-add-empty-lines)
-- [Edite rápidamente sus macros](#quickly-edit-your-macros)
-- [Saltar rápidamente a la cabecera o al archivo fuente](#quickly-jump-to-header-or-source-file)
-- [Cambiar rápidamente el tamaño de la fuente en la interfaz gráfica de usuario](#quickly-change-font-size-in-gui)
-- [Cambiar el estilo del cursor en función del modo](#change-cursor-style-dependent-on-mode)
-- [No perder la selección al cambiar de lado](#dont-lose-selection-when-shifting-sidewards)
-- [Recargar un archivo al guardar](#reload-a-file-on-saving)
-- [Cursor más inteligente](#smarter-cursorline)
-- [Completación más rapida de palabras claves](#faster-keyword-completion)
-- [Cambios cosméticos a los esquemas de color](#cosmetic-changes-to-colorschemes)
+- [Ir al otro extremo del texto seleccionado](#ir-al-otro-extremo-del-texto-seleccionado)
+- [Comportamiento más sano de n y N](#comportamiento-más-sano-de-n-y-n)
+- [Uso más sano del historial de la línea de comandos](#uso-más-sano-del-historial-de-la-línea-de-comandos)
+- [Uso más sano del CTRL-L](#uso-más-sano-del-ctrl-l)
+- [Desactivar los timbres sonoros y visuales](#desactivar-los-timbres-sonoros-y-visuales)
+- [Mover rápidamente la línea actual](#mover-rápidamente-la-línea-actual)
+- [Añadir rápidamente líneas vacías](#añadir-rápidamente-líneas-vacías)
+- [Edite rápidamente sus macros](#edite-rápidamente-sus-macros)
+- [Saltar rápidamente a la cabecera o al archivo fuente](#saltar-rápidamente-a-la-cabecera-o-al-archivo-fuente)
+- [Cambiar rápidamente el tamaño de la fuente en la interfaz gráfica de usuario](#cambiar-rápidamente-el-tamaño-de-la-fuente-en-la-interfaz-gráfica-de-usuario)
+- [Cambiar el estilo del cursor en función del modo](#cambiar-el-estilo-del-cursor-en-función-del-modo)
+- [No perder la selección al cambiar de lado](#no-perder-la-selección-al-cambiar-de-lado)
+- [Recargar un archivo al guardar](#recargar-un-archivo-al-guardar)
+- [Cursor más inteligente](#cursor-más-inteligente)
+- [Completación más rapida de palabras claves](#completación-más-rapida-de-palabras-claves)
+- [Cambios cosméticos a los esquemas de color](#cambios-cosméticos-a-los-esquemas-de-color)
 
 ### [Comandos](#comandos-1)
 
-- [:global y :vglobal](#global-and-vglobal) - Ejecutar un comando en todas las líneas coincidentes.
-- [:normal y :execute](#normal-and-execute) - El dream team de los guiones.
-- [:redir y execute()](#redir-and-execute) - Capturar la salida del comando.
+- [:global y :vglobal](#global-y-vglobal) - Ejecutar un comando en todas las líneas coincidentes.
+- [:normal y :execute](#normal-y-execute) - El dream team de los guiones.
+- [:redir y execute()](#redir-y-execute) - Capturar la salida del comando.
 
-### [Debugging](#debugging-1)
+### [Depuración](#depuración-1)
 
-- [Tips generales](#general-tips)
-- [Verbosidad (Comando `verbose`)](#verbosity)
-- [Perfilando el tiempo de inicio](#profiling-startup-time)
-- [Perfilando en tiempo de ejecución](#profiling-at-runtime)
-- [Debugging los scripts Vim](#debugging-vim-scripts)
-- [Debugging archivo de sintaxis](#debugging-syntax-files)
+- [Tips generales](#tips-generales)
+- [Verbosidad (Comando `verbose`)](#verbosidad)
+- [Perfilando el tiempo de inicio](#perfilando-el-tiempo-de-inicio)
+- [Perfilando en tiempo de ejecución](#perfilando-en-tiempo-de-ejecución)
+- [Depurando los scripts Vim](#depurando-los-scripts-vim)
+- [Depurando archivos de sintaxis](#depurando-archivos-de-sintaxis)
 
 ### [Miscelánea](#miscelánea-1)
 
-- [Recursos adicionales](#additional-resources)
-- [Distribucciones de Vim](#vim-distributions)
-- [Plugins standard](#standard-plugins)
-- [Mapear CapsLock a Control](#map-capslock-to-control)
-- [Generar HTML del buffer](#generating-html-from-buffer)
+- [Recursos adicionales](#recursos-adicionales)
+- [Distribucciones de Vim](#distribuciones-de-vim)
+- [Plugins standard](#plugins-standard)
+- [Mapear CapsLock a Control](#mapear-capslock-a-control)
+- [Generar HTML del buffer](#generar-html-del-buffer)
 - [Easter eggs](#easter-eggs)
-- [¿Por qué hjkl para la navegación?](#why-hjkl-for-navigation)
+- [¿Por qué hjkl para la navegación?](#¿por-qué-hjkl-para-la-navegación)
 
 ### [Problemas comunes](#problemas-comunes-1)
 
-- [La edición de archivos pequeños es lenta](#editing-small-files-is-slow)
-- [La edición de archivos grandes es lenta](#editing-huge-files-is-slow)
-- [Pegar entre corchetes (o ¿por qué tengo que poner "pegar" todo el tiempo?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
-- [Retrasos al utilizar la tecla de escape en el terminal](#delays-when-using-escape-key-in-terminal)
-- [Deshacer función de busqueda (function-search-undo)](#function-search-undo)
+- [La edición de archivos pequeños es lenta](#la-edición-de-archivos-pequeños-es-lenta)
+- [La edición de archivos grandes es lenta](#la-edición-de-archivos-grandes-es-lenta)
+- [Pegar entre corchetes (o ¿por qué tengo que poner "pegar" todo el tiempo?)](#pegar-entre-corchetes-o-¿por-qué-tengo-que-poner-pegar-todo-el-tiempo)
+- [Retrasos al utilizar la tecla de escape en el terminal](#retrasos-al-utilizar-la-tecla-de-escape-en-el-terminal)
+- [Deshacer función de busqueda (function-search-undo)](#deshacer-función-de-busqueda-function-search-undo)
 
 ### [Peculiaridades técnicas](#peculiaridades-técnicas-1)
 
-- [Nueva linea utilizada para NUL](#newline-used-for-nul)
+- [Nueva linea utilizada para NUL](#nueva-linea-utilizada-para-nul)
 
 ### [Terminología](#terminología-1)
 
@@ -141,7 +143,7 @@
 
 # Introducción
 
-## Qué es Vim?
+## ¿Qué es Vim?
 
 [Vim](http://www.vim.org) es un editor de texto con una larga línea de ancestros que se remonta a [qed](https://en.wikipedia.org/wiki/QED_(text_editor)). [Bram
 Moolenaar](https://es.wikipedia.org/wiki/Bram_Moolenaar) lo lanzó en 1991.
@@ -268,7 +270,7 @@ En pocas palabras, si inicias Vim sin argumentos, tendrás una página de pesta�
 
 Por cierto, la lista de búferes es global y puedes acceder a cualquier búfer desde cualquier pestaña.
 
-## Buffers activados, cargados, listados, y nombrados
+## Búfers activados, cargados, listados, y nombrados
 
 Ejecute Vim de esta forma `vim archivo1`. El contenido del archivo se cargará en un buffer. Ahora **tienes un buffer cargado**. El contenido del búfer sólo se sincroniza en el disco (se escribe de nuevo en el archivo) si lo guarda dentro de Vim.
 
@@ -1356,123 +1358,98 @@ Si quiere ser realmente sofisticado, eche un vistazo a los [cursores multiples](
 
 <!-- TERMINE AQUÍ -->
 
-Disclaimer: Vim is single-threaded, so running an external program in the
-foreground will block everything else. Sure, you can use one of Vim's
-programming interfaces, e.g. Lua, and use its thread support, but during that
-time the Vim process is blocked nevertheless. Neovim fixed that by adding a
-proper job API.
+Nota: Vim es de síncrono de un solo hilo, por lo que la ejecución de un programa externo en primer plano bloqueará todo lo demás. Claro, puedes usar una de las interfaces de programación de Vim, por ejemplo Lua, y usar su soporte de hilos asíncrono, pero durante ese tiempo el proceso de Vim se bloquea de todas formas. Neovim ha solucionado esto añadiendo una API de trabajo adecuada.
 
-(Apparently Bram is thinking about adding job control to Vim as well. If you
-have a very recent version, see `:helpgrep startjob`.)
+(Al parecer, Bram está pensando en añadir el control de trabajos a Vim también. Si tiene una versión muy reciente, vea `:helpgrep startjob`).
 
-Use `:!` to start a job. If you want to list the files in the current working
-directory, use `:!ls`. Use `|` for piping in the shell as usual, e.g. `:!ls -1 |
-sort | tail -n5`.
+Utilice `:!` para iniciar un trabajo. Si quieres listar los archivos en el directorio de trabajo actual, usa `:!ls`. Utilice `|` para canalizar en el shell como de costumbre, por ejemplo, `:!ls -1 | sort | tail -n5`.
 
-Without a range, the output of `:!` will be shown in a scrollable window. On the
-other hand, if a range is given, these lines will be
-[filtered](https://en.wikipedia.org/wiki/Filter_(software)). This means they
-will be piped to the
-[stdin](https://en.wikipedia.org/wiki/Standard_streams#Standard_input_.28stdin.29)
-of the filter program and after processing be replaced by the
-[stdout](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29)
-of the filter. E.g. for prepending numbers to the next 5 lines, use this:
+Sin un rango, la salida de `:!` se mostrará en una ventana desplazable. Por otro lado, si se da un rango, estas líneas serán [filtradas](https://es.wikipedia.org/wiki/Filtro_(programa)). Esto significa que serán enviadas al [stdin](https://es.wikipedia.org/wiki/Entrada_est%C3%A1ndar) del programa de filtrado y después de procesarlas serán reemplazadas por el [stdout](https://es.wikipedia.org/wiki/Entrada_est%C3%A1ndar) del filtro. Por ejemplo, para añadir números a las 5 líneas siguientes, utilice esto:
+
 
     :.,+4!nl -ba -w1 -s' '
 
-Since manually adding the range is quite burdensome, Vim also provides some
-helpers for convenience. As always with ranges, you can also select lines in
-visual mode and then hit `:`. There's also an operator `!` that takes a motion.
-E.g. `!ip!sort` will sort the lines of the current paragraph.
+Como añadir manualmente el rango es bastante pesado, Vim también proporciona algunos ayudantes para mayor comodidad. Como siempre con los rangos, también puedes seleccionar líneas en modo visual y luego pulsar `:`. También hay un operador `!` que toma un movimiento. Por ejemplo, `!ip!sort` ordenará las líneas del párrafo actual.
 
-A good use case for filtering is the [Go programming
-language](https://golang.org). The indentation is pretty opinionated, it even
-comes with a filter called `gofmt` for indenting Go source code properly. So
-plugins for Go often provide helper commands called `:Fmt` that basically do
-`:%!gofmt`, so they indent all lines in the file.
 
-People often use `:r !prog` to put the output of prog below the current line,
-which is fine for scripts, but when doing it on the fly, I find it easier to use
-`!!ls` instead, which replaces the current line.
+Un buen caso de uso para el filtrado es el [lenguaje de programación Go](https://golang.org). La indentación es bastante opinable, incluso viene con un filtro llamado `gofmt` para indentar el código fuente Go correctamente. Así que los plugins para Go a menudo proporcionan comandos de ayuda llamados `:Fmt` que básicamente hacen `:%!gofmt`, por lo que indentan todas las líneas del archivo.
+
+La gente suele usar `:r !prog` para poner la salida de prog debajo de la línea actual, lo que está bien para los scripts, pero cuando se hace sobre la marcha, me parece más fácil usar `!!ls` en su lugar, que reemplaza la línea actual.
+
 
     :h filter
     :h :read!
 
 ## Cscope
 
-[Cscope](http://cscope.sourceforge.net/) does more things than
-[ctags](http://ctags.sourceforge.net/), but only supports C (and C++ and Java to
-some extent).
+[Cscope](http://cscope.sourceforge.net/) hace más cosas que [ctags](http://ctags.sourceforge.net/), pero sólo soporta C (y C++ y Java hasta cierto punto).
 
-Whereas a tags file only knows where a symbol was defined, a cscope database
-knows much more about your data:
+Mientras que un archivo de etiquetas sólo sabe dónde se definió un símbolo, una base de datos de cscope sabe mucho más sobre sus datos:
 
-- Where is this symbol defined?
-- Where is this symbol used?
-- What is this global symbol's definition?
-- Where did this variable get its value?
-- Where is this function in the source files?
-- What functions call this function?
-- What functions are called by this function?
-- Where does the message "out of space" come from?
-- Where is this source file in the directory structure?
-- What files include this header file?
+- ¿Dónde está definido este símbolo?
+- ¿Dónde se utiliza este símbolo?
+- ¿Cuál es la definición de este símbolo global?
+- ¿Dónde obtuvo esta variable su valor?
+- ¿Dónde está esta función en los archivos fuente?
+- ¿Qué funciones llaman a esta función?
+- ¿Qué funciones son llamadas por esta función?
+- ¿De dónde viene el mensaje "out of space"?
+- ¿Dónde se encuentra este fichero fuente en la estructura de directorios?
+- ¿Qué archivos incluyen este archivo de cabecera?
 
-### 1. Build the database
+### 1. Crear la base de datos
 
-Do this in the root of your project:
+Hazlo en la base (root) de tu proyecto:
 
 ```sh
 $ cscope -bqR
 ```
 
-This will create 3 files: `cscope{,.in,.po}.out` in the current working
-directory. Think of them as your database.
+Esto creará 3 archivos: `cscope{,.in,.po}.out` en el directorio de trabajo actual. Piense en ellos como su base de datos.
 
-Unfortunately `cscope` only analyzes `*.[c|h|y|l]` files by default. If you want
-to use cscope for a Java project instead, do this:
+Desafortunadamente, `cscope` sólo analiza archivos `*.[c|h|y|l]` por defecto. Si quieres usar cscope para un proyecto Java en su lugar, haz esto:
 
 ```sh
 $ find . -name "*.java" > cscope.files
 $ cscope -bq
 ```
 
-### 2. Add the database
+### 2. Agrega la base de datos
 
-Open a connection to your freshly built database:
+Abra una conexión con su base de datos recién creada:
 
 ```vim
 :cs add cscope.out
 ```
 
-Verify that the connection was made:
+Compruebe que la conexión se ha realizado:
 
 ```vim
 :cs show
 ```
 
-(Yes, you can add multiple connections.)
+(Sí, puedes añadir varias conexiones).
 
-### 3. Query the database
+### 3. Consulta la base de datos
 
 ```vim
 :cs find <kind> <query>
 ```
 
-E.g. `:cs find d foo` will list all functions that are called by `foo(...)`.
+Por ejemplo, `:cs find d foo` listará todas las funciones que son llamadas por `foo(...)`.
 
-| Kind | Explanation |
+| Tipo | Explicación |
 |------|-------------|
-| s    | **s**ymbol: find all references to the token        |
-| g    | **g**lobal: find global definition(s) of the token  |
-| c    | **c**alls: find all calls to the function           |
-| t    | **t**ext: find all instances of the text            |
-| e    | **e**grep: egrep search for the word                |
-| f    | **f**ile: open the filename                         |
-| i    | **i**ncludes: find files that include the filename  |
-| d    | **d**epends: find functions called by this function |
+| s    | **s**ímbolo: encuentra todas las referencias al token        |
+| g    | **g**lobal: encontrar la(s) definición(es) global(es) del token  |
+| c    | **c**alls o llamadas: encuentra todas las llamadas a la función           |
+| t    | **t**exto: encuentra todas las instancias del texto            |
+| e    | **e**grep: búsqueda egrep para la palabra                |
+| f    | **f**ile o arhivo: abre el nombre del archivo                         |
+| i    | **i**ncluye: busca archivos que incluyan el nombre del archivo  |
+| d    | **d**epende de: encuentra funciones llamadas por esta función |
 
-I suggest some convenience mappings e.g.:
+Sugiero algunos mapeos de conveniencia, por ejemplo:
 
 ```vim
 nnoremap <buffer> <leader>cs :cscope find s  <c-r>=expand('<cword>')<cr><cr>
@@ -1485,39 +1462,31 @@ nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
 nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
 ```
 
-So, when `:tag` (or `<c-]>`) jumps to a definition from the tags file, `:cstag`
-does the same, but also takes connected cscope databases into account. The
-option `'cscopetag'` makes `:tag` act like `:cstag` automatically. This is very
-convenient if you already have tag-related mappings.
+Así, cuando `:tag` (o `<c-]>`) salta a una definición del fichero de etiquetas, `:cstag` hace lo mismo, pero también tiene en cuenta las bases de datos cscope conectadas. La opción `'cscopetag` hace que :tag actúe como `:cstag` automáticamente. Esto es muy conveniente si ya tienes mapeos relacionados con las etiquetas.
 
-Help: `:h cscope`
+Comando help: `:h cscope`
 
 ## MatchIt
 
-Since Vim is written in C, a lot of features assume C-like syntax. By default,
-if your cursor is on `{` or `#endif`, you can use `%` to jump to the
-corresponding `}` or `#ifdef` respectively.
+Dado que Vim está escrito en C, muchas funciones asumen una sintaxis similar a la de C. Por defecto, si tu cursor está en `{` o `#endif`, puedes usar `%` para saltar al correspondiente `}` o `#ifdef` respectivamente.
 
-Vim comes bundled with a plugin called matchit.vim which is not enabled by
-default. It makes `%` also cycle through HTML tags, if/else/endif constructs in
-VimL etc. and introduces a few new commands.
+Vim viene con un plugin llamado _matchit.vim_ que no está activado por defecto. Hace que `%` también recorra las etiquetas HTML, las construcciones if/else/endif en VimL, etc. e introduce algunos comandos nuevos.
 
-#### Installation for Vim 8
+#### Instalación para Vim 8
 
 ```vim
 " vimrc
 packadd! matchit
 ```
 
-#### Installation for Vim 7 and older
+#### Instalación para Vim 7 y anteriores
 
 ```vim
 " vimrc
 runtime macros/matchit.vim
 ```
 
-Since the documentation of matchit is pretty extensive, I suggest also doing the
-following once:
+Dado que la documentación de matchit es bastante extensa, sugiero hacer también lo siguiente una vez:
 
 ```vim
 :!mkdir -p ~/.vim/doc
@@ -1525,21 +1494,19 @@ following once:
 :helptags ~/.vim/doc
 ```
 
-#### Small intro
+#### Pequeña introducción
 
-The plugin is ready to use now. See `:h matchit-intro` for the supported
-commands and `:h matchit-languages` for the supported languages.
+El plugin está listo para ser utilizado. Vea `:h matchit-intro` para los comandos soportados y `:h matchit-languages` para los idiomas soportados.
 
-That said, it's easy to define your own matching pairs:
+Dicho esto, es fácil definir sus propios pares de correspondencia:
 
 ```vim
 autocmd FileType python let b:match_words = '\<if\>:\<elif\>:\<else\>'
 ```
 
-Afterwards you can cycle through these 3 statements in any Python file by using
-`%` (forward) or `g%` (backward).
+Después puedes recorrer estas 3 sentencias en cualquier archivo de Python usando `%` (hacia adelante) o `g%` (hacia atrás).
 
-Help:
+Comando help:
 
 ```
 :h matchit-install
@@ -1547,68 +1514,51 @@ Help:
 :h b:match_words
 ```
 
-## True colors
+## Verdaderos colores (True colors)
 
-Using true colors in a terminal emulator means being able to use 24 bits for RGB
-colors. That makes 16777216 (2^24) colors instead of the usual 256.
+Utilizar colores reales en un emulador de terminal significa poder utilizar 24 bits para los colores RGB. Eso hace 16777216 (2^24) colores en lugar de los 256 habituales.
 
-As explained [here](#colorschemes), colorschemes can actually be _two_
-colorschemes by having definitions for terminals (xterm) and for GUIs (gvim).
-This made sense before terminal emulators learned about true colors.
+Como se explica [aquí](#esquema-de-colores), los esquemas de colores pueden ser en realidad _dos_ esquemas de colores al tener definiciones para terminales (xterm) y para GUIs (gvim). Esto tenía sentido antes de que los emuladores de terminal conocieran los colores reales.
 
-After `:set termguicolors`, Vim starts emitting escape sequences only understood
-by a terminal emulator that supports true colors. When your colors look weird,
-chances are your terminal emulator doesn't support true colors or your
-colorcheme has no GUI colors defined.
+Después de `:set termguicolors`, Vim comienza a emitir secuencias de escape sólo entendidas por un emulador de terminal que soporte colores verdaderos. Cuando sus colores se ven extraños, es probable que su emulador de terminal no soporte colores verdaderos o que su esquema de colores no tenga definidos los colores de la interfaz gráfica de usuario.
 
-Many people use the terminal multiplexer
-[tmux](https://github.com/tmux/tmux/wiki) which basically sits in between the
-terminal emulator and Vim. To make tmux _forward_ the true color escape
-sequences emitted by Vim, you have to put the following in the user's
-`.tmux.conf`:
+Mucha gente utiliza el multiplexor de terminal [tmux](https://github.com/tmux/tmux/wiki) que básicamente se sitúa entre el emulador de terminal y Vim. Para hacer que tmux _reenvíe_ las secuencias de escape de color verdadero emitidas por Vim, tienes que poner lo siguiente en el `.tmux.conf` del usuario:
 
 ```
 set-option -g  default-terminal 'tmux-256color'
 set-option -ga terminal-overrides ',xterm-256color:Tc'
 ```
 
-- The first line should be the same for most people and denotes the `$TERM` to
-  be used _within_ tmux.
-- The second line adds the tmux-specific `Tc` (true color) capability to the
-  other terminfo entries of `xterm-256color`. Obviously this assumes that the
-  user is using `TERM=xterm-256color` _outside_ of tmux.
+- La primera línea debería ser la misma para la mayoría de la gente y denota el `$TERM` a utilizar _dentro_ de tmux.
+- La segunda línea añade la capacidad `Tc` (color verdadero) específica de tmux a las otras entradas terminfo de `xterm-256color`. Obviamente esto asume que el usuario está usando `TERM=xterm-256color` fuera de tmux.
 
-So, here is the checklist for enabling true colors:
+Por lo tanto, aquí está la lista de verificación para habilitar los verdaderos colores:
 
-- Read `:h 'termguicolors'`.
-- Put `set termguicolors` in your vimrc.
-- Make sure your colorscheme has color definitions for GUIs. (It should contain
-  lines with `guifg` and `guibg`.)
-- Make sure your terminal emulator of choice supports true colors.
-- Using tmux? Configure it to add the `Tc` capability.
+- Lee `:h 'termguicolors'`.
+- Ponga `set termguicolors` en tu vimrc.
+- Asegúrese de que su esquema de colores tiene definiciones de color para las interfaces gráficas de usuario. (Debería contener líneas con `guifg` y `guibg`).
+- Asegúrate de que tu emulador de terminal elegido soporta colores reales.
+- ¿Usas tmux? Configúralo para añadir la capacidad `Tc`.
 
-A popular reference for colors in the terminal:
-https://gist.github.com/XVilka/8346728
+Una referencia popular para los colores en el terminal:
+https://gist.github.com/XVilka/8346728 (Link en inglés)
 
 # Tips
 
-## Go to other end of selected text
+## Ir al otro extremo del texto seleccionado
 
-`o` and `O` in a visual selection make the cursor go to the other end. Try with
-blockwise selection to see the difference. This is useful for quickly changing
-the size of the selected text.
+`o` y `O` en una selección visual hacen que el cursor vaya al otro extremo. Pruebelo con la selección en sentido de bloques para ver la diferencia. Esto es útil para cambiar rápidamente el tamaño del texto seleccionado.
 
 ```
 :h v_o
 :h v_O
 ```
 
-## Saner behavior of n and N
+## Comportamiento más sano de n y N
 
-The direction of `n` and `N` depends on whether `/` or `?` was used for
-searching forward or backward respectively. This is pretty confusing to me.
+La dirección de `n` y `N` depende de si se ha utilizado `/` o `?` para buscar hacia delante o hacia atrás respectivamente. Esto es bastante confuso para mí.
 
-If you want `n` to always search forward and `N` backward, use this:
+Si quieres que `n` busque siempre hacia adelante y `N` hacia atrás, usa esto:
 
 ```vim
 nnoremap <expr> n  'Nn'[v:searchforward]
@@ -1620,41 +1570,32 @@ xnoremap <expr> N  'nN'[v:searchforward]
 onoremap <expr> N  'nN'[v:searchforward]
 ```
 
-## Saner command-line history
+## Uso más sano del historial de la línea de comandos
 
-If you're anything like me, you're used to going to next and previous items via
-`<c-n>` and `<c-p>` respectively. By default, this also works in the
-command-line and recalls older or more recent command-lines from history.
+Si eres como yo, estás acostumbrado a ir a los elementos siguientes y anteriores mediante `<c-n>` y `<c-p>` respectivamente. Por defecto, esto también funciona en la línea de comandos y recuerda las líneas de comandos más antiguas o más recientes del historial.
 
-So far, so good. But `<up>` and `<down>` are even smarter! They recall the
-command-line whose beginning matches the current command-line. E.g. `:echo <up>`
-may change to `:echo "Vim rocks!"`.
+Hasta aquí, todo bien. Pero `<up>` (arriba) y `<down>` (down) son aún más inteligentes. Recuperan la línea de comandos cuyo comienzo coincide con la línea de comandos actual. Por ejemplo, `:echo <up>` puede cambiar a `:echo "¡Vim mola!"`.
 
-Of course, I don't want you to reach for the arrow keys:
+Por supuesto, no quiero que busque las teclas de dirección:
 
 ```vim
 cnoremap <expr> <c-n> wildmenumode() ? "\<c-n>" : "\<down>"
 cnoremap <expr> <c-p> wildmenumode() ? "\<c-p>" : "\<up>"
 ```
 
-Here we also distinguish between command-line history and the wildmenu. See `:h
-'wildmenu'`.
+Aquí también distinguimos entre el historial de la línea de comandos y el menú comodín. Vea `:h 'wildmenu'`.
 
-I depend on this behaviour several times a day.
+Yo dependo de este comportamiento varias veces al día.
 
-## Saner CTRL-L
+## Uso más sano del CTRL-L
 
-By default, `<c-l>` clears and redraws the screen (like `:redraw!`). The
-following mapping does the same, plus de-highlighting the matches found via `/`,
-`?` etc., plus fixing syntax highlighting (sometimes Vim loses highlighting due
-to complex highlighting rules), plus force updating the syntax highlighting in
-diff mode:
+Por defecto, `<c-l>` borra y redibuja la pantalla (como `:redraw!`). El siguiente mapeo hace lo mismo, además de des-destacar las coincidencias encontradas a través de `/`, `?` etc., además de arreglar el resaltado de sintaxis (a veces Vim pierde el resaltado debido a las complejas reglas de resaltado), además de forzar la actualización del resaltado de sintaxis en el modo diff:
 
 ```vim
 nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 ```
 
-## Disable audible and visual bells
+## Desactivar los timbres sonoros y visuales
 
 ```vim
 set noerrorbells
@@ -1662,72 +1603,66 @@ set novisualbell
 set t_vb=
 ```
 
-See [Vim Wiki: Disable beeping](http://vim.wikia.com/wiki/Disable_beeping).
+Vea [Vim Wiki: Desactivar el pitido](http://vim.wikia.com/wiki/Disable_beeping).
 
-## Quickly move current line
+## Mover rápidamente la línea actual
 
-Sometimes I need a quick way to move the current line above or below:
+A veces necesito una forma rápida de mover la línea actual por encima o por debajo:
 
 ```vim
 nnoremap [e  :<c-u>execute 'move -1-'. v:count1<cr>
 nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 ```
 
-These mappings also take a count, so `2]e` moves the current line 2 lines below.
+Estos mapeos también toman un conteo, así que `2]e` mueve la línea actual 2 líneas abajo.
 
-## Quickly add empty lines
+## Añadir rápidamente líneas vacías
 
 ```vim
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 ```
 
-Now `5[<space>` inserts 5 blank lines above the current line.
+Ahora `5[<espacio>` inserta 5 líneas en blanco sobre la línea actual.
 
-## Quickly edit your macros
+## Edite rápidamente sus macros
 
-This is a real gem! The mapping takes a register (or `*` by default) and opens
-it in the cmdline-window. Hit `<cr>` when you're done editing for setting the
-register.
+¡Esta es una verdadera joya! El mapeo toma un registro (o `*` por defecto) y lo abre en la ventana de cmdline. Pulsa `<cr>` cuando termines de editar para fijar el registro.
 
-I often use this to correct typos I did while recording a macro.
+A menudo uso esto para corregir errores de escritura que hice mientras grababa una macro.
 
 ```vim
 nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 ```
 
-Use it like this `<leader>m` or `"q<leader>m`.
+Utilízalo así `<leader>m` o `"q<leader>m`.
 
-Notice the use of `<c-r><c-r>` to make sure that the `<c-r>` is inserted
-literally. See `:h c_^R^R`.
+Observe el uso de `<c-r><c-r>` para asegurarse de que el `<c-r>` se inserta literalmente. Véase `:h c_^R^R`.
 
-## Quickly jump to header or source file
+## Saltar rápidamente a la cabecera o al archivo fuente
 
-This technique can probably be applied to many filetypes. It sets _file marks_
-(see `:h marks`) when leaving a source or header file, so you can quickly jump
-back to the last accessed one by using `'C` or `'H` (see `:h 'A`).
+Esta técnica puede aplicarse probablemente a muchos tipos de archivos. Establece marcas de archivo (ver `:h marcas`) cuando se sale de un archivo fuente o de cabecera, de modo que se puede volver rápidamente al último al que se accedió utilizando `'C` o `'H` (ver `:h 'A`).
 
 ```vim
 autocmd BufLeave *.{c,cpp} mark C
 autocmd BufLeave *.h       mark H
 ```
 
-**NOTE**: The info is saved in the viminfo file, so make sure that `:set
-viminfo?` includes `:h viminfo-'`.
+**NOTA**: La información se guarda en el archivo viminfo, así que asegúrese de que `:set
+viminfo?` incluya `:h viminfo-'`.
 
-## Quickly change font size in GUI
+## Cambiar rápidamente el tamaño de la fuente en la interfaz gráfica de usuario
 
-I think this was taken from tpope's config:
+Creo que esto fue tomado de la configuración de tpope:
 
 ```vim
 command! Bigger  :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
 command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 ```
 
-## Change cursor style dependent on mode
+## Cambiar el estilo del cursor en función del modo
 
-I like to use a block cursor in normal mode, i-beam cursor in insert mode, and
-underline cursor in replace mode.
+Me gusta utilizar un cursor de bloque en el modo normal, un cursor `i-beam` en el modo de inserción y un cursor de subrayado en el modo de sustitución.
 
 ```vim
 if empty($TMUX)
@@ -1741,207 +1676,162 @@ else
 endif
 ```
 
-This simply tells Vim to print a certain sequence of characters ([escape
-sequence](https://en.wikipedia.org/wiki/Escape_sequence)) when entering/leaving
-insert mode. The underlying terminal, or programs like
-[tmux](https://tmux.github.io) that sit between Vim and the terminal, will
-process and evaluate it.
+Esto simplemente le dice a Vim que imprima una determinada secuencia de caracteres ([secuencia de escape](https://es.frwiki.wiki/wiki/S%C3%A9quence_d%27%C3%A9chappement)) al entrar/salir del modo de inserción. El terminal subyacente, o programas como [tmux](https://tmux.github.io) que se sitúan entre Vim y el terminal, lo procesarán y evaluarán.
 
-There's one drawback though: there are many terminal emulator implementations
-and not all use the same sequences for doing the same things. The sequences used
-above might not work with your implementation. Your implementation might not
-even support different cursor styles. Check the documentation.
+Sin embargo, hay un inconveniente: hay muchas implementaciones de emuladores de terminal y no todas usan las mismas secuencias para hacer las mismas cosas. Las secuencias usadas arriba podrían no funcionar con tu implementación. Su implementación podría incluso no soportar diferentes estilos de cursor. Compruebe la documentación.
 
-The example above works with iTerm2.
+El ejemplo anterior funciona con iTerm2.
 
-## Don't lose selection when shifting sidewards
+## No perder la selección al cambiar de lado
 
-If you select one or more lines, you can use `<` and `>` for shifting them
-sidewards. Unfortunately you immediately lose the selection afterwards.
+Si selecciona una o más líneas, puede utilizar `<` y `>` para desplazarlas hacia los lados. Desgraciadamente, se pierde inmediatamente la selección.
 
-You can use `gv` to reselect the last selection (see `:h gv`), thus you can work
-around it like this:
+Puedes usar `gv` para volver a seleccionar la última selección (vea `:h gv`), por lo que puedes evitarlo así:
 
 ```vim
 xnoremap <  <gv
 xnoremap >  >gv
 ```
 
-Now you can use `>>>>>` on your visual selection without any problems.
+Ahora puede utilizar `>>>>>` en su selección visual sin problemas.
 
-**NOTE**: The same can be achieved using `.`, which repeats the last change.
+**NOTA**: Lo mismo puede conseguirse utilizando `.`, que repite el último cambio.
 
-## Reload a file on saving
+## Recargar un archivo al guardar
 
-Using [autocmds](#autocmds) you can do anything on saving a file, e.g. sourcing
-it in case of a dotfile or running a linter to check for syntactical errors in
-your source code.
+Usando los [autocmds](#autocmds) puedes hacer cualquier cosa al guardar un archivo, por ejemplo, abastecerlo en el caso de un dotfile o ejecutar un linter para comprobar si hay errores sintácticos en tu código fuente.
 
 ```vim
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
 ```
 
-## Smarter cursorline
+## Cursor más inteligente
 
-I love the cursorline, but I only want to use it in the current window and not
-when being in insert mode:
+Me encanta la línea del cursor, pero sólo quiero usarla en la ventana actual y no cuando esté en modo de inserción:
 
 ```vim
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 ```
 
-## Faster keyword completion
+## Completación más rapida de palabras claves
 
-The keyword completion (`<c-n>`/`<c-p>`) tries completing whatever is listed in
-the `'complete'` option. By default, this also includes tags (which can be
-annoying) and scanning all included files (which can be very slow). If you can
-live without these things, disable them:
+La palabra clave de finalización (`<c-n>`/`<c-p>`) intenta completar todo lo que aparece en la opción `'complete''. Por defecto, esto también incluye las etiquetas (lo que puede ser molesto) y el escaneo de todos los archivos incluidos (lo que puede ser muy lento). Si puede vivir sin estas cosas, desactívelas:
 
 ```vim
 set complete-=i   " disable scanning included files
 set complete-=t   " disable searching tags
 ```
 
-## Cosmetic changes to colorschemes
+## Cambios cosméticos a los esquemas de color
 
-Always use a dark gray statusline, no matter what colorscheme is chosen:
+Utilice siempre una línea de estado gris oscuro, sea cual sea el esquema de colores elegido:
 
 ```vim
 autocmd ColorScheme * highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
 
-This triggers every time you use `:colorscheme ...`. If you want it to trigger
-only for a certain colorscheme:
+Esto se activa cada vez que se utiliza `:colorscheme ...`. Si quieres que se active sólo para un determinado esquema de colores:
 
 ```vim
 autocmd ColorScheme desert highlight StatusLine ctermbg=darkgray cterm=NONE guibg=darkgray gui=NONE
 ```
 
-This triggers only for `:colorscheme desert`.
+Esto se activa sólo para `:colorscheme desert`.
 
-# Commands
+# Comandos
 
-Useful commands that are good to know. Use `:h :<command name>` to learn more
-about them, e.g. `:h :global`.
+Comandos útiles que es bueno conocer. Utilice `:h :<nombre del comando>` para saber más sobre ellos, por ejemplo `:h :global`.
 
-## :global and :vglobal
+## :global y :vglobal
 
-Execute a command on all matching lines. E.g. `:global /regexp/ print` will use
-`:print` on all lines that contain "regexp".
+Ejecuta un comando en todas las líneas que coincidan. Por ejemplo, `:global /regexp/ print` utilizará `:print` en todas las líneas que contengan "regexp".
 
-Fun fact: You probably all know good old grep, the filter program written by Ken
-Thompson. What does it do? It prints all lines matching a certain regular
-expression! Now guess the short form of `:global /regexp/ print`? That's right!
-It's `:g/re/p`. Ken Thompson was inspired by vi's `:global` when he wrote grep.
+Dato curioso: Probablemente todos conocen el viejo comando grep, el programa de filtrado escrito por Ken Thompson. ¿Qué hace? Imprime todas las líneas que coinciden con una determinada expresión regular. ¿Adivina la forma corta de `:global /regexp/ print`? Sí, así es. Es `:g/re/p`. Ken Thompson se inspiró en `:global` de vi cuando escribió grep.
 
-Despite its name, `:global` only acts on all lines by default, but it also takes
-a range. Assume you want use `:delete` on all lines from the current line to the
-next blank line (matched by the regular expression `^$`) that contain "foo":
+A pesar de su nombre, `:global` sólo actúa sobre todas las líneas por defecto, pero también toma un rango. Suponga que quiere usar `:delete` en todas las líneas desde la línea actual hasta la siguiente línea en blanco (coincidente con la expresión regular `^$`) que contengan "foo":
 
 ```vim
 :,/^$/g/foo/d
 ```
 
-For executing commands on all lines that do _not_ match a given pattern, use
-`:global!` or its alias `:vglobal` (think _inVerse_) instead.
+Para ejecutar comandos en todas las líneas que _no_ coinciden con un patrón dado, utilice `:global!` o su alias `:vglobal` (piense en _inVerse_) en su lugar.
 
-## :normal and :execute
+## :normal y :execute
 
-These commands are commonly used in Vim scripts.
+Estos comandos se utilizan habitualmente en los scripts de Vim.
 
-With `:normal` you can do normal mode mappings from the command-line. E.g.
-`:normal! 4j` will make the cursor go down 4 lines (without using any custom
-mapping for "j" due to the "!").
+Con `:normal` puedes hacer mapeos en modo normal desde la línea de comandos. ¡Por ejemplo, `:normal! 4j` hará que el cursor baje 4 líneas (sin usar ningún mapeo personalizado para "j" debido al "!").
 
-Mind that `:normal` also takes a [range](#ranges), so `:%norm! Iabc` would
-prepend "abc" to every line.
+¡Tenga en cuenta que `:normal` también toma un [rango](#rangos), así que `:%norm! Iabc` añadiría "abc" a cada línea.
 
-With `:execute` you can mix commands with expressions. Assume you edit a C
-source file and want to switch to its header file:
+Con `:execute` puedes mezclar comandos con expresiones. Suponga que edita un fichero fuente en C y quiere pasar a su fichero de cabecera:
 
 ```vim
 :execute 'edit' fnamemodify(expand('%'), ':r') . '.h'
 ```
 
-Both commands are often used together. Assume you want to make the cursor go
-down "n" lines:
+Ambos comandos se utilizan a menudo juntos. Suponga que quiere hacer que el cursor baje "n" líneas:
 
 ```vim
 :let n = 4
 :execute 'normal!' n . 'j'
 ```
 
-## :redir and execute()
+## :redir y execute()
 
-Many commands print messages and `:redir` allows to redirect that output. You
-can redirect to files, [registers](#registers) or variables.
+Muchos comandos imprimen mensajes y `:redir` permite redirigir esa salida. Puede redirigir a archivos, [registros](#registradores) o variables.
 
 ```vim
 :redir => var
 :reg
 :redir END
 :echo var
-:" For fun let's also put it onto the current buffer.
+:" Para variar, pongámoslo también en el buffer actual.
 :put =var
 ```
 
-In Vim 8 there is an even shorter way:
+En Vim 8 hay una forma aún más corta:
 
 ```vim
 :put =execute('reg')
 ```
 
-Help:
+Comandos help:
 
 ```
 :h :redir
 :h execute()
 ```
 
-# Debugging
+# Depuración
 
-## General tips
+## Tips generales
 
-If you encounter a strange behaviour, try reproducing it like this:
+Si encuentras un comportamiento extraño, intenta reproducirlo así:
 
 ```
 vim -u NONE -N
 ```
 
-This will start Vim without vimrc (thus default settings) and in nocompatible
-mode (which makes it use Vim defaults instead of vi defaults). (See `:h
---noplugin` for other combinations of what to load at start.)
+Esto iniciará Vim sin vimrc (por lo tanto, la configuración por defecto) y en modo nocompatible (lo que hace que utilice los valores predeterminados de Vim en lugar de los de vi). (Vea `:h --noplugin` para otras combinaciones de lo que debe cargar al inicio).
 
-If you can still reproduce it now, it's most likely a bug in Vim itself! Report
-it to the [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing
-list. Most of the time the issue won't be resolved at this time and you'll have
-to further investigate.
+Si todavía puedes reproducirlo ahora, lo más probable es que sea un error en el propio Vim. Infórmalo en la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev). La mayoría de las veces el problema no se resolverá en ese momento y tendrás que seguir investigando.
 
-Plugins often introduce new/changed/faulty behaviour. E.g. if it happens on
-saving, check `:verb au BufWritePost` to get a list of potential culprits.
+Los plugins a menudo introducen un comportamiento nuevo/cambiado/falso. Por ejemplo, si ocurre al guardar, comprueba `:verb au BufWritePost` para obtener una lista de posibles culpables.
 
-If you're using a plugin manager, comment them out until you find the culprit.
+Si utilizas un gestor de plugins, coméntalos temporalmente hasta que encuentres al culpable.
 
-Issue is still not resolved? If it's not a plugin, it must be your other
-settings, so maybe your options or autocmds etc.
+¿El problema sigue sin resolverse? Si no es un plugin, debe ser su otra configuración, así que tal vez sus opciones o autocmds etc.
 
-Time to use binary search. Repeatedly split the search space in two until you
-find the culprit line. Due to the nature of binary division, it won't take many
-steps.
+Es hora de utilizar la búsqueda binaria. Divida repetidamente el espacio de búsqueda en dos hasta que encuentre la línea culpable. Debido a la naturaleza de la división binaria, no tomará muchos pasos.
 
-In practice, it works like this: Put the `:finish` command in the middle of your
-vimrc. Vim will skip everything after it. If it still happens, the problem is in
-the active upper half. Move the `:finish` to the middle of _that_ half.
-Otherwise, the issue is in the inactive lower half. Move the `:finish` to the
-middle of _that_ half. And so on.
+En la práctica, funciona así: Ponga el comando `:finish` en medio de su vimrc. Vim se saltará todo lo que venga después. Si sigue ocurriendo, el problema está en la mitad superior activa. Mueve el `:finish` a la mitad de _esa_ mitad. Si no, el problema está en la mitad inferior inactiva. Mueve el `:finish` a la mitad de _esa_ mitad. Y así sucesivamente.
 
-## Verbosity
+## Verbosidad
 
-Another useful way for observing what Vim is currently doing is increasing the
-verbosity level. Currently Vim supports 9 different levels. See `:h 'verbose'`
-for the full list.
+Otra forma útil de observar lo que hace Vim actualmente es aumentar el nivel de verbosidad. Actualmente Vim soporta 9 niveles diferentes. Vea `:h 'verbose'` para la lista completa.
 
 ```vim
 :e /tmp/foo
@@ -1950,12 +1840,9 @@ for the full list.
 :set verbose=0
 ```
 
-This would show all the files that get sourced, e.g. the undo file or various
-plugins that act on saving.
+Esto mostraría todos los archivos que se originan, por ejemplo, el archivo de deshacer o varios plugins que actúan al guardar.
 
-If you only want increase verbosity for a single command, there's also
-`:verbose`, which simply gets put in front of any other command. It takes the
-verbosity level as count and defaults to 1:
+Si sólo quieres aumentar la verbosidad para un solo comando, también está `:verbose`, que simplemente se pone delante de cualquier otro comando. Toma el nivel de verbosidad como cuenta y por defecto es 1:
 
 ```vim
 :verb set verbose
@@ -1964,198 +1851,162 @@ verbosity level as count and defaults to 1:
 "  verbose=10
 ```
 
-It's very often used with its default verbosity level 1 to show where an option
-was set last:
+Se utiliza muy a menudo con su nivel de verbosidad 1 por defecto para mostrar dónde se estableció una opción por última vez:
 
 ```vim
 :verb set ai?
 "      Last set from ~/.vim/vimrc
 ```
 
-Naturally, the higher the verbosity level the more overwhelming the output. But
-fear no more, you can simply redirect the output to a file:
+Naturalmente, cuanto más alto sea el nivel de verbosidad, más abrumadora será la salida. Pero no temas más, puedes simplemente redirigir la salida a un archivo:
 
 ```vim
 :set verbosefile=/tmp/foo | 15verbose echo "foo" | vsplit /tmp/foo
 ```
 
-You can also enable verbosity at starting time, with the `-V` option. It
-defaults to verbosity level 10. E.g. `vim -V5`.
+También puede habilitar la verbosidad en el momento de iniciar, con la opción `-V`. Por defecto, el nivel de verbosidad es 10. Por ejemplo, `vim -V5`.
 
-## Profiling startup time
+## Perfilando el tiempo de inicio
 
-Vim startup feels slow? Time to crunch some numbers:
+¿El inicio de Vim es lento? Es hora de hacer números:
 
 ```
 vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log
 ```
 
-The first column is the most important as it shows the elapsed absolute time. If
-there is a big jump in time between two lines, the second line is either a very
-big file or a file with faulty VimL code that is worth investigating.
+La primera columna es la más importante, ya que muestra el tiempo absoluto transcurrido. Si hay un gran salto de tiempo entre dos líneas, la segunda línea es un archivo muy grande o un archivo con código VimL defectuoso que vale la pena investigar.
 
-## Profiling at runtime
+## Perfilando en tiempo de ejecución
 
-Required [feature](#what-kind-of-vim-am-i-running): `+profile`
+[Funcionalidad](#¿qué-tipo-de-vim-estoy-utilizando) requerida: `+perfil`.
 
-Vim provides a built-in capability for profiling at runtime and is a great way
-to find slow code in your environment.
+Vim proporciona una capacidad incorporada para perfilar en tiempo de ejecución y es una gran manera de encontrar código lento en su entorno.
 
-The `:profile` command takes a bunch of sub-commands for specifying what to
-profile.
+El comando `:profile` tiene un montón de subcomandos para especificar lo que se va a perfilar.
 
-If you want to profile _everything_, do this:
+Si quieres perfilar _todo_, haz esto:
 
     :profile start /tmp/profile.log
     :profile file *
     :profile func *
-    <do something in Vim>
+    <hacer algo en Vim>
     :qa
 
-Vim keeps the profiling information in memory and only writes it out to the
-logfile on exit. (Neovim has fixed this using `:profile dump`).
+    Vim mantiene la información del perfil en la memoria y sólo la escribe en el archivo de registro al salir. (Neovim ha arreglado esto usando `:profile dump`).
 
-Have a look at `/tmp/profile.log`. All code that was executed during profiling
-will be shown. Every line, how often it was executed and how much time it took.
+Echa un vistazo a `/tmp/profile.log`. Se mostrará todo el código que se ha ejecutado durante el perfilado. Cada línea, cuántas veces se ha ejecutado y cuánto tiempo ha tardado.
 
-Jump to the bottom of the log. Here are two different sections `FUNCTIONS SORTED
-ON TOTAL TIME` and `FUNCTIONS SORTED ON SELF TIME` that are worth gold. At a
-quick glance you can see which functions are taking the longest.
+Salte al final del registro. Aquí hay dos secciones diferentes `FUNCTIONS SORTED ON TOTAL TIME` (FUNCIONES ORDENADAS EN TIEMPO TOTAL) y `FUNCTIONS SORTED ON SELF TIME` (FUNCIONES ORDENADAS EN TIEMPO PROPIO) que valen oro. De un vistazo rápido puedes ver qué funciones están tardando más.
 
-You can use `:profile` during startup as well:
+También puedes utilizar `:profile` durante el arranque:
 
     $ vim --cmd 'prof start prof.log | prof file * | prof func *' test.c
     :q
     $ tail -50 prof.log
 
-## Debugging Vim scripts
+## Depurando los scripts Vim
 
-If you ever used a command-line debugger before, `:debug` will quickly feel
-familiar.
+Si alguna vez has utilizado un depurador de línea de comandos, `:debug` te resultará rápidamente familiar.
 
-Simply prepend `:debug` to any other command and you'll be put into debug mode.
-That is, the execution will stop at the first line about to be executed and that
-line will be displayed.
+Simplemente añade `:debug` a cualquier otro comando y se pondrá en modo de depuración. Es decir, la ejecución se detendrá en la primera línea a punto de ser ejecutada y se mostrará esa línea.
 
-See `:h >cont` and below for the 6 available debugger commands and note that,
-like in gdb and similar debuggers, you can also use their short forms: `c`, `q`,
-`n`, `s`, `i`, and `f`.
+Vea `:h >cont` y más abajo los 6 comandos de depuración disponibles y tenga en cuenta que, como en gdb y depuradores similares, también puede utilizar sus formas cortas: `c`, `q`, `n`, `s`, `i` y `f`.
 
-Apart from that those, you're free to use any Vim command, e.g. `:echo myvar`,
-which gets executed in the context of the current position in the code.
+Aparte de estos, eres libre de usar cualquier comando de Vim, por ejemplo `:echo myvar`, que se ejecuta en el contexto de la posición actual en el código.
 
-You basically get a
-[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) by
-simply using `:debug 1`.
+Básicamente se obtiene un [REPL](https://es.wikipedia.org/wiki/REPL) simplemente usando `:debug 1`.
 
-It would be a pain if you had to single-step through every single line, so of
-course we can define breakpoints, too. (Breakpoints are called breakpoints,
-because the execution stops when they're hit, thus you can simply skip code
-you're not interested in.) See `:h :breakadd`, `:h :breakdel`, and `:h
-:breaklist` for further details.
+Sería un dolor de cabeza si tuvieras que pasar por cada una de las líneas, así que, por supuesto, también podemos definir puntos de interrupción. (Los puntos de interrupción se llaman puntos de ruptura porque la ejecución se detiene cuando se alcanzan, por lo que puede simplemente saltarse el código que no le interesa). Vea `:h :breakadd`, `:h :breakdel`, y `:h :breaklist` para más detalles.
 
-Let's assume you want to know what code is run every time you save a file:
+Supongamos que quiere saber qué código se ejecuta cada vez que guarda un archivo:
 
 ```vim
 :au BufWritePost
-" signify  BufWritePost
-"     *         call sy#start()
+" señalar  BufWritePost
+"     *         llamar sy#start()
 :breakadd func *start
 :w
 " Breakpoint in "sy#start" line 1
 " Entering Debug mode.  Type "cont" to continue.
-" function sy#start
-" line 1: if g:signify_locked
+" función sy#start
+" línea 1: if g:signify_locked
 >s
-" function sy#start
-" line 3: endif
+" función sy#start
+" línea 3: endif
 >
-" function sy#start
-" line 5: let sy_path = resolve(expand('%:p'))
+" función sy#start
+" línea 5: let sy_path = resolve(expand('%:p'))
 >q
 :breakdel *
 ```
 
-As you can see, using `<cr>` will repeat the previous debugger command, `s` in
-this case.
+Como puede ver, el uso de `<cr>` repetirá el comando de depuración anterior, `s` en este caso.
 
-`:debug` can be used in combination with the [verbose](#verbosity) option.
+`:debug` puede ser usado en combinación con la opción de [verbosidad](#verbosidad) (`:verbose`).
 
-## Debugging syntax files
+## Depurando archivos de sintaxis
 
-Syntax files are often the cause for slowdowns due to wrong and/or complex
-regular expressions. If the `+profile` [feature](#what-kind-of-vim-am-i-running)
-is compiled in, Vim provides the super useful `:syntime` command.
+Los archivos de sintaxis suelen ser la causa de ralentizaciones debido a expresiones regulares erróneas y/o complejas. Si la [funcionalidad](#¿qué-tipo-de-vim-estoy-utilizando) `+perfil` está compilada, Vim proporciona el súper útil comando `:syntime`.
 
 ```vim
 :syntime on
-" hit <c-l> a few times to redraw the window which causes the syntax rules to get applied again
+" pulse `<c-l>` unas cuantas veces para volver a mostrar la ventana, lo que hace que las reglas de sintaxis se apliquen de nuevo
 :syntime off
 :syntime report
 ```
 
-The output contains important metrics. E.g. you can see which regexp takes too
-long and should be optimized or which regexps are used all the time but never
-even match.
+La salida contiene métricas importantes. Por ejemplo, puede ver qué regexp tarda demasiado y debería optimizarse o qué regexps se utilizan todo el tiempo pero nunca coinciden.
 
-See `:h :syntime`.
+Vea `:h :syntime`.
 
-# Miscellaneous
+# Miscelánea
 
-## Additional resources
+## Recursos adicionales
 
-| Resource | Description |
-|----------|-------------|
-| [Seven habits of effective text editing](http://www.moolenaar.net/habits.html) | By Bram Moolenaar, the author of Vim. |
-| [Seven habits of effective text editing 2.0 (PDF)](http://www.moolenaar.net/habits_2007.pdf) | See above. |
-| [IBM DeveloperWorks: Scripting the Vim editor](http://www.ibm.com/developerworks/views/linux/libraryview.jsp?sort_order=asc&sort_by=Title&search_by=scripting+the+vim+editor) | Five-part series on Vim scripting. |
-| [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com) | Develop a Vim plugin from scratch. |
-| [Practical Vim (2nd Edition)](https://pragprog.com/titles/dnvim2/practical-vim-second-edition) | Hands down the best book about Vim. |
-| [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html) | Common misconceptions explained. |
-| [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Concise, informative and correct. A real gem. |
+_Nota: Todos los recursos se encuentran en inglés._
 
-#### Screencasts
+| Recursos | Título en Español | Descripción |
+|----------|----------|----------|
+|[Seven habits of effective text editing](http://www.moolenaar.net/habits.html) | Siete hábitos de edición de textos eficaces | Por Bram Moolenaar, el autor de Vim. |
+| [Seven habits of effective text editing 2.0 (PDF)](http://www.moolenaar.net/habits_2007.pdf) | Siete hábitos de edición de textos eficaces 2.0 (PDF) | Mismo que el de arriba. |
+| [IBM DeveloperWorks: Scripting the Vim editor](http://www.ibm.com/developerworks/views/linux/libraryview.jsp?sort_order=asc&sort_by=Title&search_by=scripting+the+vim+editor) | IBM DeveloperWorks: Scripting del editor Vim | Serie de cinco partes sobre el scripting en Vim. |
+| [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com) | Aprende Vimscript a las malas | Desarrolla un plugin de Vim desde cero. |
+| [Practical Vim (2nd Edition)](https://pragprog.com/titles/dnvim2/practical-vim-second-edition) | Vim práctico (2ª edición) | Sin duda el mejor libro sobre Vim. |
+| [Why, oh WHY, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html) | ¿Por qué, oh POR QUÉ, esos #?@! chiflados usan vi? | Explicación de los conceptos erróneos más comunes. |
+| [Your problem with Vim is that you don't grok vi](http://stackoverflow.com/a/1220118) | Tu problema con Vim es que no entiendes el vi | Conciso, informativo y correcto. Una verdadera joya. |
+
+#### Recursos en forma de video
+
+_Nota: Similarmente, estos recursos se encuentran en inglés._
 
 - [vimcasts.org](http://vimcasts.org/episodes/archive)
-- [By wincent](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA)
-- [By Derek Wyatt](http://derekwyatt.org/vim/tutorials/index.html)
+- [Por wincent](https://www.youtube.com/channel/UCXPHFM88IlFn68OmLwtPmZA) (Canal de Youtube)
+- [Por Derek Wyatt](http://derekwyatt.org/vim/tutorials/index.html)
 
-## Vim distributions
+## Distribuciones de Vim
 
-Vim distributions are bundles of custom settings and plugins for Vim.
+Las distribuciones de Vim son paquetes de configuraciones personalizadas y plugins para Vim.
 
-More advanced users know how to configure their editor anyway, so distributions
-are mostly targeted at beginners. If you think about that, it's quite
-paradoxical though: Making it easier by adding even more things to learn about?
+Los usuarios más avanzados saben cómo configurar su editor de todos modos, por lo que las distribuciones están dirigidas principalmente a los principiantes. Sin embargo, si lo piensas, es bastante paradójico: ¿Hacerlo más fácil añadiendo aún más cosas que aprender?
 
-I know that many people don't want to spend hours and hours on customizing an
-editor (and actually you never stop customizing your vimrc when you finally got
-hooked), but eventually you only get efficient in Vim when you take the time to
-learn it properly.
+Sé que mucha gente no quiere pasar horas y horas personalizando un editor (y en realidad nunca dejas de personalizar tu vimrc cuando finalmente te enganchas), pero al final sólo consigues ser eficiente en Vim cuando te tomas el tiempo para aprenderlo correctamente.
 
-Repeat after me: "A programmer should know their tools."
+Repite después de mí: "Un programador debe conocer sus herramientas".
 
-Anyway, if you know what you're doing, you might draw some inspiration from
-looking at a few distributions:
+De todos modos, si sabes lo que haces, podrías inspirarte mirando algunas distribuciones:
 
 - [cream](http://cream.sourceforge.net)
 - [janus](https://github.com/carlhuda/janus.git)
 - [spacevim](https://github.com/SpaceVim/SpaceVim)
 - [spf13](https://github.com/spf13/spf13-vim)
 
-## Standard plugins
+## Plugins standard
 
-Many people are surprised by the fact that Vim comes with a handful of standard
-plugins. Some get loaded by default (`:e $VIMRUNTIME/plugin`) and some are not
-(`:e $VIMRUNTIME/pack/dist/opt`). Read `:h pack-add` on how to source the
-latter.
+Mucha gente se sorprende por el hecho de que Vim viene con un puñado de plugins estándar. Algunos se cargan por defecto (`:e $VIMRUNTIME/plugin`) y otros no (`:e $VIMRUNTIME/pack/dist/opt`). Lee `:h pack-add` para saber cómo obtener estos últimos.
 
-Most of the plugins that get loaded by default will never get used, though.
-Disable them as you see fit. They will still be shown as sourced
-(`:scriptnames`), but only the first lines actually get read before Vim bails
-out. No further code (mappings, commands, logic) will be processed.
+Sin embargo, la mayoría de los plugins que se cargan por defecto nunca se utilizarán. Desactívelos si lo considera oportuno. Seguirán apareciendo como fuente (`:scriptnames`), pero sólo se leerán las primeras líneas antes de que Vim se retire. No se procesará más código (mapeos, comandos, lógica).
 
-| Plugin     | Disable it using..                  | Help |
+| Plugin     | Desactívalo usando..                 | Comando help |
 |------------|-------------------------------------|------|
 | 2html      | `let g:loaded_2html_plugin = 1`     | `:h 2html` |
 | getscript  | `let g:loaded_getscriptPlugin = 1`  | `:h pi_getscript` |
@@ -2169,250 +2020,200 @@ out. No further code (mappings, commands, logic) will be processed.
 | vimball    | `let g:loaded_vimballPlugin = 1`    | `:h pi_vimball` |
 | zip        | `let g:loaded_zipPlugin = 1`        | `:h pi_zip` |
 
-## Map CapsLock to Control
+## Mapear CapsLock a Control
 
-CapsLock belongs to the most useless keys on your keyboard, but it's much easier
-to reach than the Control key, since it lies on your [home
-row](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-homerow.png).
-Mapping CapsLock to Control is a great way to prevent or at least reduce
-[RSI](https://de.wikipedia.org/wiki/Repetitive-Strain-Injury-Syndrom) if you
-program a lot.
+CapsLock es una de las teclas más inútiles del teclado, pero es mucho más fácil de alcanzar que la tecla Control, ya que se encuentra en la [fila de inicio](./static/images/content-homerow.png). La asignación de CapsLock a Control es una buena manera de prevenir o al menos reducir el [LMT](https://es.wikipedia.org/wiki/Lesiones_por_movimientos_repetitivos) si programas mucho.
 
-Attention: When you get used to it, you can't live without it anymore.
+Atención: Cuando te acostumbras, ya no puedes vivir sin ella.
 
 **macOS**:
 
-`System Preferences -> Keyboard -> Keyboard Tab -> Modifier Keys`. Change
-"CapsLock" to "Control".
+`Preferencias del Sistema -> Teclado -> Pestaña 'Teclado' -> Teclas de modificación`. Cambie "CapsLock" a "Control".
+
+---
+
+_En caso de tener el sistema operativo en Inglés_
+
+`System Preferences -> Keyboard -> Keyboard Tab -> Modifier Keys`. Cambie
+"CapsLock" a "Control".
 
 **Linux**:
 
-To change the keys in X, put this in your `~/.xmodmap`:
+Para cambiar las claves en X, pon esto en tu `~/.xmodmap`:
 
     remove Lock = Caps_Lock
     keysym Caps_Lock = Control_L
     add Control = Control_L
 
-Afterwards source it via `$ xmodmap ~/.xmodmap`.
+A continuación, actualice la configuración a través de `$ xmodmap ~/.xmodmap`.
 
-An alternative would be using [caps2esc](https://github.com/oblitum/caps2esc) or
-[xcape](https://github.com/alols/xcape).
+Una alternativa sería utilizar [caps2esc](https://github.com/oblitum/caps2esc) o [xcape](https://github.com/alols/xcape).
 
 **Windows**:
 
-See [superuser.com: Map Caps-Lock to Control in Windows
-8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1).
+Vea [superuser.com: Asignar Caps-Lock a Control en Windows 8.1](http://superuser.com/questions/764782/map-caps-lock-to-control-in-windows-8-1).
 
-## Generating HTML from buffer
+## Generar HTML del buffer
 
-Generate HTML from any buffer using `:TOhtml` from the 2html [standard
-plugin](#standard-plugins). The output can be used for printing or easy web
-publishing.
+Genera HTML desde cualquier buffer usando `:TOhtml` del [plugin estándar](#plugins-standard) 2html. La salida se puede utilizar para imprimir o publicar fácilmente en la web.
 
-The command creates a new buffer of the same name with `.html` appended. The
-colors are the same as seen in Vim. They depend on the
-[colorscheme](#colorschemes).
+El comando crea un nuevo buffer del mismo nombre con `.html` añadido. Los colores son los mismos que se ven en Vim. Dependen del [esquema de colores](#esquema-de-colores).
 
-The plugin knows several options to finetune the output, e.g. for setting the
-encoding and font.
+El plugin conoce varias opciones para ajustar la salida, por ejemplo, para establecer la codificación y la fuente.
 
-See `:h :TOhtml`.
+Vea `:h :TOhtml`.
 
 ## Easter eggs
 
-| Command   | Message |
-|-----------|---------|
-| `:Ni!` | `Do you demand a shrubbery?` |
-| `:h 'sm'` | `NOTE: Use of the short form is rated PG.` |
-| `:h 42` | `What is the meaning of life, the universe and everything? Douglas Adams, the only person who knew what this question really was about is now dead, unfortunately.  So now you might wonder what the meaning of death is...` |
-| `:h UserGettingBored` | `When the user presses the same key 42 times. Just kidding! :-)` |
-| `:h bar` | `Ceci n'est pas une pipe.` |
-| `:h holy-grail` | `You found it, Arthur!` |
-| `:h map-modes` | `:nunmap can also be used outside of a monastery.` |
-| `:help!` | `E478: Don't panic!` (Glitch? When used in a help buffer (`buftype=help`) this works like `:h help.txt` instead.) |
-| `:smile` | Try it out yourself. ;-) Added in 7.4.1005. |
-| `:hi!` | `Greetings, Vim user!` |
+| Comando | Mensaje | Traducción |
+|-----------|-----------|-----------|
+| `:Ni!` | `Do you demand a shrubbery?`| ¿Exige usted un arbusto? |
+| `:h 'sm'` | `NOTE: Use of the short form is rated PG.` | NOTA: El uso de la forma corta está clasificado como PG.|
+| `:h 42` | `What is the meaning of life, the universe and everything? Douglas Adams, the only person who knew what this question really was about is now dead, unfortunately. So now you might wonder what the meaning of death is...` | ¿Cuál es el sentido de la vida, del universo y de todo? Douglas Adams, la única persona que sabía cuál era el verdadero sentido de esta pregunta, ha muerto, por desgracia. Así que ahora te preguntarás cuál es el significado de la muerte... |
+| `:h UserGettingBored` | `When the user presses the same key 42 times. Just kidding! :-)` | Cuando el usuario pulsa la misma tecla 42 veces. ¡Es broma! :-) |
+| `:h bar` | `Ceci n'est pas une pipe.` | Esto no es una pipa. |
+| `:h holy-grail` | `You found it, Arthur!` | ¡Lo has encontrado, Arthur! |
+| `:h map-modes` | `	:nunmap can also be used outside of a monastery.` | `:nunmap` también puede utilizarse fuera de un monasterio. | 
+| `:help!` | `E478: Don't panic! (Glitch? When used in a help buffer (buftype=help) this works like :h help.txt instead.)` | E478: ¡No te asustes! ( ¿Glitch? Cuando se usa en un buffer de ayuda (buftype=help) esto funciona como `:h help.txt` en su lugar). |
+| `:smile` | Try it out yourself. ;-) Added in 7.4.1005. | Pruébalo tú mismo ;-) Añadido en 7.4.1005. |
+| `:hi!` | `	Greetings, Vim user!` | 	¡Saludos, usuario de Vim! |
 
-## Why hjkl for navigation?
+## ¿Por qué hjkl para la navegación?
 
-When [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) created
-[vi](https://en.wikipedia.org/wiki/Vi), a predecessor of Vim, he did it on a
-[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A) which had no extra cursor buttons
-but used, you might already guessed it, hjkl instead.
+Cuando [Bill Joy](https://es.wikipedia.org/wiki/Bill_Joy) creó [vi](https://es.wikipedia.org/wiki/Vi), un predecesor de Vim, el lo hizo en un [ADM-3A](https://es.gggwiki.com/672994-adm-3a-JARUTR) que no tenía botones de cursor adicionales sino que usaba, ya lo habrás adivinado, hjkl en su lugar.
 
-Keyboard layout: [click](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-adm-3a-layout.jpg)
+Disposición del teclado: [click](./static/images/content-adm-3a-layout.jpg)
 
-This also shows why `~` is used to denote the home directory on Unix systems.
+Esto también muestra por qué `~` se utiliza para denotar el directorio de inicio en los sistemas Unix.
 
-# Common problems
+# Problemas comunes
 
-## Editing small files is slow
+## La edición de archivos pequeños es lenta
 
-There are two things which can have a huge impact on performance:
+Hay dos cosas que pueden tener un gran impacto en el rendimiento:
 
-1. Complex **regular expressions**. Particular the Ruby syntax file caused
-   people to have slowdowns in the past. (Also see [Debugging syntax files](#debugging-syntax-files).)
-2. **Screen redraws**. Some features force all lines to redraw.
+1. Las **expresiones regulares** complejas. Particularmente el archivo de sintaxis de Ruby causó que la gente tuviera ralentizaciones en el pasado. (Ver también [Depuración de archivos de sintaxis](#depurando-archivos-de-sintaxis)).
+2. **Redibujo de pantalla**. Algunas funciones obligan a redibujar todas las líneas.
 
-| Typical culprit | Why? | Solution? |
+Hay dos cosas que pueden tener un gran impacto en el rendimiento:
+
+| Típico culpable | ¿Por qué? | ¿Solución? |
 |-----------------|------|-----------|
-| `:set cursorline`        | Causes all lines to redraw. | `:set nocursorline` |
-| `:set cursorcolumn`      | Causes all lines to redraw. | `:set nocursorcolumn` |
-| `:set relativenumber`    | Causes all lines to redraw. | `:set norelativenumber` |
-| `:set foldmethod=syntax` | If the syntax file is slow already, this makes it even worse. | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) |
-| `:set synmaxcol=3000`    | Due to internal representation, Vim has problems with long lines in general. Highlights columns till column 3000. | `:set synmaxcol=200` |
-| matchparen.vim           | Loaded by default. Uses regular expressions to find the accompanying parenthesis. | Disable plugin: `:h matchparen` |
+| `:set cursorline`        | Hace que todas las líneas se redibujen. | `:set nocursorline` |
+| `:set cursorcolumn`      | Hace que todas las líneas se redibujen. | `:set nocursorcolumn` |
+| `:set relativenumber`    | Hace que todas las líneas se redibujen. | `:set norelativenumber` |
+| `:set foldmethod=syntax` | Si el archivo de sintaxis ya es lento, esto lo empeora aún más. | `:set foldmethod=manual`, `:set foldmethod=marker` or [FastFold](https://github.com/Konfekt/FastFold) |
+| `:set synmaxcol=3000`    | Debido a la representación interna, Vim tiene problemas con las líneas largas en general. Resalta las columnas hasta la columna 3000. | `:set synmaxcol=200` |
+| matchparen.vim           | Cargado por defecto. Utiliza expresiones regulares para encontrar el paréntesis que lo acompaña. | Disable plugin: `:h matchparen` |
 
-**NOTE**: You only need to do this if you experience actual performance
-drawbacks. In most cases using the things mentioned above is absolutely fine.
+**NOTA**: Sólo necesitas hacer esto si experimentas inconvenientes reales de rendimiento. En la mayoría de los casos, el uso de las cosas mencionadas anteriormente está absolutamente bien.
 
-## Editing huge files is slow
+## La edición de archivos grandes es lenta
 
-The biggest issue with big files is, that Vim reads the whole file at once. This
-is done due to how buffers are represented internally.
-([Discussion on vim_dev@](https://groups.google.com/forum/#!topic/vim_dev/oY3i8rqYGD4/discussion))
+El mayor problema con los archivos grandes es que Vim lee todo el archivo a la vez. Este
+se hace debido a cómo se representan internamente los buffers.
+([Discusión en vim_dev@](https://groups.google.com/forum/#!topic/vim_dev/oY3i8rqYGD4/discussion))
 
-If you only want to read, `tail hugefile | vim -` is a good workaround.
+Si sólo quieres leer, `tail hugefile | vim -` es una buena solución.
 
-If you can live without syntax, settings and plugins for the moment:
+Si puedes vivir sin sintaxis, configuraciones y plugins por el momento:
 
 ```
 $ vim -u NONE -N
 ```
 
-This should make navigation quite a lot faster, especially since no expensive
-regular expressions for syntax highlighting are used. You should also tell Vim
-not to use swapfiles and viminfo files to avoid long delays on writing:
+Esto debería hacer que la navegación sea bastante más rápida, especialmente porque no se utilizan costosas expresiones regulares para el resaltado de sintaxis. También debe decirle a Vim que no use archivos de intercambio y viminfo para evitar largas demoras en la escritura:
 
 ```
 $ vim -n -u NONE -i NONE -N
 ```
 
-Putting it in a nutshell, try to avoid using Vim when intending to write really
-huge files. :\
+En pocas palabras, trate de evitar el uso de Vim cuando tenga la intención de escribir archivos realmente
+archivos enormes. :\
 
-## Bracketed paste (or why do I have to set 'paste' all the time?)
+## Pegar entre corchetes (o ¿por qué tengo que poner "pegar" todo el tiempo?
 
-Bracketed paste mode allows terminal emulators to distinguish between typed text
-and pasted text.
+El modo de pegado entre corchetes permite a los emuladores de terminal distinguir entre el texto escrito y el pegado.
 
-Did you ever tried pasting code into Vim and afterwards everything seemed messed
-up?
+¿Alguna vez has probado a pegar código en Vim y después todo parece desordenado?
 
-This only happens if you paste via `cmd+v`, `shift-insert`, `middle-click` etc.
-because then you're just throwing text at the terminal emulator. Vim doesn't
-know that you just pasted the text, it thinks you're an extremely fast typist.
-Accordingly, it tries to indent the lines and fails.
+Esto sólo ocurre si pegas mediante `cmd+v`, `shift-insert`, `middle-click`, etc. porque entonces sólo estás lanzando texto al emulador de terminal. Vim no sabe que acabas de pegar el texto, piensa que eres un mecanógrafo extremadamente rápido. En consecuencia, trata de sangrar las líneas y falla.
 
-Obviously this is not an issue, if you paste using Vim's registers, e.g. `"+p`,
-because then Vim knows that you're actually pasting.
+Obviamente esto no es un problema, si pegas usando los registros de Vim, por ejemplo `"+p`, porque entonces Vim sabe que realmente estás pegando.
 
-To workaround this, you have to `:set paste`, so it gets pasted as-is. See `:h
-'paste'` and `:h 'pastetoggle'`.
+Para solucionar esto, tienes que `:set paste`, para que se pegue tal cual. Ver `:h 'paste'` y `:h 'pastetoggle'`.
 
-If you're fed up with toggling `'paste'` all the time, have a look at this fine
-plugin that does it for you:
-[bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste).
+Si estás harto de tener que alternar `'pegar'` todo el tiempo, echa un vistazo a este buen plugin que lo hace por ti: [bracketed-paste](https://github.com/ConradIrwin/vim-bracketed-paste).
 
-Additional read from the same author as the plugin:
-[here](http://cirw.in/blog/bracketed-paste).
+Lectura adicional del mismo autor del plugin: [aquí](http://cirw.in/blog/bracketed-paste).
 
-**Neovim**: Neovim tries to make all of this much more seamless and sets
-bracketed paste mode automatically if the terminal emulator supports it.
+**Neovim**: Neovim trata de hacer todo esto mucho más fluido y establece el modo de pegado entre corchetes automáticamente si el emulador de terminal lo soporta.
 
-## Delays when using escape key in terminal
+## Retrasos al utilizar la tecla de escape en el terminal
 
-If you live in the command-line, you probably use a so-called _terminal
-emulator_ like xterm, gnome-terminal, iTerm2, etc. (opposed to a real
-[terminal](https://en.wikipedia.org/wiki/Computer_terminal)).
+Si vives en la línea de comandos, probablemente utilices un llamado _emulador de terminal_ como xterm, gnome-terminal, iTerm2, etc. (en lugar de un [terminal](https://es.wikipedia.org/wiki/Terminal_(inform%C3%A1tica)) real).
 
-Like their ancestors, terminal emulators use [escape
-sequences](https://en.wikipedia.org/wiki/Escape_sequence) (or _control
-sequences_) to control things like moving the cursor, changing text colors, etc.
-They're simply strings of ASCII characters starting with an escape character
-(displayed in [caret notation](https://en.wikipedia.org/wiki/Caret_notation) as
-`^[`). When such a string arrives, the terminal emulator looks up the
-accompanying action in the [terminfo](https://en.wikipedia.org/wiki/Terminfo)
-database.
+Al igual que sus antepasados, los emuladores de terminal utilizan [secuencias de escape](https://es.frwiki.wiki/wiki/S%C3%A9quence_d%27%C3%A9chappement)
+(o _secuencias de control_) para controlar cosas como mover el cursor, cambiar los colores del texto, etc. Se trata simplemente de cadenas de caracteres ASCII que comienzan con un carácter de escape (mostrado en [notación caret](https://es.frwiki.wiki/wiki/Notation_caret) como `^[`). Cuando llega una cadena de este tipo, el emulador de terminal busca la acción que la acompaña en la base de datos [terminfo](https://it.abcdef.wiki/wiki/Terminfo).
 
-To make the problem clearer, I'll explain mapping timeouts first. They always
-happen when there's ambiguity between mappings:
+Para aclarar el problema, primero explicaré los tiempos de espera de los mapeos. Siempre ocurren cuando hay ambigüedad entre los mapeos:
 
 ```vim
 :nnoremap ,a  :echo 'foo'<cr>
 :nnoremap ,ab :echo 'bar'<cr>
 ```
 
-Both mappings work as expected, but when typing `,a`, there will be a delay of 1
-second, because Vim waits whether the user keys in another `b` or not.
+Ambos mapeos funcionan como se espera, pero al escribir `,a`, habrá un retraso de 1 segundo, porque Vim espera si el usuario teclea otra `b` o no.
 
-Escape sequences pose the same problem:
+Las secuencias de escape plantean el mismo problema:
 
-- `<esc>` is used a lot for returning to normal mode or quitting an action.
-- Cursor keys are encoded using escape sequences.
-- Vim expects <kbd>Alt</kbd> (also called _Meta key_) to send a proper 8-bit
-  encoding with the high bit set, but many terminal emulators don't support it
-  (or don't enable it by default) and send an escape sequence instead.
+- `<esc>` se utiliza mucho para volver al modo normal o salir de una acción.
+- Las teclas del cursor se codifican mediante secuencias de escape.
+- Vim espera que <kbd>Alt</kbd> (también llamada tecla Meta) envíe una codificación adecuada de 8 bits con el bit alto activado, pero muchos terminales
 
-You can test the above like this: `vim -u NONE -N` and type `i<c-v><left>` and
-you'll see a sequence inserted that starts with `^[` which denotes the escape
-character.
+Puedes probar lo anterior así: `vim -u NONE -N` y teclear `i<c-v><left>` y verás que se inserta una secuencia que comienza con `^[` que denota el carácter de escape.
 
-Putting it in a nutshell, Vim has a hard time distinguishing between a typed
-`<esc>` character and a proper escape sequence.
+En resumen, a Vim le cuesta distinguir entre un carácter `<esc>` tecleado y una secuencia de escape adecuada.
 
-By default, Vim uses `:set timeout timeoutlen=1000`, so it delays on ambiguity
-of mappings _and_ key codes by 1 second. This is a sane value for mappings, but
-you can define the key code timeout on its own which is the most common
-workaround for this entire issue:
+Por defecto, Vim utiliza `:set timeout timeoutlen=1000`, por lo que retrasa en 1 segundo la ambigüedad de los mapeos _y_ los códigos clave. Este es un valor razonable para las asignaciones, pero puedes definir el tiempo de espera del código clave por sí mismo, el cual es la solución más común para todo este problema:
 
 ```vim
-set timeout           " for mappings
-set timeoutlen=1000   " default value
-set ttimeout          " for key codes
-set ttimeoutlen=10    " unnoticeable small value
+set timeout           " para mapeos
+set timeoutlen=1000   " valor por defecto
+set ttimeout          " para los códigos de las teclas
+set ttimeoutlen=10    " valor pequeño e imperceptible
 ```
 
-Under `:h ttimeout` you find a small table showing the relationship between
-these options.
+Bajo `:h ttimeout` encontrarás una pequeña tabla que muestra la relación entre estas opciones.
 
-If you're using tmux between Vim and your terminal emulator, also put this in
-your `~/.tmux.conf`:
+Si estás usando tmux entre Vim y tu emulador de terminal, pon también esto en tu `~/.tmux.conf`:
 
 ```tmux
 set -sg escape-time 0
 ```
 
-## Function search undo
+## Deshacer función de busqueda (function-search-undo)
 
-- A search pattern in a command (`/`, `:substitute`, ...) changes the "last used
-  search pattern". (It's saved in the `/` register; print it with `:echo @/`).
-- A simple text change can be redone with `.`. (It's saved in the `.` register;
-  print it with `:echo @.`).
+- Un patrón de búsqueda en un comando (`/`, `:substitute`, ...) cambia el "último patrón de búsqueda utilizado". (Se guarda en el registro `/`; imprímalo con `:echo @/`).
+- Un simple cambio de texto puede hacerse con `.`. (Se guarda en el registro `.`; imprímalo con `:echo @.`).
 
-Both things are _not_ the case, if you do them from a function, though! Thus you
-can't easily highlight words from a function or redo the text changes made by
-it.
+¡Sin embargo, ambas cosas _no_ son el caso, si las haces desde una función! Por lo tanto, no puedes resaltar fácilmente las palabras desde una función o rehacer los cambios de texto realizados por ella.
 
-Help: `:h function-search-undo`
+Comando help: `:h function-search-undo`
 
-# Technical quirks
+# Peculiaridades técnicas
 
-## Newline used for NUL
+## Nueva linea utilizada para NUL
 
-NUL characters (`\0`) in a file, are stored as newline (`\n`) in memory and
-displayed in a buffer as `^@`.
+Los caracteres NUL (`\0`) en un archivo, se almacenan como nueva línea (`\n`) en la memoria y
+se muestran en un buffer como `^@`.
 
-See `man 7 ascii` and `:h NL-used-for-Nul` for more information.
+Vea `man 7 ascii` y `:h NL-used-for-Nul` para más información.
 
-# Terminology
+# Terminología
 
 ## Vim script? Vimscript? VimL?
 
-`Vim script`, `Vimscript`, and `VimL` all refer to the same thing: The
-programming language used for scripting Vim. Even though
-[8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c)
-changed all references from `VimL` to `Vim script`, which can now be considered
-the official term, `VimL` is still widespread all over the internet.
+Los términos `Vim script`, `Vimscript` y `VimL` se refieren a lo mismo: el lenguaje de programación utilizado para hacer scripts en Vim. Aunque [8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) cambió todas las referencias de `VimL` a `Vim script`, que ahora puede considerarse el término oficial, `VimL` sigue estando muy extendido por todo Internet.
 
-No matter which term you use, everyone will understand it.
+No importa el término que utilices, todo el mundo lo entenderá.
