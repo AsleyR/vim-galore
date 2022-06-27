@@ -20,12 +20,12 @@
 
 - [¿Qué es Vim?](#qué-es-vim)
 - [La Filosofía de Vim](#la-filosofía-de-vim)
-- [Primeros pasos](#first-steps)
-- [Vimrc mínimo](#minimal-vimrc)
-- [¿Qué tipo de vim estoy utilizando?](#what-kind-of-vim-am-i-running)
+- [Primeros pasos](#primeros-pasos)
+- [Vimrc mínimo](#vimrc-mínimo)
+- [¿Qué tipo de Vim estoy utilizando?](#¿qué-tipo-de-vim-estoy-utilizando)
 - [Cheatsheets](#cheatsheets)
 
-### [Conceptos Básicos](#conceptos-básicos)
+### [Conceptos Básicos](#conceptos-bc3a1sicos-1)
 
 - [Buffers, ventanas, pestañas](#buffers-ventanas-pestañas)
 - [Buffers activados, cargados, listados, y nombrados](#buffers-activados-cargados-listados-y-nombrados)
@@ -42,22 +42,22 @@
 - [Árbol de deshacer](#árbol-de-deshacer)
 - [Quickfix y lista de ubicaciones](#quickfix-y-lista-de-ubicaciones)
 - [Macros](#macros)
-- [Esquema de colores](#colorschemes)
-- [Folding (Doblamiento)](#folding)
-- [Sesiones](#sessions)
-- [Localidad](#locality)
+- [Esquema de colores](#esquema-de-colores)
+- [Plegados](#plegados)
+- [Sesiones](#sesiones)
+- [Localidad](#localidad)
 
-### [Utilización](#usage-1)
+### [Utilización](#utilizacic3b3n-1)
 
-- [Conseguir ayuda offline](#getting-help-offline)
-- [Conseguir ayuda offline (alternativo)](#getting-help-offline-alternative)
-- [Conseguir ayuda online](#getting-help-online)
-- [Autocmds en la practica](#autocmds-in-practice)
-  - [Eventos del usuario](#user-events)
-  - [Autocmds anidados](#nested-autocmds)
-- [Portapapeles](#clipboard)
-  - [Uso de portapapeles (Windows, macOS)](#clipboard-usage-windows-macos)
-  - [Uso de portapapeles (Linux, BSD, ...)](#clipboard-usage-linux-bsd-)
+- [Conseguir ayuda offline](#conseguir-ayuda-offline)
+- [Conseguir ayuda offline (alternativo)](#conseguir-ayuda-offline-alternativo)
+- [Conseguir ayuda online](#conseguir-ayuda-online)
+- [Autocmds en la practica](#autocmds-en-la-practica)
+  - [Eventos del usuario](#eventos-del-usuario)
+  - [Autocmds anidados](#autocmds-anidados)
+- [Portapapeles](#portapapeles)
+  - [Uso de portapapeles (Windows, macOS)](#uso-de-portapapeles-windows-macos)
+  - [Uso de portapapeles (Linux, BSD, ...)](#uso-de-portapapeles-linux-bsd)
 - [Restaurar la posición del cursor al abrir un archivo](#restore-cursor-position-when-opening-file)
 - [Archivos temporales](#temporary-files)
   - [Archivos de respaldo](#backup-files)
@@ -92,7 +92,7 @@
 - [Completación más rapida de palabras claves](#faster-keyword-completion)
 - [Cambios cosméticos a los esquemas de color](#cosmetic-changes-to-colorschemes)
 
-### [Comandos](#commands-1)
+### [Comandos](#comandos-1)
 
 - [:global y :vglobal](#global-and-vglobal) - Ejecutar un comando en todas las líneas coincidentes.
 - [:normal y :execute](#normal-and-execute) - El dream team de los guiones.
@@ -107,7 +107,7 @@
 - [Debugging los scripts Vim](#debugging-vim-scripts)
 - [Debugging archivo de sintaxis](#debugging-syntax-files)
 
-### [Miscelánea](#miscellaneous-1)
+### [Miscelánea](#miscelánea-1)
 
 - [Recursos adicionales](#additional-resources)
 - [Distribucciones de Vim](#vim-distributions)
@@ -117,7 +117,7 @@
 - [Easter eggs](#easter-eggs)
 - [¿Por qué hjkl para la navegación?](#why-hjkl-for-navigation)
 
-### [Problemas comunes](#common-problems-1)
+### [Problemas comunes](#problemas-comunes-1)
 
 - [La edición de archivos pequeños es lenta](#editing-small-files-is-slow)
 - [La edición de archivos grandes es lenta](#editing-huge-files-is-slow)
@@ -125,11 +125,11 @@
 - [Retrasos al utilizar la tecla de escape en el terminal](#delays-when-using-escape-key-in-terminal)
 - [Deshacer función de busqueda (function-search-undo)](#function-search-undo)
 
-### [Peculiaridades técnicas](#technical-quirks-1)
+### [Peculiaridades técnicas](#peculiaridades-técnicas-1)
 
 - [Nueva linea utilizada para NUL](#newline-used-for-nul)
 
-### [Terminología](#terminology-1)
+### [Terminología](#terminología-1)
 
 - [Vim script? Vimscript? VimL?](#vim-script-vimscript-viml)
 
@@ -181,12 +181,12 @@ Vim fue agrupado con [Stevie](https://en.wikipedia.org/wiki/Stevie_(text_editor)
 
 Próximos pasos:
 
-1. Crea tu propio [vimrc](#minimal-vimrc).
+1. Crea tu propio [vimrc](#vimrc-mínimo).
 2. Ten preparadas algunas [cheatsheets](#cheatsheets) listas para las primeras semanas.
-3. Lea la sección de [conceptos basicos](#basics) para saber qué es incluso posible en vim.
+3. Lea la sección de [conceptos basicos](#conceptos-bc3a1sicos-1) para saber qué es incluso posible en vim.
 4. ¡Aprende a la marcha! Uno nunca termina de aprender Vim. Si te encuentras con algún problema, sólo tienes que buscarlo en Internet. Tu problema ya está resuelto. Vim viene con una gran documentación y saber cómo navegar por ella es imprescindible:
-   [Conseguir ayuda fuera de línea](#getting-help-offline).
-5. Echa un vistazo a los [recursos adicionales](#additional-resources).
+   [Conseguir ayuda fuera de línea](#conseguir-ayuda-offline).
+5. Echa un vistazo a los [recursos adicionales](#recursos-adicionales).
 
 Un último consejo: Por favor, aprende a usar Vim correctamente antes de empezar a añadir todo tipo de [plugins](#managing-plugins) exagerados que sólo implementan características que Vim ya soporta de forma nativa.
 
@@ -230,7 +230,7 @@ if (v:version > 704 || v:version == 704 && has('patch42')) && has('profile')
 endif
 ```
 
-Ayuda:
+Comandos help:
 
 ```
 :h :version
@@ -297,7 +297,7 @@ Sin embargo, hay un caso de uso enorme para la lista de argumentos: el procesami
 
 Reemplaza todas las apariciones de "foo" por "bar" en todos los archivos fuente y de cabecera de C del directorio en que se encuentre y de los siguientes.
 
-Ayuda: `:h argument-list`
+Comando help: `:h argument-list`
 
 ## Mapeos
 
@@ -350,7 +350,7 @@ Busque sus mapeos no dando un lado derecho. Por ejemplo, `:nmap` muestra todos l
 
 Si quieres desactivar un mapeo normal, mapea con el carácter especial `<nop>`, por ejemplo `:noremap <left> <nop>`.
 
-Ayuda:
+Comandos help:
 
     :h key-notation
     :h mapping
@@ -494,7 +494,7 @@ línea de comandos con `:.!`. Si es seguido por un programa externo, la salida d
 reemplazará la línea actual. Así que podría reemplazar el párrafo actual
 con la salida de ls usando `:?^$?+1,/^$/-1!ls`. ¡Genial!
 
-Ayuda:
+Comandos help:
 
 ```
 :h cmdline-ranges
@@ -583,7 +583,7 @@ Vim también permite completar varios tipos a la vez configurando la opción `'c
 
 Asegúrese de revisar `:h 'completeopt'` para configurar el comportamiento del menú emergente. El valor por defecto es bastante sano, pero yo prefiero añadir también "noselect".
 
-Ayuda:
+Comandos help:
 
 ```
 :h ins-completion
@@ -646,7 +646,7 @@ Los eventos `BufNewFile` y `BufRead` en este caso están codificados en las fuen
 
 En pocas palabras, Vim hace un uso intensivo de eventos y autocomandos, pero también expone una interfaz limpia para engancharse a ese sistema basado en eventos para personalización.
 
-Ayuda: `:h autocommand`
+Comando help: `:h autocommand`
 
 ## Lista de cambios, lista de salto
 
@@ -668,7 +668,7 @@ Si quiere que ambas listas persistan después de reiniciar Vim, necesitaras usar
 **NOTA**: La posición anterior al último salto también se guarda como un [marcador](#marcadores)
 y se puede saltar a ella mediante ``` `` ``` o `''`.
 
-Ayuda:
+Comandos help:
 
 ```
 :h changelist
@@ -719,7 +719,7 @@ El árbol de deshacer se mantiene en memoria y se perderá cuando Vim se cierre.
 
 Si estás confundido con el árbol de deshacer, el proyecto [undotree](https://github.com/mbbill/undotree) hace un excelente trabajo vizualizando este tipo árbol. Sin embargo, cabo destacar que el proyecto se encuentra en inglés.
 
-Ayuda:
+Comandos help:
 
 ```
 :h undo.txt
@@ -817,123 +817,82 @@ q
 
 (Lo mismo podría hacerse sin macros: `:%s/^/\=line('.') . '. '`)
 
-<!-- TERMINE aquí -->
+Ten en cuenta que también muestro cómo lograr lo mismo sin usar macros, pero esto funciona principalmente sólo para estos ejemplos simples. Para una automatización más compleja, ¡las macros son la bomba!
 
-Mind that I also show how to achieve the same without using macros, but this
-mostly works only for such simple examples. For more complex automation, macros
-are the bomb!
+Vea también: [Edite rápidamente sus macros](#quickly-edit-your-macros)
 
-Also see: [Quickly edit your macros](#quickly-edit-your-macros)
-
-Help:
+Comandos help:
 
 ```
 :h recording
 :h 'lazyredraw'
 ```
 
-## Colorschemes
+## Esquema de colores
 
-Colorschemes are the way to style your Vim. Vim consists of many components and
-each of those can be customized with different colors for the foreground,
-background and a few other attributes like bold text etc. They can be set like
-this:
+Los esquemas de color son la forma de dar estilo a su Vim. Vim consta de muchos componentes y cada uno de ellos puede personalizarse con diferentes colores para el primer plano, el fondo y algunos otros atributos como el texto en negrita, etc. Se pueden configurar así:
 
 ```vim
 :highlight Normal ctermbg=1 guibg=red
 ```
 
-This would paint the background of the editor red. See `:h :highlight` for more
-information.
+Esto pintaría el fondo del editor de color rojo. Ver `:h :highlight` para más información.
 
-So, colorschemes are mostly collections of `:highlight` commands.
+Así, los esquemas de colores son en su mayoría colecciones de comandos `:highlight`.
 
-Actually, most colorschemes are really 2 colorschemes! The example above sets
-colors via `ctermbg` and `guibg`. The former definition (`cterm*`) will only be
-used if Vim was started in a terminal emulator, e.g. xterm. The latter (`gui*`)
-will be used in graphical environments like gvim or MacVim.
+En realidad, la mayoría de los esquemas de colores son realmente 2 esquemas de colores. El ejemplo anterior establece los colores mediante `ctermbg` y `guibg`. La primera definición (`cterm*`) sólo se utilizará si Vim se inicia en un emulador de terminal, por ejemplo, xterm. La segunda (`gui*`) se utilizará en entornos gráficos como gvim o MacVim.
 
-If you ever happen to use a colorscheme in terminal Vim and the colors don't
-look like the ones in the screenshot at all, chances are that the colorscheme
-only defines colors for the GUI. Conversely, if you use a graphical Vim (e.g.
-gvim or MacVim) and the colors look off, the colorscheme might only define
-colors for the terminal.
+Si alguna vez usas un esquema de colores en Vim terminal y los colores no se parecen en absoluto a los de la captura de pantalla, lo más probable es que el esquema de colores sólo defina los colores para la GUI. Por el contrario, si usas un Vim gráfico (por ejemplo, gvim o MacVim) y los colores no se parecen, es posible que el esquema de colores sólo defina los colores para el terminal.
 
-The latter case can be "solved" by enabling true colors in Neovim or Vim
-7.4.1830 and newer. This makes terminal Vim use the GUI definitions instead, but
-also requires the terminal emulator itself and all software in between (e.g.
-tmux) to be capable of handling true colors. ([This
-gist](https://gist.github.com/XVilka/8346728) gives a good overview about the
-topic.)
+Este último caso puede ser "resuelto" habilitando los colores verdaderos en Neovim o Vim 7.4.1830 y más recientes. Esto hace que el terminal Vim utilice las definiciones de la GUI en su lugar, pero también requiere que el propio emulador de terminal y todo el software intermedio (por ejemplo, tmux) sea capaz de manejar los colores verdaderos. (Este [gist](https://gist.github.com/XVilka/8346728) da una buena visión general sobre el tema).
 
-Help:
+Comando help & cosas de interés:
 
 - `:h 'termguicolors'`
-- [List of colorschemes](PLUGINS.md#colorschemes-1)
-- [Cosmetic changes to colorschemes](#cosmetic-changes-to-colorschemes)
+- [Lista de esquema de colores](PLUGINS.md#colorschemes-1)
+- [Cambios cosméticos en los esquemas de color](#cosmetic-changes-to-colorschemes)
 
-## Folding
+## Plegados
 
-Every text (or source code) has a certain structure. If you have a structure, it
-means you have regions of logically separated text. Folding allows to "fold"
-such a region into a single line and displaying a short description. There are
-many commands that act on these regions called _folds_. Folds can be nested.
+Todo texto (o código fuente) tiene una estructura determinada. Si tiene una estructura, significa que tiene regiones de texto lógicamente separadas. El plegado permite "plegar" una región de este tipo en una sola línea y mostrar una breve descripción. Hay muchos comandos que actúan sobre estas regiones llamadas _folds_. Los pliegues pueden ser anidados.
 
-Vim distinguishes between several types of fold methods:
+Vim distingue entre varios tipos de métodos de plegado:
 
-| 'foldmethod' | Usage |
+| 'foldmethod' | Uso |
 |--------------|-------|
-| diff         | Used in diff windows to fold unchanged text. |
-| expr         | Uses `'foldexpr'` to basically create a new fold method. |
-| indent       | Folds based on indentation. |
-| manual       | Create folds yourself via `zf`, `zF`, and `:fold`. |
-| marker       | Folds based on markers in the text (often in comments). |
-| syntax       | Folds based on syntax, e.g. folding `if` blocks. |
+| diff         | Se utiliza en las ventanas diff para doblar el texto sin modificar. |
+| expr         | Utiliza `'foldexpr'` para crear básicamente un nuevo método de plegado. |
+| indent       | Pliegues basados en la sangría. |
+| manual       | Cree usted mismo los pliegues mediante `zf`, `zF` y `:fold`. |
+| marker       | Pliegues basados en marcadores en el texto (a menudo en los comentarios). |
+| syntax       | Pliegues basados en la sintaxis, por ejemplo, plegando bloques "si". |
 
-**NOTE**: Folding can be computationally intensive! If you experience any
-performance drawbacks (small delays when typing), have a look at
-[FastFold](https://github.com/Konfekt/FastFold), which prevents Vim from
-updating folds when it's not needed.
+**NOTA**: El plegado puede ser intensivo desde el punto de vista computacional. Si experimenta algún inconveniente de rendimiento (pequeños retrasos al escribir), eche un vistazo a [FastFold](https://github.com/Konfekt/FastFold) (link en inglés), que evita que Vim actualizar los pliegues cuando no es necesario.
 
-Help:
+Comando help:
 
 ```
 :h usr_28
 :h folds
 ```
 
-## Sessions
+## Sesiones
 
-If you save a **view** (`:h :mkview`), the current state of the window (and
-options and mappings) gets saved for later use (`:h :loadview`).
+Si guardas una **vista** (`:h :mkview`), el estado actual de la ventana (y opciones y mapeos) se guarda para su uso posterior (`:h :loadview`).
 
-A **session** saves the views of all windows plus global settings. It basically
-makes a snapshot of your current Vim instance and saves it in a session file.
-Let me stress this: it saves the current state; everything done after saving a
-session won't be part of the session file. To "update" a session, simply write
-it out again.
+Una **sesión** guarda las vistas de todas las ventanas más la configuración global. Básicamente hace una instantánea de su instancia actual de Vim y la guarda en un archivo de sesión. Permíteme subrayar esto: guarda el estado actual; todo lo que se haga después de guardar una sesión no será parte del archivo de sesión. Para "actualizar" una sesión, simplemente escríbala de nuevo.
 
-This makes it perfect for saving your _projects_ and easy to switch between
-them.
+Esto hace que sea perfecto para guardar tus proyectos y que sea fácil cambiar entre ellos.
 
-Try it right now! Open a few windows and tabs and do `:mksession Foo.vim`. If
-you omit the filename, `Session.vim` will be assumed. The file will be saved to
-the current working directory, check `:pwd`. Restart Vim and do `:source
-Foo.vim` and voilà, the buffer list, window layout, mappings, working directory
-etc. should all be the same as before you saved the session. Do some more work
-and update the session by overwriting the already existing session file with
-`:mksession! Foo.vim`.
+¡Pruébalo ahora mismo! Abre algunas ventanas y pestañas y haz `:mksession Foo.vim`. Si omites el nombre del archivo, se asumirá `Session.vim`. El archivo se guardará en el directorio de trabajo actual, compruebe `:pwd`. Reinicie Vim y haga `:source Foo.vim` y voilà, la lista de búferes, la disposición de las ventanas, las asignaciones, el directorio de trabajo, etc. deberían ser los mismos que antes de guardar la sesión. ¡Trabaja un poco más y actualiza la sesión sobrescribiendo el archivo de sesión ya existente con `:mksession! Foo.vim`.
 
-Note that a session file is really just a collection of Vim commands that are
-supposed to restore a certain state of a Vim instance, so feel free to take a
-look at it: `:vs Foo.vim`.
+Ten en cuenta que un archivo de sesión es en realidad una colección de comandos de Vim que se supone que restablecen un determinado estado de una instancia de Vim, así que no dudes en echarle un vistazo: `:vs Foo.vim`.
 
-You can tell Vim what things to save in a session by setting `'sessionoptions'`.
+Puedes decirle a Vim qué cosas debe guardar en una sesión estableciendo `'sessionoptions''.
 
-For scripting purposes Vim keeps the name of the last sourced or written session
-in the internal variable `v:this_session`.
+Para propósitos de scripting, Vim mantiene el nombre de la última sesión escrita o generada en la variable interna `v:this_session`.
 
-Help:
+Comando help:
 
 ```
 :h Session
@@ -941,219 +900,137 @@ Help:
 :h v:this_session
 ```
 
-## Locality
+## Localidad
 
-Many of the concepts mentioned above also have _local_ counterparts:
+Muchos de los conceptos mencionados anteriormente también tienen contrapartidas _locales_:
 
-| Global | Local | Scope | Help |
+| Global | Local | Alcance | Ayuda |
 |--------|-------|-------|------|
-| `:set`     | `:setlocal`           | buffer or window | `:h local-options`    |
-| `:map`     | `:map <buffer>`       | buffer           | `:h :map-local`       |
-| `:autocmd` | `:autocmd * <buffer>` | buffer           | `:h autocmd-buflocal` |
-| `:cd`      | `:lcd`                | window           | `:h :lcd`             |
-| `<leader>` | `<localleader>`       | buffer           | `:h maplocalleader`   |
+| `:set`     | `:setlocal`           | búfer o ventana | `:h local-options`    |
+| `:map`     | `:map <buffer>`       | búfer           | `:h :map-local`       |
+| `:autocmd` | `:autocmd * <buffer>` | búfer           | `:h autocmd-buflocal` |
+| `:cd`      | `:lcd`                | ventana          | `:h :lcd`             |
+| `<leader>` | `<localleader>`       | búfer           | `:h maplocalleader`   |
 
-[Variables also have different scopes](https://vimhelp.appspot.com/usr_41.txt.html#41.2).
+[Las variables también tienen diferentes alcances](https://vimhelp.appspot.com/usr_41.txt.html#41.2) (link en inglés).
 
-# Usage
+# Utilización
 
-## Getting help offline
+## Conseguir ayuda offline
 
-Vim comes with great documentation in the form of single text files with a
-special layout. Vim uses a system based on tags for accessing certain parts of
-those help files.
+Vim viene con una gran documentación en forma de archivos de texto individuales con un diseño especial. Vim utiliza un sistema basado en etiquetas para acceder a ciertas partes de esos archivos de ayuda.
 
-First of all, read this: `:help :help`. This will open the file
-`$VIMRUNTIME/doc/helphelp.txt` in a new window and jump to the `:help` tag
-within that file.
+En primer lugar, lee esto: `:help :help`. Esto abrirá el archivo `$VIMRUNTIME/doc/helphelp.txt` en una nueva ventana y saltará a la etiqueta `:help` dentro de ese archivo.
 
-A few simple rules:
+Unas cuantas reglas sencillas:
 
-- options are enclosed in single quotes, e.g. `:h 'textwidth'`
-- VimL functions end in `()`, e.g. `:h reverse()`
-- commands start with `:`, e.g. `:h :echo`
+- las opciones van entre comillas simples, por ejemplo `:h 'textwidth'`.
+- Las funciones de VimL terminan en `()`, p. ej. `:h reverse()`.
+- los comandos comienzan con `:`, por ejemplo `:h :echo`.
 
-You can use `<c-d>` (this is <kbd>ctrl</kbd>+<kbd>d</kbd>) to list all tags that
-match the currently entered query. E.g. `:h tab<c-d>` will get you a list of all
-tags from `tab` over `'softtabstop'` to `setting-guitablabel`.
+Puede utilizar `<c-d>` (esto es <kbd>ctrl</kbd>+<kbd>d</kbd>) para listar todas las etiquetas que coincidan con la consulta introducida actualmente. Por ejemplo, `:h tab<c-d>` obtendrá una lista de todas las etiquetas desde `tab` sobre `'softtabstop'` hasta `setting-guitablabel`.
 
-You want to list all VimL functions? Simple: `:h ()<c-d>`. You want to list all
-VimL functions that concern windows? `:h win*()<c-d>`.
+¿Quieres listar todas las funciones de VimL? Simple: `:h ()<c-d>`. ¿Quieres listar todas las funciones de VimL que tienen que ver con las ventanas? `:h win*()<c-d>`.
 
-This quickly becomes second nature, but especially in the beginning, you
-sometimes don't know any part of the tag you are looking for. You can only
-imagine some keywords that could be involved. `:helpgrep` to the rescue!
+Esto se convierte rápidamente en una segunda naturaleza, pero especialmente al principio, a veces no se sabe ninguna parte de la etiqueta que se busca. Sólo puedes imaginar algunas palabras clave que pueden estar involucradas. ¡`:helpgrep` al rescate!
 
 ```
 :helpgrep backwards
 ```
 
-This will look for "backwards" in all documentation files and jump to the first
-match. The matches will be assembled in the quickfix list. Use `:cn`/`:cp` to
-jump to the next/previous match. Or use `:copen` to open the quickfix window,
-navigate to an entry and hit `<cr>` to jump to that match. See `:h quickfix` for
-the whole truth.
+Esto buscará "hacia atrás" en todos los archivos de documentación y saltará a la primera coincidencia. Las coincidencias se reunirán en la lista de correcciones rápidas. Utilice `:cn`/`:cp` para saltar a la siguiente/anterior coincidencia. O utilice `:copen` para abrir la ventana de quickfix, navegue hasta una entrada y pulse `<cr>` para saltar a esa coincidencia. Vea `:h quickfix` para conocer toda la verdad.
 
-## Getting help offline (alternative)
+## Conseguir ayuda offline (alternativo)
 
-This list was compiled by @chrisbra, one of the most active Vim developers, and
-posted to [vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
+Esta lista fue compilada por @chrisbra, uno de los desarrolladores de Vim más activos, y publicada en [vim_dev](https://groups.google.com/forum/#!forum/vim_dev) (link en inglés).
 
-It's reposted here with minor changes.
+Se repostea aquí con pequeños cambios.
 
 ---
 
-If you know what you are looking for, it is usually easier to search for it
-using the help system, because the subjects follow a certain style guide.
+Si sabes lo que buscas, suele ser más fácil buscarlo utilizando el sistema de ayuda, porque los temas siguen una determinada guía de estilo.
 
-Also, the help has the advantage of belonging to your particular Vim version, so
-that obsolete topics or topics that have been added later won't turn up.
+Además, la ayuda tiene la ventaja de pertenecer a tu versión particular de Vim, por lo que no aparecerán temas obsoletos o añadidos posteriormente.
 
-Therefore, it is essential to learn the help system and the language it uses.
-Here are some examples (not necessarily complete and I might have forgotten
-something).
+Por lo tanto, es esencial aprender el sistema de ayuda y el lenguaje que utiliza. Aquí hay algunos ejemplos (no necesariamente completos y puede que me haya olvidado de algo).
 
-1. Options are enclosed in single quotes. So you would use `:h 'list'` to go to
-   the help topic for the list option. If you only know, you are looking for a
-   certain option, you can also do `:h options.txt` to open the help page which
-   describes all option handling and then you can search using regular
-   expressions e.g. `/width`. Certain options have their own namespace, e.g. `:h
-   cpo-a`, `:h cpo-A`, `:h cpo-b`, and so on.
+1. Las opciones van entre comillas simples. Por lo tanto, usted utilizaría `:h 'list'` para ir al tema de ayuda de la opción list. Si sólo sabe que está buscando una determinada opción, también puede hacer `:h options.txt` para abrir la página de ayuda que describe el manejo de todas las opciones y entonces puede buscar usando expresiones regulares, por ejemplo `/width`. Algunas opciones tienen su propio espacio de nombres, por ejemplo `:h cpo-a`, `:h cpo-A`, `:h cpo-b`, etc.
 
-2. Normal mode commands are just that. Use `:h gt` to go to the help page for
-   the "gt" command.
+2. Los comandos en modo normal son sólo eso. Utilice `:h gt` para ir a la página de ayuda del comando "gt".
 
-3. Regexp items always start with "/", so `:h /\+` takes you to the help item
-   for the "\+" quantifier in Vim regexes. If you need to know anything about
-   regular expressions, start reading at `:h pattern.txt`.
+3. Los elementos de regexp siempre empiezan por "/", así que `:h /\+` te lleva al elemento de ayuda para el cuantificador ``\+`` en las regexes de Vim. Si necesitas saber algo sobre expresiones regulares, empieza a leer en `:h pattern.txt`.
 
-4. Key combinations. They usually start with a single letter indicating the mode
-   for which they can be used. E.g. `:h i_CTRL-X` takes you to the family of
-   CTRL-X commands for insert mode which can be used to auto complete different
-   things. Note that certain keys will always be written the same, e.g. Control
-   will always be CTRL. Note, for normal mode commands, the "n" is left away,
-   e.g. `:h CTRL-A`. In contrast, `:h c_CTRL-R` will describe what CTRL-R does
-   when entering commands in the command line and `:h v_Ctrl-A` talks about
-   incrementing numbers in visual mode and `:h g_CTRL-A` talks about the g<C-A>
-   command (thus you have to press "g" then <Ctrl-A>). Here the "g" stand for
-   the normal command "g" which always expect a second key before doing
-   something similar to the commands starting with "z".
+4. Combinaciones de teclas. Suelen empezar con una sola letra que indica el modo para el que se pueden utilizar. Por ejemplo, `:h i_CTRL-X` te lleva a la familia de comandos CTRL-X para el modo de inserción que se puede utilizar para autocompletar diferentes cosas. Tenga en cuenta que ciertas teclas siempre se escribirán igual, por ejemplo, Control siempre será CTRL. Tenga en cuenta que para los comandos del modo normal, la "n" se deja de lado, por ejemplo `:h CTRL-A`. Por el contrario, `:h c_CTRL-R` describirá lo que hace CTRL-R cuando se introducen comandos en la línea de comandos y `:h v_Ctrl-A` habla sobre el incremento de números en modo visual y `:h g_CTRL-A` habla sobre el comando g (por lo que hay que pulsar "g" entonces). Aquí la "g" representa el comando normal "g" que siempre espera una segunda tecla antes de hacer algo similar a los comandos que comienzan con "z".
 
-5. Registers always start with "quote" so use `:h quote` to find out about the
-   special ":" register.
+5. Los registros siempre empiezan por "quote", así que utiliza `:h quote` para conocer el registro especial ":".
 
-6. Vim script (VimL) is available at `:h eval.txt`. Certain aspects of the
-   language are available at `:h expr-X` where 'X' is a single letter, e.g. `:h
-   expr-!` will take you to the topic describing the '!' (Not) operator for
-   VimL. Also important, see `:h function-list` to find a short description of
-   all functions available.
+6. El script de Vim (VimL) está disponible en `:h eval.txt`. Ciertos aspectos del lenguaje están disponibles en `:h expr-X` donde 'X' es una sola letra, por ejemplo, `:h expr-!` te llevará al tema que describe el operador '!' (Not) para VimL. También es importante ver `:h function-list` para encontrar una breve descripción de todas las funciones disponibles.
 
-7. Mappings are talked about in the help page `:h map.txt`. Use `:h mapmode-i`
-   to find out about the `:imap` command. Also use `:map-topic` to find out
-   about certain subtopics particular for mappings (e.g. `:h :map-local` for
-   buffer-local mappings or `:h map_bar` for how the '|' is handled in mappings.
+7. En la página de ayuda `:h map.txt` se habla de los mapeos. Utilice `:h mapmode-i` para conocer el comando `:imap`. Utilice también `:map-topic` para conocer ciertos subtemas particulares de los mapeos (por ejemplo, `:h :map-local` para mapeos de búferes locales o `:h map_bar` para saber cómo se maneja el '|' en los mapeos.
 
-8. Command definitions are talked about at `:h command-*`, so use :h command-bar
-   to find out about the '!' argument for custom commands.
+8. Las definiciones de los comandos se comentan en `:h command*`, así que utiliza `:h command-bar` para conocer el argumento '!' de los comandos personalizados.
 
-9. Window management commands always start with CTRL-W, so you find the
-   corresponding help at `:h CTRL-W_*` (e.g. `:h CTRL-W_p` for switch to the
-   previously accessed window). You can also access `:h windows.txt` and read
-   your way through, if you are looking for window handling command.
+9.  Los comandos de manejo de ventanas siempre comienzan con CTRL-W, por lo que encontrará la ayuda correspondiente en `:h CTRL-W_*` (por ejemplo, `:h CTRL-W_p` para cambiar a la ventana previamente accedida). También puede acceder a `:h windows.txt` y leer su camino, si está buscando un comando de manejo de ventanas.
 
-10. Ex commands always start with ":", so `:h :s` covers the ":s" command.
+10. Los comandos Ex siempre empiezan por ":", por lo que `:h :s` cubre el comando ":s".
 
-11. Use CTRL-D after typing a topic and let Vim try to complete to all available
-    topics.
+11. Utilice CTRL-D después de escribir un tema y deje que Vim intente completar todos los temas disponibles.
 
-12. Use `:helpgrep` to search in all help pages (usually also includes help
-    pages by installed plugins). See `:h :helpgrep` for how to use it. Once you
-    have searched for a topic, all matches are available in the quickfix (or
-    location) window which can be opened with `:copen` or `:lopen`. There you
-    can also use `/` to further filter the matches.
+12. Utilice `:helpgrep` para buscar en todas las páginas de ayuda (normalmente también incluye las páginas de ayuda de los plugins instalados). Vea `:h :helpgrep` para saber cómo usarlo. Una vez que haya buscado un tema, todas las coincidencias están disponibles en la ventana de quickfix (o localización) que puede abrirse con `:copen` o `:lopen`. Allí también puede utilizar `/` para filtrar aún más las coincidencias.
 
-13. `:h helphelp` contains some information on how to use the help.
+13. `:h helphelp` contiene información sobre cómo utilizar el comando `help`.
 
-14. The user manual. This describes help topics for beginners in a rather
-    friendly way. Start at `:h usr_toc.txt` to find the table of content (as you
-    might have guessed). Skimming over that help to find certain topics, .e.g
-    you will find an entry "Digraphs" and "Entering special characters" in
-    chapter 24 (so use `:h usr_24.txt` to go to that particular help page).
+14. El manual de usuario. Describe los temas de ayuda para los principiantes de una forma bastante amigable. Empieza en `:h usr_toc.txt` para encontrar la tabla de contenidos (como habrás adivinado). Hojee esa ayuda para encontrar ciertos temas, .por ejemplo encontrará una entrada "Digraphs" y "Entering special characters" en el capítulo 24 (así que use `:h usr_24.txt` para ir a esa página de ayuda en particular).
 
-15. Highlighting groups always start with `hl-*`. E.g. `:h hl-WarningMsg` talks
-    about the "WarningMsg" highlighting group.
+15. Los grupos de resaltado siempre empiezan por `hl-*`. Por ejemplo, `:h hl-WarningMsg` se refiere al grupo de resaltado "WarningMsg".
 
-16. Syntax highlighting is namespaced to ":syn-topic", e.g. `:h :syn-conceal`
-    talks about the conceal argument for the :syn command.
+16. El resaltado de la sintaxis tiene como nombre ":syn-topic", por ejemplo, `:h :syn-conceal` habla del argumento conceal para el comando `:syn`.
 
-17. Quickfix commands usually start with ":c", while location list commands
-    usually start with ":l".
+17. Los comandos de Quickfix suelen empezar por ":c", mientras que los de la lista de ubicaciones suelen empezar por ":l".
 
-18. `:h BufWinLeave` talks about the BufWinLeave autocmd. Also, `:h
-    autocommands-events` talks about all possible events.
+18. `:h BufWinLeave` habla del autocmd BufWinLeave. Además, `:h autocommands-events` habla de todos los posibles eventos.
 
-19. Startup arguments always start with "-", so `:h -f` takes you to the help of
-    the "-f" command switch of Vim.
+19. Los argumentos de inicio siempre comienzan con "-", por lo que `:h -f` le lleva a la ayuda del interruptor de comando "-f" de Vim.
 
-20. Compiled extra features always start with "+", so `:h +conceal` talks about
-    the conceal support.
+20. Las funciones extra compiladas siempre comienzan con "+", por lo que `:h +conceal` habla del soporte de ocultación.
 
-21. Error codes can be looked up directly in the help. `:h E297` takes you
-    exactly to the description of the error message. Sometimes however, those
-    error codes are not described, but rather are listed at the Vim command that
-    usually causes this. E.g. `:h hE128` takes you directly to the `:function`
-    command.
+21. Los códigos de error pueden consultarse directamente en la ayuda. `:h E297` te lleva exactamente a la descripción del mensaje de error. Sin embargo, a veces esos códigos de error no se describen, sino que se enumeran en el comando de Vim que suele causarlo. Por ejemplo, `:hE128` te lleva directamente al comando `:function`.
 
-22. Documentation for included syntax files is usually available at `:h
-    ft-*-syntax`. E.g. `:h ft-c-syntax` talks about the C syntax file and the
-    options it provides. Sometimes, additional sections for omni completion (`:h
-    ft-php-omni`) or filetype plugins (`:h ft-tex-plugin`) are available.
+22. La documentación de los archivos de sintaxis incluidos suele estar disponible en `:h ft-*-syntax`. Por ejemplo, `:h ft-c-syntax` habla sobre el archivo de sintaxis C y las opciones que proporciona. A veces, hay secciones adicionales para la finalización omni (`:h ft-php-omni`) o plugins de tipo de archivo (`:h ft-tex-plugin`).
 
-Also, a link to the user documentation (which describes certain commands more
-from a user perspective and less detailed) will be mentioned at the top of help
-pages if they are available. So `:h pattern.txt` mentions the user guide topics
-`:h 03.9` and `:h usr_27`.
+Además, en la parte superior de las páginas de ayuda se mencionará un enlace a la documentación del usuario (que describe ciertos comandos más desde la perspectiva del usuario y de forma menos detallada) si está disponible. Así, `:h pattern.txt` menciona los temas de la guía del usuario `:h 03.9` y `:h usr_27`.
 
-## Getting help online
+## Conseguir ayuda online
 
-If you have an issue you can't resolve or are in need of general guidance, see
-the [vim_use](https://groups.google.com/forum/#!forum/vim_use) mailing list.
-Another great resource is using
-[IRC](https://de.wikipedia.org/wiki/Internet_Relay_Chat). The channel `#vim` on
-[Freenode](https://freenode.net) is huge and usually full of helpful people.
+Si tienes un problema que no puedes resolver o necesitas orientación general, consulta la lista de correo [vim_use](https://groups.google.com/forum/#!forum/vim_use). Otro gran recurso es utilizar el [IRC](https://de.wikipedia.org/wiki/Internet_Relay_Chat). El canal #vim en [Freenode](https://freenode.net) es enorme y suele estar lleno de gente que ayuda.
 
-If you want to report a Vim bug, use the
-[vim_dev](https://groups.google.com/forum/#!forum/vim_dev) mailing list.
+Si quieres informar de un error en Vim, utiliza la lista de correo [vim_dev](https://groups.google.com/forum/#!forum/vim_dev).
 
-## Autocmds in practice
+## Autocmds en la practica
 
-You can trigger any event right now: `:doautocmd BufRead`.
+Puedes activar cualquier evento en cualquier momento usando: `:doautocmd BufRead`.
 
-### User events
+### Eventos del usuario
 
-Especially for plugins it's useful to create your own "User" events:
+Especialmente para los plugins es útil crear sus propios eventos de "User":
 
 ```vim
 function! Chibby()
-  " A lot of stuff is happening here.
-  " And at last..
+  " Muchas cosas pasan por aquí...
+  " Y al final...
   doautocmd User ChibbyExit
 endfunction
 ```
 
-Now users of your plugin can execute anything when Chibby finishes running:
+Ahora los usuarios de su plugin pueden ejecutar cualquier cosa cuando Chibby() termine de ejecutarse:
 
 ```vim
 autocmd User ChibbyExit call ChibbyCleanup()
 ```
 
-By the way, if there's no "catching" :autocmd, :doautocmd will output a pesky
-"No matching autocommands" message. That's why many plugins use `silent
-doautocmd ...` instead. But this has the disadvantage, that you can't simply use
-`echo "foo"` in the :autocmd, you have to use `unsilent echo "foo"` instead..
+Por cierto, si no hay "captura" de `:autocmd`, `:doautocmd` mostrará el molesto mensaje "No hay autocomandos que coincidan". Por eso muchos plugins utilizan `silent doautocmd ...` en su lugar. Pero esto tiene la desventaja de que no puedes usar simplemente `echo "foo"` en el `:autocmd`, tienes que usar `unsilent echo "foo"` en su lugar...
 
-That's why it's better to check if there even is a receiving autocmd and not
-bothering emitting the event otherwise:
+Por eso es mejor comprobar si existe un autocmd receptor y no molestarse en emitir el evento en caso contrario:
 
 ```vim
 if exists('#User#ChibbyExit')
@@ -1161,40 +1038,33 @@ if exists('#User#ChibbyExit')
 endif
 ```
 
-Help: `:h User`
+Comando help: `:h User`
 
-### Nested autocmds
+### Autocmds anidados
 
-By default, autocmds do not nest! If an autocmd executes a command, which in
-turn would usually trigger another event, it won't happen.
+Por defecto, los autocmds no se anidan. Si un autocmd ejecuta un comando, que a su vez suele desencadenar otro evento, no lo hará.
 
-Let's say every time you start Vim, you want to automatically open your vimrc:
+Digamos que cada vez que inicias Vim, quieres abrir automáticamente tu vimrc:
 
 ```vim
 autocmd VimEnter * edit $MYVIMRC
 ```
 
-When you now start Vim, it will open your vimrc, but the first thing you'll
-notice is that there won't be any highlighting although usually there would be.
+Cuando inicies Vim, abrirá tu vimrc, pero lo primero que notarás es que no habrá ningún resaltado, aunque normalmente lo habría.
 
-The problem is that `:edit` in your non-nested autocmd won't trigger the
-"BufRead" event, so the filetype never gets set to "vim" and
-`$VIMRUNTIME/syntax/vim.vim` never sourced. See `:au BufRead *.vim`. Use this
-instead:
+El problema es que `:edit` en tu autocmd no anidado no dispara el evento "BufRead", por lo que el filetype nunca se establece en "vim" y `$VIMRUNTIME/syntax/vim.vim` nunca se origina. Ver `:au BufRead *.vim`. Utilice esto en su lugar:
 
 ```vim
 autocmd VimEnter * nested edit $MYVIMRC
 ```
 
-Help: `:h autocmd-nested`
+Comando help: `:h autocmd-nested`
 
-## Clipboard
+## Portapapeles
 
-Required [features](#what-kind-of-vim-am-i-running): `+clipboard` and optionally
-`+xterm_clipboard` if you want to use the `'clipboard'` option on a Unix system
-with a Vim that doesn't have GUI support.
+[Funciones](#¿qué-tipo-de-vim-estoy-utilizando) de Vim requeridas: `+clipboard` y opcionalmente `+xterm_clipboard` si quieres usar la opción `'clipboard'` en un sistema Unix con un Vim que no tiene soporte de GUI.
 
-Help:
+Comandos help:
 
 ```
 :h 'clipboard'
@@ -1202,51 +1072,37 @@ Help:
 :h gui-selections
 ```
 
-Also see: [Bracketed paste (or why do I have to set 'paste' all the
-time?)](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
+Vea también: [Pegar entre corchetes (¿o por qué tengo que poner "paste" todo el tiempo?) ](#bracketed-paste-or-why-do-i-have-to-set-paste-all-the-time)
 
-### Clipboard usage (Windows, macOS)
+### Uso de portapapeles (Windows, macOS)
 
-Windows comes with a
-[clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx)
-and macOS comes with a
-[pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
+Windows cuenta con un portapapeles llamado [clipboard](https://msdn.microsoft.com/en-us/library/windows/desktop/ms649012(v=vs.85).aspx), mientras que macOS cuenta con uno similar llamado [pasteboard](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PasteboardGuide106/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008100-SW1).
 
-Both work like most users would expect them to work. You copy selected text with
-`ctrl+c`/`cmd+c` and paste them in another application with `ctrl+v`/`cmd+v`.
+Ambos funcionan como la mayoría de los usuarios esperan que lo hagan. Copias el texto seleccionado con `ctrl+c`/`cmd+c` y lo pegas en otra aplicación con `ctrl+v`/`cmd+v`.
 
-Note that copied text is actually transferred to the clipboard, so you can close
-the application you copied from before pasting in another application without
-problems.
+Ten en cuenta que el texto copiado se transfiere realmente al portapapeles, por lo que puedes cerrar la aplicación de la que has copiado antes de pegar en otra aplicación sin problemas.
 
-Whenever this happens, the clipboard register `*` gets filled with the
-selection. From Vim use `"*y` and `"*p` to yank and paste from the clipboard
-respectively.
+Cuando esto ocurre, el registro del portapapeles `*` se llena con la selección. Desde Vim utiliza `"*y` y `"*p` para arrancar y pegar desde el portapapeles respectivamente.
 
-If you don't even want to specify the `*` register all the time, put this in
-your vimrc:
+Si no quieres especificar el registro `*` todo el tiempo, pon esto en tu vimrc:
+
 
 ```vim
 set clipboard=unnamed
 ```
 
-Usually all yank/delete/put operations fill the `"` register, now the `*`
-register is used for the same operations, therefore simply `y` and `p` will be
-enough.
+Normalmente todas las operaciones de jalar/borrar/poner llenan el registro `"`, ahora el registro `*` se utiliza para las mismas operaciones, por lo que simplemente `y` y `p` serán suficientes.
 
-Let me repeat: Using the option above means that every yank/paste, even when
-only used in the same Vim window, will alter the clipboard. Decide for yourself
-if this is useful or not.
+Permíteme repetirlo: Usar la opción anterior significa que cada yank/paste, incluso cuando sólo se usa en la misma ventana de Vim, alterará el portapapeles. Decida usted mismo si esto es útil o no.
 
-If you're even too lazy to type `y`, you can send every visual selection to the
-clipboard by using these settings:
+Si incluso te da pereza teclear `y`, puedes enviar cada selección visual al portapapeles usando estas opciones:
 
 ```vim
 set clipboard=unnamed,autoselect
 set guioptions+=a
 ```
 
-Help:
+Comandos help:
 
 ```
 :h clipboard-unnamed
@@ -1254,69 +1110,55 @@ Help:
 :h 'go_a'
 ```
 
-### Clipboard usage (Linux, BSD, ...)
+### Uso de portapapeles (Linux, BSD, ...)
 
-If your OS uses [X](http://www.x.org/wiki), things work a bit different. X
-implements the [X Window System
-Protocol](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) which
-happens to be at major version 11 since 1987, hence X is also often called X11.
+Si su sistema operativo utiliza [X](http://www.x.org/wiki), las cosas funcionan un poco diferente. X implementa el [Protocolo del Sistema de Ventanas X](http://www.x.org/releases/X11R7.7/doc/xproto/x11protocol.html) que resulta estar en la versión principal 11 desde 1987, de ahí que X también se llame a menudo X11.
 
-Prior, in X10, [cut
-buffers](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers)
-were introduced that kind of worked like a _clipboard_ as in copied text was
-actually held by X and it was accessible by all other applications. This
-mechanism still exists in X, but its use is deprecated now and most software
-doesn't use it anymore.
+Anteriormente, en X10, se introdujeron los [buffers de corte](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Cut_Buffers), que funcionaban como un portapapeles, ya que el texto copiado era guardado por X y era accesible por todas las demás aplicaciones. Este mecanismo todavía existe en X, pero su uso está obsoleto y la mayoría del software ya no lo utiliza.
 
-Nowadays data is transferred between applications by the means of
-[selections](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Selections).
-From the 3 _selection atoms_ defined, only 2 are used in practice: PRIMARY and
-CLIPBOARD.
+Hoy en día los datos se transfieren entre aplicaciones por medio de [selecciones](http://www.x.org/releases/X11R7.7/doc/xorg-docs/icccm/icccm.html#Peer_to_Peer_Communication_by_Means_of_Selections). De los 3 átomos de selección definidos, sólo 2 se utilizan en la práctica: PRIMARY y CLIPBOARD.
 
-Selections work roughly like this:
+Las selecciones funcionan más o menos así:
 
 ```
 Program A: <ctrl+c>
-Program A: assert ownership of CLIPBOARD
+Program A: reclamar la propiedad de CLIPBOARD
 Program B: <ctrl+v>
-Program B: note that ownership of CLIPBOARD is hold by Program A
-Program B: request data from Program A
-Program A: respond to request and send data to Program B
-Program B: receives data from Program A and inserts it into the window
+Program B: Tenga en cuenta que la propiedad de CLIPBOARD la tiene el Programa A
+Program B: solicitar datos al Programa A
+Program A: responder a la solicitud y enviar los datos al Programa B
+Program B: recibe los datos del Programa A y los inserta en la ventana
 ```
 
-| Selection | When used? | How to paste? | How to access from Vim? |
+| Selección | ¿Cuándo se utiliza? | ¿Cómo se pega? | ¿Cómo se accede desde Vim? |
 |-----------|------------|---------------|-------------------------|
-| PRIMARY   | Selecting text              | `middle-click`, `shift+insert` | `*` register |
-| CLIPBOARD | Selecting text and `ctrl+c` | `ctrl+v`                       | `+` register |
+| PRIMARY   | Selección de texto             | `middle-click`, `shift+insert` | registro `*` |
+| CLIPBOARD | Selección de texto y `ctrl+c` | `ctrl+v`                       | registro `+` |
 
-**NOTE**: Selections (no, not even the CLIPBOARD selection) are never kept in
-the X server! Thus, you lose the data copied with `ctrl+c` when the application
-closes.
+**NOTA**: ¡Las selecciones (no, ni siquiera la selección del CLIPBOARD) nunca se guardan en el servidor X! Por lo tanto, se pierden los datos copiados con `ctrl+c` cuando se cierra la aplicación.
 
-Use `"*p` to paste the PRIMARY selection or `"+y1G` to yank the entire file to
-the CLIPBOARD selection.
+Utilice `"*p` para pegar la selección PRIMARIA o `"+y1G` para tirar todo el archivo a la selección CLIPBOARD.
 
-If you happen to access one of the two registers all the time, consider using:
+Si resulta que accede a uno de los dos registros todo el tiempo, considere usar
 
 ```vim
-set clipboard^=unnamed      " * register
+set clipboard^=unnamed      " registro *
 " or
-set clipboard^=unnamedplus  " + register
+set clipboard^=unnamedplus  " registro +
 ```
 
-(The `^=` is used to prepend to the default value, `:h :set^=`.)
+(El `^=` se utiliza para anteponer al valor por defecto, `:h :set^=`).
 
-This will make all yank/delete/put operations use either `*` or `+` instead of
-the unnamed register `"`. Afterwards you can simply use `y` or `p` for accessing
-your chosen X selection.
+Esto hará que todas las operaciones de y/borrar/poner usen `*` o `+` en lugar del registro sin nombre `"`. Después puedes simplemente usar `y` o `p` para acceder a tu selección X elegida.
 
-Help:
+Comandos help:
 
 ```vim
 :h clipboard-unnamed
 :h clipboard-unnamedplus
 ```
+
+<!-- TErmine aquí -->
 
 ## Restore cursor position when opening file
 
