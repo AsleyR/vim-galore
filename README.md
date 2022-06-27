@@ -58,17 +58,17 @@
 - [Portapapeles](#portapapeles)
   - [Uso de portapapeles (Windows, macOS)](#uso-de-portapapeles-windows-macos)
   - [Uso de portapapeles (Linux, BSD, ...)](#uso-de-portapapeles-linux-bsd)
-- [Restaurar la posición del cursor al abrir un archivo](#restore-cursor-position-when-opening-file)
-- [Archivos temporales](#temporary-files)
-  - [Archivos de respaldo](#backup-files)
-  - [Archivos Swap (Swap Files)](#swap-files)
-  - [Deshacer archivos](#undo-files)
-  - [Archivos viminfo](#viminfo-files)
-  - [Ejemplo de configuración de archivos temporales](#example-configuration-for-temporary-files)
-- [Editando archivos remotos](#editing-remote-files)
-- [Gestión de plugins](#managing-plugins)
-- [Inserción en bloque](#block-insert)
-- [Ejecución de programas externos y uso de filtros](#running-external-programs-and-using-filters)
+- [Restaurar la posición del cursor al abrir un archivo](#restaurar-la-posición-del-cursor-al-abrir-un-archivo)
+- [Archivos temporales](#archivos-temporales)
+  - [Archivos de respaldo](#archivos-de-respaldo)
+  - [Archivos Swap (Swap Files)](#archivos-swap)
+  - [Deshacer archivos](#deshacer-archivos)
+  - [Archivos viminfo](#archivos-viminfo)
+  - [Ejemplo de configuración de archivos temporales](#ejemplo-de-configuración-de-archivos-temporales)
+- [Editando archivos remotos](#editando-archivos-remotos)
+- [Gestión de plugins](#gestión-de-plugins)
+- [Inserción en bloque](#inserción-en-bloque)
+- [Ejecución de programas externos y uso de filtros](#ejecución-de-programas-externos-y-uso-de-filtros)
 - [Cscope](#cscope)
 - [MatchIt](#matchit)
 - [Verdaderos colores (True colors)](#true-colors)
@@ -1158,13 +1158,11 @@ Comandos help:
 :h clipboard-unnamedplus
 ```
 
-<!-- TErmine aquí -->
+<!-- Termine aquí -->
 
-## Restore cursor position when opening file
+## Restaurar la posición del cursor al abrir un archivo
 
-When you open a file, the cursor will be positioned at line 1, column 1.
-Fortunately the viminfo file remembers [marks](#marks). The `"` mark contains
-the position in the buffer where you left off.
+Al abrir un archivo, el cursor se situará en la línea 1, columna 1. Afortunadamente, el archivo viminfo recuerda los [marcadores](#marcadores). La marca `"` contiene la posición en el búfer en la que lo dejaste.
 
 ```vim
 autocmd BufReadPost *
@@ -1173,45 +1171,34 @@ autocmd BufReadPost *
     \ endif
 ```
 
-Read: If the mark `"` contains a line number greater than line 1 but not greater
-than the last line in the file, jump to it.
+Leer: Si la marca `"` contiene un número de línea mayor que la línea 1 pero no mayor que la última línea del archivo, salta a ella.
 
     :h viminfo-'
     :h `quote
     :h g`
 
-## Temporary files
+## Archivos temporales
 
-### Backup files
+### Archivos de respaldo
 
-Before saving a file, Vim creates a backup file. If writing to disk was
-successful, the backup file will be deleted.
+Antes de guardar un archivo, Vim crea un archivo de copia de seguridad. Si la escritura en el disco fue exitosa, el archivo de respaldo será borrado.
 
-With `:set backup`, the backup will persist. This means, the backup file will
-always have the same content as the original file _before_ the most recent save.
-It's up to you to decide whether this is useful or not.
+Con `:set backup`, la copia de seguridad persistirá. Esto significa que el archivo de copia de seguridad siempre tendrá el mismo contenido que el archivo original antes del último guardado. Depende de usted decidir si esto es útil o no.
 
-You can disable backups entirely with `:set nobackup nowritebackup`, but you
-shouldn't need to nowadays. `'writebackup'` is a security feature that makes
-sure that you don't lose the original file in case saving it should ever fail,
-no matter whether you keep the backup file afterwards or not.
+Puedes desactivar las copias de seguridad por completo con `:set nobackup nowritebackup`, pero no deberías necesitarlo hoy en día. La función `'writebackup'' es una característica de seguridad que asegura que no se pierda el archivo original en caso de que se falle al guardarlo, sin importar si se guarda el archivo de respaldo después o no.
 
-If you frequently use Vim to edit huge files, [and you probably
-shouldn't](#editing-huge-files-is-slow), you can exclude those from backups with
-`'backupskip'`.
+Si usas frecuentemente Vim para editar archivos enormes, [y probablemente no deberías](#editing-huge-files-is-slow), puedes excluirlos de las copias de seguridad con `'backupskip'`.
 
-Vim knows different ways to create a backup: _copying_ and _renaming_.
+Vim conoce diferentes maneras de crear una copia de seguridad: _copiar_ y _renombrar_.
 
-- **Copying**
-    1. A full copy of the original file is created and used as backup.
-    1. The original file gets emptied and then filled with the content of the
-    Vim buffer.
-- **Renaming**
-    1. The original file is renamed to the backup file.
-    1. The content of the Vim buffer gets written to a new file with the name of
-    the original file.
+- **Copiar**
+    1. Se crea una copia completa del archivo original y se utiliza como copia de seguridad.
+    2. El archivo original se vacía y luego se llena con el contenido del buffer de Vim.
+- **Renombrar**
+    1. El archivo original es renombrado al archivo de respaldo.
+    2. El contenido del buffer de Vim se escribe en un nuevo archivo con el nombre del archivo original.
 
-See `:h 'backupcopy'` for all the nitty-gritty details.
+Vea :h 'backupcopy' para conocer todos los detalles.
 
 ---
 
@@ -1222,10 +1209,10 @@ Demo:
 :e /tmp/foo
 ifoo<esc>
 :w
-" original file gets created, no need for backup file
+" se crea el archivo original, no es necesario el archivo de copia de seguridad
 obar<esc>
 :w
-" backup file is created, original file gets updated
+" se crea el archivo de copia de seguridad, el archivo original se actualiza
 ```
 
 ```diff
@@ -1242,160 +1229,132 @@ $ diff -u /tmp/foo-backup /tmp/foo
     :h backup
     :h write-fail
 
-### Swap files
+### Archivos swap
 
-When editing a file, unsaved changes get written to a swap file.
+Al editar un archivo, los cambios no guardados se escriben en un archivo de intercambio.
 
-Get the name of the current swap file with `:swapname`. Disable them with `:set
-noswapfile`.
+Obtenga el nombre del archivo de intercambio actual con `:swapname`. Desactívelos con `:set noswapfile`.
 
-A swap file gets updated either all 200 characters or when nothing was typed for
-4 seconds. They get deleted when you stop editing the file. You can change these
-numbers with `:h 'updatecount'` and `:h 'updatetime'`.
+Un archivo de intercambio se actualiza ya sea con los 200 caracteres o cuando no se ha escrito nada durante 4 segundos. Se borran cuando se deja de editar el archivo. Puede cambiar estos números con `:h 'updatecount'` y `:h 'updatetime'`.
 
-If Vim gets killed (e.g. power outage), you lose all changes since the last time
-the file was written to disk, but the swap file won't be deleted. Now, if you
-edit the file again, Vim will offer the chance to recover the file from the swap
-file.
+Si Vim muere (por ejemplo, por un corte de energía), se pierden todos los cambios desde la última vez que se escribió el archivo en el disco, pero el archivo de intercambio no se borrará. Ahora, si vuelve a editar el archivo, Vim le ofrecerá la posibilidad de recuperar el archivo desde el archivo de intercambio.
 
-When two people try to edit the same file, the second person will get a notice
-that the swap file already exists. It prevents people from trying to save
-different versions of a file. If you don't want that behaviour, see `:h
-'directory'`.
+Cuando dos personas intentan editar el mismo archivo, la segunda persona recibirá un aviso de que el archivo de intercambio ya existe. Esto evita que la gente intente guardar diferentes versiones de un archivo. Si no quiere ese comportamiento, vea `:h 'directory'`.
 
     :h swap-file
     :h usr_11
 
-### Undo files
+### Deshacer archivos
 
-The [undo tree](#undo-tree) is kept in memory and will be lost when Vim quits.
-If you want it to persist, `:set undofile`. This will save the undo file for
-`~/foo.c` in `~/foo.c.un~`.
+El [árbol de deshacer](#árbol-de-deshacer) se mantiene en memoria y se perderá cuando Vim se cierre. Si quiere que persista, `:set undofile`. Esto guardará el archivo de deshacer para `~/foo.c` en `~/foo.c.un~`.
 
     :h 'undofile'
     :h undo-persistence
 
-### Viminfo files
+### Archivos viminfo
 
-When backup, swap, and undo files are all about text state, viminfo files are
-used for saving everything else that would otherwise be lost when quitting Vim.
-The viminfo file keeps histories (command line, search, input), registers,
-marks, buffer list, global variables etc.
+Cuando los archivos de respaldo, tipos swap y de deshacer se refieren al estado del texto, los archivos viminfo se utilizan para guardar todo lo demás que, de otro modo, se perdería al salir de Vim. El archivo viminfo guarda los historiales (línea de comandos, búsqueda, entrada), registros, marcas, lista de búferes, variables globales, etc.
 
-By default, the viminfo is written to `~/.viminfo`.
+Por defecto, el viminfo se escribe en `~/.viminfo`.
 
     :h viminfo
     :h 'viminfo'
 
-### Example configuration for temporary files
+### Ejemplo de configuración de archivos temporales
 
-Put all temporary files in their own directory under `~/.vim/files`:
+Poner todos los archivos temporales en su propio directorio bajo `~/.vim/files`:
 
 ```vim
-" create directory if needed
+" cree un directorio si es necesario
 if !isdirectory($HOME.'/.vim/files') && exists('*mkdir')
   call mkdir($HOME.'/.vim/files')
 endif
 
-" backup files
+" archivos de respaldo
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
-" swap files
+" archivos swap
 set directory   =$HOME/.vim/files/swap//
 set updatecount =100
-" undo files
+" archivos de deshacer
 set undofile
 set undodir     =$HOME/.vim/files/undo/
-" viminfo files
+" archivos viminfo
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 ```
 
-## Editing remote files
+## Editando archivos remotos
 
-Vim comes with the netrw plugin that enables editing remote files. Actually it
-transfers the remote file to a local temporary file via scp, opens a buffer
-using that file, and writes the changes back to the remote file on saving.
+Vim viene con el plugin `netrw` que permite editar archivos remotos. En realidad, transfiere el archivo remoto a un archivo temporal local a través de `scp`, abre un buffer usando ese archivo, y escribe los cambios de vuelta al archivo remoto al guardarlo.
 
-This is extremely useful if you want to use your local configuration opposed to
-ssh'ing into a server and use whatever the admins want you to use.
+Esto es extremadamente útil si quieres usar tu configuración local en lugar de entrar por ssh en un servidor y usar lo que los administradores quieran que uses.
 
 ```
 :e scp://bram@awesome.site.com/.vimrc
 ```
 
-If you have a `~/.ssh/config` set up already, this gets used automatically:
+Si ya tienes un `~/.ssh/config` configurado, este se utiliza automáticamente:
 
 ```
-Host awesome
-    HostName awesome.site.com
+Host pedro
+    HostName computadoradepedro.site.com
     Port 1234
-    User bram
+    User pedro_pérez
 ```
 
-Assuming the above content in `~/.ssh/config`, this works just as well:
+Asumiendo el contenido anterior en `~/.ssh/config`, esto funciona igual de bien:
 
 ```
 :e scp://awesome/.vimrc
 ```
 
-Similar can be done with a `~/.netrc`, see `:h netrw-netrc`.
+Algo similar puede hacerse con un `~/.netrc`, ver `:h netrw-netrc`.
 
-Make sure to read `:h netrw-ssh-hack` and `:h g:netrw_ssh_cmd`.
+Asegúrese de leer `:h netrw-ssh-hack` y `:h g:netrw_ssh_cmd`.
 
 ---
 
-Another possibility is using [sshfs](https://wiki.archlinux.org/index.php/Sshfs)
-which uses [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) to
-mount a remote filesystem into your local filesystem.
 
-## Managing plugins
+Otra posibilidad es usar [sshfs](https://wiki.archlinux.org/index.php/Sshfs) (link en inglés) que utiliza [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) (link en inglés) para montar un sistema de archivos remoto en su sistema de archivos local.
 
-[Pathogen](https://github.com/tpope/vim-pathogen) was the first popular tool for
-managing plugins. Actually it just adjusts the _runtimepath_ (`:h 'rtp'`) to
-include all the things put under a certain directory. You have to clone the
-repositories of the plugins there yourself.
+## Gestión de plugins
 
-Real plugin managers expose commands that help you to install and update plugins
-from within Vim.
+[Pathogen](https://github.com/tpope/vim-pathogen) (contenido del link en inglés) fue la primera herramienta popular para gestionar plugins. En realidad sólo ajusta la ruta de ejecución (`:h 'rtp'`) para incluir todas las cosas puestas bajo un determinado directorio. Tienes que clonar los repositorios de los plugins allí mismo.
 
-[List of plugin managers](PLUGINS.md#plugin-managers)
+Los verdaderos gestores de plugins exponen comandos que te ayudan a instalar y actualizar plugins desde Vim.
 
-## Block insert
+[Lista de gestores de plugins](PLUGINS.md#plugin-managers)
 
-This is a technique to insert the same text on multiple consecutive lines at the
-same time. See this
-[demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-block_insert.gif).
+## Inserción en bloque
 
-Switch to visual block mode with `<c-v>`. Afterwards go down for a few lines.
-Hit `I` or `A` and start entering your text.
+Esta es una técnica para insertar el mismo texto en varias líneas consecutivas al mismo tiempo. Vea este [demo](https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/content-block_insert.gif).
 
-It might be a bit confusing at first, but text is always entered for the current
-line and only after finishing the current insertion, the same text will be
-applied to all other lines of the prior visual selection.
+Cambie al modo de bloque visual con `<c-v>`. Después baja unas cuantas líneas. Pulsa `I` o `A` y empieza a introducir tu texto.
 
-So a simple example is `<c-v>3jItext<esc>`.
+Puede ser un poco confuso al principio, pero el texto siempre se introduce para la línea actual y sólo después de terminar la inserción actual, el mismo texto se aplicará a todas las demás líneas de la selección visual anterior.
 
-If you have lines of different length and want to append the same text right
-after the end of each line, do this: `<c-v>3j$Atext<esc>`.
+Así que un ejemplo sencillo es `<c-v>3jItext<esc>`.
 
-Sometime you need to place the cursor somewhere after the end of the current
-line. You can't do that by default, but you can set the `virtualedit` option:
+Si tiene líneas de diferente longitud y quiere añadir el mismo texto justo después del final de cada línea, haga lo siguiente `<c-v>3j$Atext<esc>`.
+
+A veces necesitas colocar el cursor en algún lugar después del final de la línea actual. No puede hacerlo por defecto, pero puede establecer la opción `virtualedit`:
+
 
 ```vim
 set virtualedit=all
 ```
 
-Afterwards `$10l` or `90|` work even after the end of the line.
+Después, `$10l` o `90|` funcionan incluso después del final de la línea.
 
-See `:h blockwise-examples` for more info. It might seem complicated at first,
-but quickly becomes second nature.
+Vea `:h blockwise-examples` para más información. Puede parecer complicado al principio, pero rápidamente se convierte en algo natural.
 
-If you want to get real fancy, have a look at
-[multiple-cursors](https://github.com/terryma/vim-multiple-cursors).
+Si quiere ser realmente sofisticado, eche un vistazo a los [cursores multiples](https://github.com/terryma/vim-multiple-cursors).
 
-## Running external programs and using filters
+## Ejecución de programas externos y uso de filtros
+
+<!-- TERMINE AQUÍ -->
 
 Disclaimer: Vim is single-threaded, so running an external program in the
 foreground will block everything else. Sure, you can use one of Vim's
