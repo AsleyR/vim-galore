@@ -1,25 +1,17 @@
-# Contributing
+# Contribuir
 
-All kinds of contributions are welcome!
+- ¡Todo tipo de contribuciones son bienvenidas!
 
-- Wrong documentation? Technical mistakes happen all the time. Behaviour can
-  change between different Vim versions.
-- Is there something you didn't understand right away? Was the explanation too
-  complicated?
-- Any other suggestions for improvement? Better wording? Typos? Dead links?
-- Want to add plugins? Please make sure that they have collected a few stars
-  already. There are new plugins every day and I can't possibly test them all,
-  so I rely on "social proof" as an indicator for usefulness. (If you wrote or
-  found a plugin with no or only very few stars but still think it's useful,
-  promote it on [r/vim](https://www.reddit.com/r/vim). It has lots of readers
-  and is great for gaining attention.)
+- ¿Documentación errónea? Los errores técnicos ocurren todo el tiempo. El comportamiento puede cambiar entre diferentes versiones de Vim.
 
-Please report _anything_ that seems wrong to you by
-[creating an issue](https://github.com/mhinz/vim-galore/issues/new) for it.
+- ¿Hay algo que no hayas entendido de inmediato? ¿La explicación era demasiado complicada?
 
-If you feel like fixing it yourself, open a
-[pull request](https://help.github.com/categories/collaborating-with-issues-and-pull-requests).
-Don't worry too much about how to format your commit messages, the actual patch
-is more important.
+- ¿Alguna otra sugerencia de mejora? ¿Mejor redacción? ¿Impresiones tipográficas? ¿Los enlaces no funcionan?
 
-Thank you for contributing! 🎉
+- ¿Quieres añadir plugins? Por favor, asegúrate de que ya han recogido unas cuantas estrellas. Hay nuevos plugins cada día y no puedo probarlos todos, así que confío en la "prueba social" como indicador de utilidad. (Si escribiste o encontraste un plugin con ninguna o muy pocas estrellas pero aún así crees que es útil, promuévelo en [r/vim](https://www.reddit.com/r/vim). Tiene muchos lectores y es genial para ganar atención).
+
+Por favor, reporta todo lo que te parezca incorrecto creando un [issue]((https://github.com/mhinz/vim-galore/issues/new)) en Github para ello.
+
+Si te apetece arreglarlo tú mismo, abre un [pull request](https://help.github.com/categories/collaborating-with-issues-and-pull-requests). No te preocupes demasiado por el formato de tus mensajes de confirmación, el parche en sí es más importante.
+
+¡Gracias por contribuir! 🎉

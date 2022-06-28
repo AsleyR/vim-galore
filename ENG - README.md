@@ -1,6 +1,6 @@
 <div align='center'>
   <br /><br /><br />
-  <img src='https://raw.githubusercontent.com/mhinz/vim-galore/master/static/images/logo-vim-galore.png' alt='vim-galore logo' />
+  <img src='./static/images/logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
   <div>
     <a href='https://github.com/wsdjeg/vim-galore-zh_cn'>Chinese</a> |

@@ -1,6 +1,6 @@
 <div align='center'>
   <br /><br /><br />
-  <img src='./static/images/logo-vim-galore.png' alt='vim-galore logo' />
+  <img src='./static/images/esp-logo-vim-galore.png' alt='vim-galore logo' />
   <br /><br /><br /><br />
   <div>
     <a href="https://github.com/mhinz/vim-galore">Inglés</a>
@@ -11,7 +11,13 @@
     <a href='http://givi.olnd.ru/vim-galore/vim-galore-ru.html'>Ruso</a> |
     <a href='https://github.com/kyoz/vim-galore-vi'>Vietnamita</a>
     <div>
-      <br />
+    <br>
+    <sub>Creado por <a href="https://github.com/mhinz">mhinz</a></sub>
+    </div>
+    <div>
+    <sub>Traducido al español por <a href="https://github.com/AsleyR">AsleyR</a></sub>
+    </div>
+    <div>
       <sub>Con licencia <a href='https://creativecommons.org/licenses/by-sa/4.0'>CC BY-SA 4.0<a/>.</sub>
     </div>
   </div>
@@ -135,9 +141,11 @@
 
 - [Vim script? Vimscript? VimL?](#vim-script-vimscript-viml)
 
-### [Lista de esquemas de colores](PLUGINS.md#colorschemes-1)
+### [Lista de esquemas de colores](PLUGINS.md#esquema-de-colores-1)
 
 ### [Lista de plugins](PLUGINS.md)
+
+### [Nota del traductor](#nota-del-traductor-1)
 
 <br>
 
@@ -851,7 +859,7 @@ Este último caso puede ser "resuelto" habilitando los colores verdaderos en Neo
 Comando help & cosas de interés:
 
 - `:h 'termguicolors'`
-- [Lista de esquema de colores](PLUGINS.md#colorschemes-1)
+- [Lista de esquema de colores](PLUGINS.md#esquemas-de-colores-1)
 - [Cambios cosméticos en los esquemas de color](#cambios-cosméticos-a-los-esquemas-de-color)
 
 ## Plegados
@@ -2217,3 +2225,7 @@ Vea `man 7 ascii` y `:h NL-used-for-Nul` para más información.
 Los términos `Vim script`, `Vimscript` y `VimL` se refieren a lo mismo: el lenguaje de programación utilizado para hacer scripts en Vim. Aunque [8.0.360](https://github.com/vim/vim/commit/b544f3c81f1e6a50322855681ac266ffaa8e313c) (link en inglés) cambió todas las referencias de `VimL` a `Vim script`, que ahora puede considerarse el término oficial, `VimL` sigue estando muy extendido por todo Internet.
 
 No importa el término que utilices, todo el mundo lo entenderá.
+
+## Nota del traductor
+
+Hola, traducir este documento fue complicado debido a la naturaleza del mismo. Así que, si al momento de leer te llegas a encontrar con algún error -- ya sea ortográfico, gramatical, semántico, o de traducción -- sepa saberse que cualquier contribucción de este tipo será recibida con los brazos abiertos. Solamente, favor leer el documento de [contribuciones](CONTRIBUIR.md) ante de todo.

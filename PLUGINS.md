@@ -1,53 +1,52 @@
-## List of plugins
+## Lista de Plugins 
 
-#### [Colorschemes](#colorschemes-1)
+_Nota: Me parece que alrededor de todos los plugins mencionados en este documento se encuentran solo en inglés._
 
-#### [By topic](#by-topic-1)
+- [Lista de Plugins](#lista-de-plugins)
+- [Esquema de colores](#esquema-de-colores)
+- [Por temas](#por-temas)
+    - [Alineamiento](#alineamiento)
+    - [Construcción y limpieza](#construcción-y-limpieza)
+    - [Completación de código](#completación-de-código)
+    - [Ciclo](#ciclo)
+    - [Comentadores](#comentadores)
+    - [Bases de datos](#bases-de-datos)
+    - [Delimitador](#delimitador)
+    - [Encontradores difusos](#encontradores-difusos)
+    - [Herramientas grep](#herramientas-grep)
+    - [Indentación](#indentación)
+    - [LSP](#lsp)
+    - [Navegación](#navegación)
+    - [Gestores de plugins](#gestores-de-plugins)
+    - [Snippets](#snippets)
+    - [Líneas de estado](#líneas-de-estado)
+    - [Surround](#surround)
+    - [Tomar notas](#tomar-notas)
+    - [Testing](#testing)
+    - [Objetos de texto](#objetos-de-texto)
+    - [Tmux](#tmux)
+    - [Deshacer historia](#deshacer-historia)
+    - [Control de versiones](#control-de-versiones)
+    - [Escrituras](#escrituras)
+    - [Varios](#varios)
+- [Por tipo de achivo](#por-tipo-de-achivo)
+    - [C y C++](#c-y-c)
+    - [Clojure](#clojure)
+    - [Elixir](#elixir)
+    - [Go](#go)
+    - [HTML](#html)
+    - [Java](#java)
+    - [Javascript](#javascript)
+    - [Lua](#lua)
+    - [PHP](#php)
+    - [Python](#python)
+    - [Rust](#rust)
+    - [TeX](#tex)
+    - [VimL](#viml)
 
-- [Alignment](#alignment)
-- [Building and linting](#building-and-linting)
-- [Code completion](#code-completion)
-- [Commenters](#commenters)
-- [Cycle](#cycle)
-- [Databases](#databases)
-- [Delimiter](#delimiter)
-- [Fuzzy finders](#fuzzy-finders)
-- [Grep tools](#grep-tools)
-- [Indent](#indent)
-- [LSP](#lsp)
-- [Misc](#misc)
-- [Navigation](#navigation)
-- [Plugin managers](#plugin-managers)
-- [Snippets](#snippets)
-- [Statusline](#statusline)
-- [Surround](#surround)
-- [Taking notes](#taking-notes)
-- [Testing](#testing)
-- [Text objects](#text-objects)
-- [Tmux](#tmux)
-- [Undo history](#undo-history)
-- [Version control](#version-control)
-- [Writing](#writing)
+## Esquema de colores
 
-#### [By filetype](#by-filetype-1)
-
-- [C and C++](#c-and-c)
-- [Clojure](#clojure)
-- [Elixir](#elixir)
-- [Go](#go)
-- [HTML](#html)
-- [Java](#java)
-- [Javascript](#javascript)
-- [Lua](#lua)
-- [PHP](#php)
-- [Python](#python)
-- [Rust](#rust)
-- [TeX](#tex)
-- [VimL](#viml)
-
-## Colorschemes
-
-Here's a list of commonly used colorschemes:
+Aquí tienes una lista de los esquemas de color más utilizados:
 
 - [acme-colors](https://github.com/plan9-for-vimspace/acme-colors)
 - [apprentice](https://github.com/romainl/Apprentice)
@@ -67,30 +66,29 @@ Here's a list of commonly used colorschemes:
 - [paramount](https://github.com/owickstrom/vim-colors-paramount)
 - [railscasts](https://github.com/jpo/vim-railscasts-theme)
 - [seoul256](https://github.com/junegunn/seoul256.vim)
-- [solarized](https://github.com/altercation/vim-colors-solarized) (or [solarized8](https://github.com/lifepillar/vim-solarized8) or [flattened](https://github.com/romainl/flattened))
+- [solarized](https://github.com/altercation/vim-colors-solarized) (o [solarized8](https://github.com/lifepillar/vim-solarized8), o [flattened](https://github.com/romainl/flattened))
 - [tomorrow](https://github.com/chriskempson/vim-tomorrow-theme)
 - [vividchalk](https://github.com/tpope/vim-vividchalk)
 - [yowish](https://github.com/kabbamine/yowish.vim)
 - [zenburn](https://github.com/jnurmine/Zenburn)
 
-Alternatively, generate your own colorscheme using [themer](https://github.com/mjswensen/themer)
-or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
+También puedes generar su propio esquema de colores utilizando [themer](https://github.com/mjswensen/themer) o [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 
-## By topic
+## Por temas
 
-#### Alignment
+#### Alineamiento
 
 - [tabular](https://github.com/godlygeek/tabular)
 - [vim-easy-align](https://github.com/junegunn/vim-easy-align)
 - [vim-lion](https://github.com/tommcdo/vim-lion)
 
-#### Building and linting
+#### Construcción y limpieza
 
 - [ale](https://github.com/w0rp/ale)
 - [neomake](https://github.com/neomake/neomake)
 - [syntastic](https://github.com/vim-syntastic/syntastic)
 
-#### Code completion
+#### Completación de código
 
 - [asyncomplete.vim](https://github.com/prabirshrestha/asyncomplete.vim)
 - [completor.vim](https://github.com/maralla/completor.vim)
@@ -102,58 +100,58 @@ or [Colortemplate](https://github.com/lifepillar/vim-colortemplate).
 - [VimCompletesMe](https://github.com/ajh17/VimCompletesMe)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
-#### Cycle
+#### Ciclo
 
 - [switch.vim](https://github.com/AndrewRadev/switch.vim)
 - [vim-speeddating](https://github.com/tpope/vim-speeddating)
 
-#### Commenters
+#### Comentadores
 
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [tcomment_vim](https://github.com/tomtom/tcomment_vim)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 
-#### Databases
+#### Bases de datos
 
 - [pgsql.vim](https://github.com/lifepillar/pgsql.vim)
 - [vim-dadbod](https://github.com/tpope/vim-dadbod)
 
-#### Delimiter
+#### Delimitador
 
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-endwise](https://github.com/tpope/vim-endwise)
 
-#### Fuzzy finders
+#### Encontradores difusos
 
-- [Command-T](https://github.com/wincent/Command-T) (_requires +ruby_)
+- [Command-T](https://github.com/wincent/Command-T) (_requiere +ruby_)
 - [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
-- [denite.nvim](https://github.com/Shougo/denite.nvim) (_requires +python3_)
-- [fzf](https://github.com/junegunn/fzf) (and [fzf.vim](https://github.com/junegunn/fzf.vim))
-- [LeaderF](https://github.com/Yggdroot/LeaderF) (_requires +python or +python3_)
+- [denite.nvim](https://github.com/Shougo/denite.nvim) (_requiere +python3_)
+- [fzf](https://github.com/junegunn/fzf) (y [fzf.vim](https://github.com/junegunn/fzf.vim))
+- [LeaderF](https://github.com/Yggdroot/LeaderF) (_requiere +python or +python3_)
 - [unite.vim](https://github.com/Shougo/unite.vim)
 
-#### Grep tools
+#### Herramientas grep
 
 - [ctrlsf.vim](https://github.com/dyng/ctrlsf.vim)
 - [ferret](https://github.com/wincent/ferret)
 - [vim-grepper](https://github.com/mhinz/vim-grepper)
 
-#### Indent
+#### Indentación
 
 - [indentLine](https://github.com/Yggdroot/indentLine)
 - [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 
 #### LSP
 
-Plugins for the [Language Server Protocol](https://microsoft.github.io/language-server-protocol)
+Plugins para el [Language Server Protocol](https://microsoft.github.io/language-server-protocol) (link en inglés)
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [languageclient-neovim](https://github.com/autozimu/LanguageClient-neovim)
 - [vim-lsc](https://github.com/natebosch/vim-lsc)
 - [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
 
-#### Navigation
+#### Navegación
 
 - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [tagbar](https://github.com/majutsushi/tagbar)
@@ -161,11 +159,11 @@ Plugins for the [Language Server Protocol](https://microsoft.github.io/language-
 - [vim-easymotion](https://github.com/easymotion/vim-easymotion)
 - [vim-sneak](https://github.com/justinmk/vim-sneak)
 - [vim-vinegar](https://github.com/tpope/vim-vinegar)
-- [vimfiler.vim](https://github.com/Shougo/vimfiler.vim) (_depends on other plugins_)
+- [vimfiler.vim](https://github.com/Shougo/vimfiler.vim) (_depende de otros plugins_)
 
-Also see [fuzzy finders](#fuzzy-finders).
+Tambien vea [encontradores difusos](#encontradores-difusos).
 
-#### Plugin managers
+#### Gestores de plugins
 
 - [apt-vim](https://github.com/egalpin/apt-vim)
 - [dein.vim](https://github.com/Shougo/dein.vim)
@@ -177,12 +175,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 #### Snippets
 
-- [neosnippet.vim](https://github.com/Shougo/neosnippet.vim) (_depends on other plugins_)
+- [neosnippet.vim](https://github.com/Shougo/neosnippet.vim) (_depende de otros plugins_)
 - [ultisnips](https://github.com/SirVer/ultisnips)
-- [vim-snipmate](https://github.com/garbas/vim-snipmate) (_depends on other plugins_)
+- [vim-snipmate](https://github.com/garbas/vim-snipmate) (_depende de otros plugins_)
 - [xptemplate](https://github.com/drmingdrmer/xptemplate)
 
-#### Statusline
+#### Líneas de estado
 
 - [lightline.vim](https://github.com/itchyny/lightline.vim)
 - [powerline](https://github.com/powerline/powerline)
@@ -195,7 +193,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-sandwich](https://github.com/machakann/vim-sandwich)
 - [vim-surround](https://github.com/tpope/vim-surround)
 
-#### Taking notes
+#### Tomar notas
 
 - [vim-dotoo](https://github.com/dhruvasagar/vim-dotoo)
 - [vim-journal](https://github.com/junegunn/vim-journal)
@@ -208,7 +206,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 
 - [vim-test](https://github.com/janko-m/vim-test)
 
-#### Text objects
+#### Objetos de texto
 
 - [targets.vim](https://github.com/wellle/targets.vim)
 - [vim-exchange](https://github.com/tommcdo/vim-exchange)
@@ -223,12 +221,12 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [vitality.vim](https://github.com/sjl/vitality.vim)
 
-#### Undo history
+#### Deshacer historia
 
 - [gundo.vim](https://github.com/sjl/gundo.vim)
 - [undotree](https://github.com/mbbill/undotree)
 
-#### Version control
+#### Control de versiones
 
 - [agit.vim](https://github.com/cohama/agit.vim)
 - [committia.vim](https://github.com/rhysd/committia.vim)
@@ -246,7 +244,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-twiggy](https://github.com/sodapopcan/vim-twiggy)
 - [vimagit](https://github.com/jreybert/vimagit)
 
-#### Writing
+#### Escrituras
 
 - [thesaurus_query.vim](https://github.com/ron89/thesaurus_query.vim)
 - [vim-grammarous](https://github.com/rhysd/vim-grammarous)
@@ -255,7 +253,7 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-textobj-quote](https://github.com/reedes/vim-textobj-quote)
 - [vim-wordy](https://github.com/reedes/vim-wordy)
 
-#### Misc
+#### Varios
 
 - [calendar.vim](https://github.com/itchyny/calendar.vim)
 - [CoVim](https://github.com/FredKSchott/CoVim)
@@ -285,9 +283,9 @@ Also see [fuzzy finders](#fuzzy-finders).
 - [vim-startify](https://github.com/mhinz/vim-startify)
 - [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 
-## By filetype
+## Por tipo de achivo
 
-#### C and C++
+#### C y C++
 
 - [a.vim](https://github.com/vim-scripts/a.vim)
 - [clang_complete](https://github.com/Rip-Rip/clang_complete)

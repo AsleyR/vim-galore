@@ -51,7 +51,7 @@ if &shell =~# 'fish$'
 endif
 
 " Coloca todos los archivos temporales en el mismo directorio.
-" https://github.com/AsleyR/vim-galore/blob/main/README.md
+" https://github.com/AsleyR/vim-galore/blob/dev-spanish/README.md
 set backup
 set backupdir   =$HOME/.vim/files/backup/
 set backupext   =-vimbackup
